@@ -23,7 +23,7 @@ class Bootstrap{
 					if($request['param4']==""){
 						$this->action="show";
 					}else{
-						$this->action="edit";
+						$this->action=$request['param4'];
 					}
 				}
 			}
@@ -44,9 +44,9 @@ class Bootstrap{
 			// $this->id=$request['param3'];
 		}
 
-		echo "controller".$this->controller."<br>";
-		echo "action".$this->action."<br>";
-		echo "id".$this->id;
+		// echo "controller".$this->controller."<br>";
+		// echo "action".$this->action."<br>";
+		// echo "id".$this->id;
 		
 	}
 	public function createController(){

@@ -28,8 +28,8 @@
         <td><?php echo $user['update_at']; ?></td>
         
         <td> <a  class="btn btn-success" href="<?php echo 'users/'.$user["id"]; ?>">Show</a> </td>
-        <td><a  class="btn btn-success" href="<?php echo 'users/'.$user["id"].'/edit'; ?>">Edit</a></td>
-        <td><?php  ?><button class="btn btn-danger">Detele</button></td>
+        <td><a  class="btn btn-warning" href="<?php echo 'users/'.$user["id"].'/edit'; ?>">Edit</a></td>
+        <td><a  class="btn btn-danger" href="<?php echo 'users/'.$user["id"].'/delete'; ?>">Delete</a></td>
       </tr>
       <?php endforeach ?>
     </tbody>

@@ -44,32 +44,39 @@ class UserModel extends Model{
 
 	}
 	public function edit($id){
-		$user = show($id);
 
+		$user = $this->show($id);
+		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+		
 		if($post['submit']){
-		
-		
-			$database->query('	UPDATE users 
-								SET fullname = :fullname, email = :email, phone=:phone, address=:address 
-								WHERE id = :id' );
+
+			if(	empty($post['fullname']) || empty($post['phone']) || empty($post['address'])  || 
+				!filter_var($post['email'], FILTER_VALIDATE_EMAIL)){
+					return ;
+			}
+			$this->query('	UPDATE users 
+							SET fullname = :fullname, email = :email, phone=:phone, address=:address
+							WHERE id = :id' );
+
+			$this->bind(':id',$id);
 			$this->bind(':fullname', $post['fullname']);
 			$this->bind(':email', $post['email']);
 			$this->bind(':phone', $post['phone']);
 			$this->bind(':address', $post['address']);
-			$this->bind(':password', $password);
-			$database->execute();
-		}
-		return;
-	}
-	// public function destroy(){
 
-	// 	if($_POST['delete']){
-	// 		$delete_id = $_POST['delete_id'];
-	// 		$database->query('DELETE FROM posts WHERE id = :id');
-	// 		$database->bind(':id', $delete_id);
-	// 		$database->execute();
-	// 	}
-	// }
+			$this->execute();
+			header('Location: '.ROOT_URL.'admin/users');
+		}
+		return $user;
+	}
+
+	public function delete($id){
+		
+			$this->query('DELETE FROM users WHERE id = :id');
+			$this->bind(':id', $id);
+			$this->execute();
+			header('Location: '.ROOT_URL.'admin/users');
+	}
 
     
 }
