@@ -1,7 +1,6 @@
 <?php 
     $email=$password="";
-    $emailErr=$passwordErr="";
-
+    
     if(isset($_POST['submit'])){
         if(empty($_POST['email'])){
             $emailErr = 'Email is required';

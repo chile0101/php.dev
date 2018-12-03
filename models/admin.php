@@ -6,8 +6,10 @@ class AdminModel extends Model{
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
 		if($post['submit']){
-			// die('die');
-			// Compare Login
+
+			if(empty($post['email']) || empty($post['password'] )){
+				return;
+			}
 			$this->query('SELECT * FROM admins WHERE email = :email AND password = :password');
 			$this->bind(':email', $post['email']);
 			$this->bind(':password', $post['password']);
@@ -21,11 +23,11 @@ class AdminModel extends Model{
 					"email"	=> $row['email']
 				);
 				header('Location: '.ROOT_URL.'users'); 
-			} else {
-				Messages::setMsg('Incorrect Login', 'error');
+			}else {
+				Messages::setMsg('Email or Password invalid', 'error');
 			}
+			return;
 		}
-		return;
 	}
 
 	public function logout(){

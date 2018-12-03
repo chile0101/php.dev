@@ -6,7 +6,7 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Email</th>
-        <th scope="col">Fullname</th>
+        <th scope="col">Full name</th>
         <th scope="col">Phone</th>
         <th scope="col">Address</th>
         <th scope="col">Create at</th>
