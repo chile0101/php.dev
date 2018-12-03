@@ -9,17 +9,18 @@ require('classes/Controller.php');
 require('classes/Model.php');  
 require('classes/Messages.php');
 
-require('controllers/admins.php');
+require('controllers/admin/authadmin.php');
+require('controllers/admin/users.php');
 require('controllers/auth.php');
 require('controllers/home.php');
-require('controllers/shares.php');
-require('controllers/users.php');
 
-require('models/admin.php');
+require('models/authadmin.php');
 require('models/auth.php');
 require('models/home.php');
-require('models/share.php');
+
 require('models/user.php');
+
+
 
 
 $bootstrap = new Bootstrap($_GET);

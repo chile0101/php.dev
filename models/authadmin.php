@@ -1,12 +1,12 @@
 <?php
-class AdminModel extends Model{
+class AuthAdminModel extends Model{
 	
 	public function login(){
 		// Sanitize POST
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
 		if($post['submit']){
-
+		
 			if(empty($post['email']) || empty($post['password'] )){
 				return;
 			}
@@ -22,7 +22,7 @@ class AdminModel extends Model{
 					"id"	=> $row['id'],
 					"email"	=> $row['email']
 				);
-				header('Location: '.ROOT_URL.'users'); 
+				header('Location: '.ROOT_URL.'admin/users'); 
 			}else {
 				Messages::setMsg('Email or Password invalid', 'error');
 			}
@@ -34,6 +34,6 @@ class AdminModel extends Model{
 		unset($_SESSION['admin_logged_in']);
 		unset($_SESSION['admin_data']);
 		session_destroy();
-		header('Location: '.ROOT_URL.'admins/login');
+		header('Location: '.ROOT_URL.'admin/');
 	}
 }

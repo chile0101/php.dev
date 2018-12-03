@@ -1,5 +1,5 @@
 <div>
-  <a href="<?php echo ROOT_PATH ?>users/new" class="btn btn-primary btn-addUser">Add User</a>
+  <a href="<?php echo ROOT_PATH_ADMIN ?>users/new" class="btn btn-primary btn-addUser">Add User</a>
   <br>
   <table class="table">
     <thead>
@@ -26,8 +26,9 @@
         <td><?php echo $user['address']; ?></td>
         <td><?php echo $user['create_at']; ?></td>
         <td><?php echo $user['update_at']; ?></td>
-        <td><?php  ?><button class="btn btn-success">View</button></td>
-        <td><?php  ?><button class="btn btn-warning">Edit</button></td>
+        
+        <td> <a  class="btn btn-success" href="<?php echo 'users/'.$user["id"]; ?>">Show</a> </td>
+        <td><a  class="btn btn-success" href="<?php echo 'users/'.$user["id"].'/edit'; ?>">Edit</a></td>
         <td><?php  ?><button class="btn btn-danger">Detele</button></td>
       </tr>
       <?php endforeach ?>

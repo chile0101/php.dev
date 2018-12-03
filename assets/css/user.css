@@ -5,6 +5,7 @@
 .form-register{
     margin: 50px auto;
 }
+
 @media(min-width: 768px) {
     .field-label-responsive {
       padding-top: .5rem;

@@ -34,7 +34,7 @@
                             <a class="dropdown-item" href="#">Your Profile</a>
                             <a class="dropdown-item" href="#">Setting</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?php echo ROOT_URL ?>admins/logout">Logout</a>
+                            <a class="dropdown-item" href="<?php echo ROOT_URL ?>admin/authadmin/logout">Logout</a>
                         </div>
                     </li>
                 </ul>

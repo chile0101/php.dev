@@ -1,26 +1,37 @@
 <?php
 abstract class Controller{
-	protected $request;
+	protected $id;
 	protected $action;
-
-	public function __construct($action, $request){
+	protected $role;
+	public function __construct($role,$action, $id){
+		$this->role=$role;
 		$this->action = $action;
-		$this->request = $request;
+		$this->id = $id;
 	}
 
 	public function executeAction(){
 		return $this->{$this->action}();
 	}
 
-	protected function returnView($viewmodel, $fullview){
-		$view = 'views/'. get_class($this). '/' . $this->action. '.php';
-		if($fullview=="user"){
+	protected function returnView($viewmodel){
+
+		if($this->role=='admin'){
+			$view='views/admins/'. get_class($this) . '/' . $this->action . '.php';
+			require('views/layout/main_admin.php');
+		}else{
+			$view = 'views/'. get_class($this). '/' . $this->action. '.php';
 			require('views/layout/main.php');
-		}elseif($fullview=="admin"){
-			require("views/layout/main_admin.php");
-		} else {
-			echo "require view";
-			//require($view);
 		}
+
+		// if($this->action)
+		//$view = 'views/'. get_class($this). '/' . $this->action. '.php';
+		// if($fullview=="user"){
+		// 	require('views/layout/main.php');
+		// }elseif($fullview=="admin"){
+		// 	require("views/layout/main_admin.php");
+		// } else {
+		// 	echo "require view";
+		// 	//require($view);
+		// }
 	}
 }

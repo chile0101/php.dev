@@ -10,4 +10,5 @@ define("DB_NAME","db_phpdev");
 
 define("ROOT_PATH","/php.dev/");
 define("ROOT_URL","http://localhost/php.dev/");
+define("ROOT_PATH_ADMIN","/php.dev/admin/");
 

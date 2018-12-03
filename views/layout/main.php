@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"> <a class="nav-link" href="<?php echo ROOT_URL ?>">Home </a></li>
-                <li class="nav-item"> <a class="nav-link" href="<?php echo ROOT_URL ?>shares">Shares </a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo ROOT_URL ?>">Shares </a></li>
             </ul>
             <ul class="navbar-nav navbar-right">
                 <?php if(isset($_SESSION['is_logged_in'])): ?>

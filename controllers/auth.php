@@ -3,15 +3,15 @@
 class Auth extends Controller{
     protected function register(){
         $viewmodel = new AuthModel();
-        $this->ReturnView($viewmodel->register(),true);
+        $this->ReturnView($viewmodel->register());
     }
     protected function login(){
         $viewmodel = new AuthModel();
-        $this->ReturnView($viewmodel->login(),true);
+        $this->ReturnView($viewmodel->login());
     }
     protected function logout(){
         $viewmodel = new AuthModel();
-        $this->ReturnView($viewmodel->logout(),true);
+        $this->ReturnView($viewmodel->logout());
     }
 }
 

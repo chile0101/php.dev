@@ -48,7 +48,7 @@ class AuthModel extends Model{
 					"name"	=> $row['name'],
 					"email"	=> $row['email']
 				);
-				header('Location: '.ROOT_URL.'shares');
+				header('Location: '.ROOT_URL);
 			} else {
 				Messages::setMsg('Incorrect Login', 'error');
 			}

@@ -30,11 +30,46 @@ class UserModel extends Model{
 			$this->execute();
 			// Verify
 			if($this->lastInsertId()){
-				header('Location: '.ROOT_URL.'users');
+				header('Location: '.ROOT_URL.'admin/users');
 			}
 		}
 		return;
 	}
+
+	public function show($id){
+		$this->query('SELECT * FROM users WHERE id = :id');
+		$this->bind(':id',$id);
+		$user=$this->single();
+		return $user;
+
+	}
+	public function edit($id){
+		$user = show($id);
+
+		if($post['submit']){
+		
+		
+			$database->query('	UPDATE users 
+								SET fullname = :fullname, email = :email, phone=:phone, address=:address 
+								WHERE id = :id' );
+			$this->bind(':fullname', $post['fullname']);
+			$this->bind(':email', $post['email']);
+			$this->bind(':phone', $post['phone']);
+			$this->bind(':address', $post['address']);
+			$this->bind(':password', $password);
+			$database->execute();
+		}
+		return;
+	}
+	// public function destroy(){
+
+	// 	if($_POST['delete']){
+	// 		$delete_id = $_POST['delete_id'];
+	// 		$database->query('DELETE FROM posts WHERE id = :id');
+	// 		$database->bind(':id', $delete_id);
+	// 		$database->execute();
+	// 	}
+	// }
 
     
 }
