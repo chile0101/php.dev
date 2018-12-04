@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/user.css">
-    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
    
     
 </head>

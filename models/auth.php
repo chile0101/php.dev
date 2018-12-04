@@ -7,21 +7,22 @@ class AuthModel extends Model{
 		$password = md5($post['password']);
 
 		if($post['submit']){
-			if($post['name'] == '' || $post['email'] == '' || $post['password'] == ''){
-				Messages::setMsg('Please Fill In All Fields', 'error');
+			if($post['fullname'] == '' || $post['email'] == '' || $post['password'] == ''){
 				return;
 			}
 
 			// Insert into MySQL
-			$this->query('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
-			$this->bind(':name', $post['name']);
+			$this->query('INSERT INTO users (fullname, email, password,address,phone) VALUES(:fullname, :email, :password,:address,:phone)');
+			$this->bind(':fullname', $post['fullname']);
 			$this->bind(':email', $post['email']);
 			$this->bind(':password', $password);
+			$this->bind(':address', $post['address']);
+			$this->bind(':phone', $post['phone']);
 			$this->execute();
 			// Verify
 			if($this->lastInsertId()){
 				// Redirect
-				header('Location: '.ROOT_URL.'users/login');
+				header('Location: '.ROOT_URL.'auth/login');
 			}
 		}
 		return;
@@ -34,7 +35,11 @@ class AuthModel extends Model{
 		$password = md5($post['password']);
 
 		if($post['submit']){
-			// Compare Login
+
+			if($post['email']=='' || $post['password']==''){
+				return;
+			}
+
 			$this->query('SELECT * FROM users WHERE email = :email AND password = :password');
 			$this->bind(':email', $post['email']);
 			$this->bind(':password', $password);
@@ -42,15 +47,15 @@ class AuthModel extends Model{
 			$row = $this->single();
 
 			if($row){
-				$_SESSION['is_logged_in'] = true;
+				$_SESSION['user_logged_in'] = true;
 				$_SESSION['user_data'] = array(
 					"id"	=> $row['id'],
-					"name"	=> $row['name'],
+					"fullname"	=> $row['fullname'],
 					"email"	=> $row['email']
 				);
 				header('Location: '.ROOT_URL);
 			} else {
-				Messages::setMsg('Incorrect Login', 'error');
+				return "Email or Password is in invalid";
 			}
 		}
 		return;
