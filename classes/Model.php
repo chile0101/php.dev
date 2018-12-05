@@ -34,7 +34,7 @@ abstract class Model{
 	public function execute(){
 		$this->stmt->execute();
 	}
-
+	
 	public function resultSet(){
 		$this->execute();
 		return $this->stmt->fetchAll(PDO::FETCH_ASSOC);

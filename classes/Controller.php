@@ -34,4 +34,14 @@ abstract class Controller{
 		// 	//require($view);
 		// }
 	}
+	protected function lock_path_admin(){
+        if(!isset($_SESSION['admin_logged_in'])){
+            header('Location: '. ROOT_URL_ADMIN);
+        }
+	}
+	protected function lock_path_user(){
+        if(!isset($_SESSION['user_logged_in'])){
+            header('Location: '. ROOT_URL);
+        }
+    }
 }
