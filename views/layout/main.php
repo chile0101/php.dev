@@ -42,7 +42,7 @@
       </div>
       <?php if(isset($_SESSION['user_logged_in'])): ?>
       <div class="cart-content"><span class="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/cart-icon.png" alt="cart-icon"></span></div>
-        <div class="sign-content"><a>Welcome <?php echo $_SESSION['user_data']['fullname']; ?>  </a>| <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a>  </div>  
+        <div class="sign-content"><a><?php echo $_SESSION['user_data']['fullname']; ?>  </a>| <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a>  </div>  
   
       <?php else: ?>
         <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/login">Log in </a>|<a href="<?php echo ROOT_URL; ?>auth/register"> Register</a></div>

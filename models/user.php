@@ -13,7 +13,6 @@ class UserModel extends Model{
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 		$password = md5($post['password']);
 		if($post['submit']){
-			
 			if(	empty($post['fullname']) || empty($post['phone'])		|| 
 				empty($post['address'])  || empty($post['password'])	||
 				!filter_var($post['email'], FILTER_VALIDATE_EMAIL)		||

@@ -1,16 +1,21 @@
 <?php
 class AuthModel extends Model{
 	public function register(){
+		
 		// Sanitize POST
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
 		$password = md5($post['password']);
 
-		if($post['submit']){
-			if($post['fullname'] == '' || $post['email'] == '' || $post['password'] == ''){
-				return;
+		if($post['register']){
+			
+			if(	empty($post['fullname']) || empty($post['phone'])		|| 
+				empty($post['address'])  || empty($post['password'])	||
+				!filter_var($post['email'], FILTER_VALIDATE_EMAIL)		||
+				$post['password_confirm'] != $post['password']){
+					return ;
 			}
-
+			
 			// Insert into MySQL
 			$this->query('INSERT INTO users (fullname, email, password,address,phone) VALUES(:fullname, :email, :password,:address,:phone)');
 			$this->bind(':fullname', $post['fullname']);
