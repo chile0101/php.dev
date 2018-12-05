@@ -6,7 +6,7 @@ CREATE TABLE admins (
     email varchar(255) NOT NULL,
     password varchar(255) NOT NULL,
     create_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-)
+);
 INSERT INTO admins (id,email, password) VALUES (null,'admin@gmail.com', '1');
 INSERT INTO admins (id,email, password) VALUES (null,'chile@gmail.com', '1');
 
@@ -19,7 +19,7 @@ CREATE TABLE users (
     address text,
     create_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     update_at datetime
-)
+);
 
 INSERT INTO users (id, email, password, fullname, phone, address) 
             VALUES (NULL, 'user@gmail.com', '1234', 'chil le', '1695669219', 'KTX KHu B');
