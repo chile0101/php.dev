@@ -87,7 +87,7 @@
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-phone" aria-hidden="true"></i></div>
                         <input type="text" name="phone" class="form-control" 
-                            value="<?php echo $viewmodel['phone']; ?>" placeholder="01695669219">
+                            value="<?php echo $viewmodel['phone']; ?>" placeholder="0169">
                     </div>
                 </div>
             </div>

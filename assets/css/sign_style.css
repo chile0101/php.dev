@@ -1,10 +1,10 @@
 .login{
   position: relative;
   width: 100%;
-  
+  /* background: url(images/clothing.jpg); */
   background-size: cover;
   height: 600px;
-  padding: 450px 0px 0px 0px;
+  padding: 200px 0px 0px 0px;
 
 }
 
@@ -17,11 +17,11 @@
   position: relative;
   opacity: 0.9; 
   padding: 70px 30px; 
-} */
+}
 
 .signin{
   width: 320px;
-  height: 500px;
+  height: 420px;
 }
 
 .signup{

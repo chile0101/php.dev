@@ -1,5 +1,5 @@
 <div>
-  <a href="<?php echo ROOT_PATH_ADMIN ?>users/new" class="btn btn-primary btn-addUser">Add User</a>
+  <a href="<?php echo ROOT_URL_ADMIN ?>users/new" class="btn btn-primary btn-addUser">Add User</a>
   <br>
   <table class="table">
     <thead>

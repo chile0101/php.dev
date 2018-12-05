@@ -62,9 +62,9 @@ class AuthModel extends Model{
 	}
 
 	public function logout(){
-		unset($_SESSION['is_logged_in']);
+		unset($_SESSION['user_logged_in']);
 		unset($_SESSION['user_data']);
 		session_destroy();
-		header('Location: '.ROOT_URL.'users/login');
+		header('Location: '.ROOT_URL);
 	}
 }

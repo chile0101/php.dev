@@ -1,60 +1,51 @@
 
 <?php 
-    // $fullname=$email=$phone=$address=$password="";
-    // $fullnameErr=$emailErr=$phoneErr=$addressErr=$passwordErr=$passwordcfErr="";
+     $fullname=$email=$phone=$address=$password="";
+    $fullnameErr=$emailErr=$phoneErr=$addressErr=$passwordErr=$passwordcfErr="";
 
-    // if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])){
 
-    //     if(empty($_POST['fullname'])){
-    //         $fullnameErr="Full name is required";
-    //     }else{
-    //         $fullname=$_POST['fullname'];
-    //     }
+        if(empty($_POST['fullname'])){
+            $fullnameErr="Full name is required";
+        }else{
+            $fullname=$_POST['fullname'];
+        }
 
-    //     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-    //         $emailErr="Email format is not valid";
-    //     }else{
-    //         $email=$_POST['email'];
-    //     }
+        if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+            $emailErr="Email format is not valid";
+        }else{
+            $email=$_POST['email'];
+        }
         
-    //     if(empty($_POST['phone'])){
-    //         $phoneErr="Phone number is required";
-    //     }else{
-    //         $phone=$_POST['phone'];
-    //     }
+        if(empty($_POST['phone'])){
+            $phoneErr="Phone number is required";
+        }else{
+            $phone=$_POST['phone'];
+        }
       
-    //     if(empty($_POST['address'])){
-    //         $addressErr="Address is required";
-    //     }else{
-    //         $address=$_POST['address'];
-    //     }
+        if(empty($_POST['address'])){
+            $addressErr="Address is required";
+        }else{
+            $address=$_POST['address'];
+        }
         
-    //     if(empty($_POST['password'])){
-    //         $passwordErr="Password is required";
-    //     }else{
-    //         $password=$_POST['password'];
-    //     }
+        if(empty($_POST['password'])){
+            $passwordErr="Password is required";
+        }else{
+            $password=$_POST['password'];
+        }
         
-    //     if($_POST['password'] != $_POST['password_confirm']){
-    //         $passwordcfErr="Password confirm not match";
-    //     }
+        if($_POST['password'] != $_POST['password_confirm']){
+            $passwordcfErr="Password confirm not match";
+        }
         
-    // }
-    $fullname=$email=$phone=$address=$password="";
+    }
 
 ?>
-<script>
-    function ValidateForm(){
 
-        var x=document.forms["formRegis"];
-        if (x.fullname.value.length <2 ||  x.fullname.value.length >30){
-        return alert("Please fill out fist name");
-    }
-    }
-</script>
 
 <div class="form-register">
-    <form class="form-horizontal" name="formRefis" method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" onsubmit="return ValidateForm()">
+    <form class="form-horizontal" id="form_user_register" name="form_user_register" action="<?php echo ROOT_URL; ?>admin/users/new" method="POST">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
@@ -78,9 +69,7 @@
             <div class="col-md-2">
                 <div class="form-control-feedback">
                         <span class="text-danger align-middle">
-                            
-                                <i class="fa fa-close"> </i>
-                           
+                            <small><?php echo $fullnameErr?></small>
                         </span>
                 </div>
             </div>
@@ -94,16 +83,14 @@
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
                         <input type="text" name="email" class="form-control" 
-                            value="<?php echo $email ; ?>" placeholder="you@example.com">
+                            value="<?php echo $email; ?>" placeholder="you@example.com">
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-control-feedback">
                         <span class="text-danger align-middle">                   
-                            <?php if(!empty($emailErr)): ?>
-                                <i class="fa fa-close"> <?php echo $emailErr ; ?></i>
-                            <?php endif ?>                         
+                            <small><?php echo $emailErr?></small>           
                         </span>
                 </div>
             </div>
@@ -117,16 +104,14 @@
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-phone" aria-hidden="true"></i></div>
                         <input type="text" name="phone" class="form-control" 
-                            value="<?php echo $phone; ?>" placeholder="01695669219">
+                            value="<?php echo $phone; ?>" placeholder="0169">
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-control-feedback">
                         <span class="text-danger align-middle">
-                            <?php if(!empty($phoneErr)): ?>
-                                <i class="fa fa-close"> <?php echo $phoneErr ; ?></i>
-                            <?php endif ?>
+                            <small><?php echo $phoneErr?></small>
                         </span>
                 </div>
             </div>
@@ -147,9 +132,7 @@
             <div class="col-md-2">
                 <div class="form-control-feedback">
                         <span class="text-danger align-middle">
-                            <?php if(!empty($addressErr)): ?>
-                                <i class="fa fa-close"> <?php echo $addressErr ; ?></i>
-                            <?php endif ?>
+                        <small><?php echo $addressErr?></small>
                         </span>
                 </div>
             </div>
@@ -170,9 +153,7 @@
             <div class="col-md-2">
                 <div class="form-control-feedback">
                         <span class="text-danger align-middle">
-                            <?php if(!empty($passwordErr)): ?>
-                                <i class="fa fa-close"> <?php echo $passwordErr ; ?></i>
-                            <?php endif ?>
+                            <small><?php echo $passwordErr?></small>
                         </span>
                 </div>
             </div>
@@ -195,9 +176,7 @@
             <div class="col-md-2">
                 <div class="form-control-feedback">
                         <span class="text-danger align-middle">
-                            <?php if(!empty($passwordcfErr)): ?>
-                                <i class="fa fa-close"> <?php echo $passwordcfErr ; ?></i>
-                            <?php endif ?>
+                            <small><?php echo $passwordcfErr?></small>
                         </span>
                 </div>
             </div>
@@ -205,9 +184,10 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <!-- <button type="submit" class="btn btn-success" name="submit"><i class="fa fa-user-plus"></i> Register</button> -->
                 <input class="btn btn-success" name="submit" type="submit" value=" Register "/>
             </div>
         </div>
     </form>
+
 </div>
+

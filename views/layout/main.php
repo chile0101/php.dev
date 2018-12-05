@@ -7,14 +7,12 @@
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/style.css"> <!-- main -->
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/shop.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/star-rate.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/sign_style.css">
-  
-  <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/style.css"> <!-- main -->
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
 
   <link rel="icon" href="<?php echo ROOT_PATH;?>assets/images/icons/logo-icon.png"  sizes="20x20">
 
@@ -42,8 +40,13 @@
           <input type="submit" class="search-submit" value="Search" />
         </form>
       </div>
+      <?php if(isset($_SESSION['user_logged_in'])): ?>
       <div class="cart-content"><span class="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/cart-icon.png" alt="cart-icon"></span></div>
-      <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/login">Log in </a>|<a href="<?php echo ROOT_URL; ?>auth/register"> Register</a></div>
+        <div class="sign-content"><a>Welcome <?php echo $_SESSION['user_data']['fullname']; ?>  </a>| <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a>  </div>  
+  
+      <?php else: ?>
+        <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/login">Log in </a>|<a href="<?php echo ROOT_URL; ?>auth/register"> Register</a></div>
+      <?php endif ?>
     </div>  
   </header>
     
