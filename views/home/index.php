@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -38,127 +39,39 @@
         </form>
         <ul class="products">
         
+        <?php foreach ($viewmodel as $product) : ?>
+            <li class="item">
+            <a href="#">
+                <div class="item-image">
+                <img width="230" height="230" src="<?php echo $product['image'];?> " alt="product">
+                <span class="price">
+                    <span class="amount"><?php echo $product['price']; ?> $</span>
+                </span>
+                </div>
+            </a>
+            <h3><?php echo $product['name']; ?></h3> 
+            <div class="product-info">
+                <form class="star-rate">
+                <div class="stars">
+                    <input type="radio" name="star" class="star-1" id="star-1" />
+                    <label class="star-1" for="star-1">1</label>
+                    <input type="radio" name="star" class="star-2" id="star-2" />
+                    <label class="star-2" for="star-2">2</label>
+                    <input type="radio" name="star" class="star-3" id="star-3" />
+                    <label class="star-3" for="star-3">3</label>
+                    <input type="radio" name="star" class="star-4" id="star-4" />
+                    <label class="star-4" for="star-4">4</label>
+                    <input type="radio" name="star" class="star-5" id="star-5" />
+                    <label class="star-5" for="star-5">5</label>
+                    <span></span>
+                </div>
+                </form>
+
+                <a href="#" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></a>
+            </div>
+            </li>
+        <?php endforeach ?>
             
-            <li class="item">
-            <a href="#">
-                <div class="item-image">
-                <img width="230" height="230" src="assets/images/products/item1.png" alt="product">
-                <span class="price">
-                    <span class="amount">3.00$</span>
-                </span>
-                </div>
-            </a>
-            <h3>Basic denim shorts</h3> 
-            <div class="product-info">
-                <form class="star-rate">
-                <div class="stars">
-                    <input type="radio" name="star" class="star-1" id="star-1" />
-                    <label class="star-1" for="star-1">1</label>
-                    <input type="radio" name="star" class="star-2" id="star-2" />
-                    <label class="star-2" for="star-2">2</label>
-                    <input type="radio" name="star" class="star-3" id="star-3" />
-                    <label class="star-3" for="star-3">3</label>
-                    <input type="radio" name="star" class="star-4" id="star-4" />
-                    <label class="star-4" for="star-4">4</label>
-                    <input type="radio" name="star" class="star-5" id="star-5" />
-                    <label class="star-5" for="star-5">5</label>
-                    <span></span>
-                </div>
-                </form>
-
-                <a href="#" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></a>
-            </div>
-            </li>
-            <li class="item">
-            <a href="#">
-                <div class="item-image">
-                <img width="230" height="230" src="assets/images/products/item2.jpg" alt="9320450250_1_1_1">
-                <span class="price">
-                    <span class="amount">3.00$</span>
-                </span>
-                </div>
-            </a>
-            <h3>Basic denim shorts</h3> 
-            <div class="product-info">
-                <form class="star-rate">
-                <div class="stars">
-                    <input type="radio" name="star" class="star-1" id="star-1" />
-                    <label class="star-1" for="star-1">1</label>
-                    <input type="radio" name="star" class="star-2" id="star-2" />
-                    <label class="star-2" for="star-2">2</label>
-                    <input type="radio" name="star" class="star-3" id="star-3" />
-                    <label class="star-3" for="star-3">3</label>
-                    <input type="radio" name="star" class="star-4" id="star-4" />
-                    <label class="star-4" for="star-4">4</label>
-                    <input type="radio" name="star" class="star-5" id="star-5" />
-                    <label class="star-5" for="star-5">5</label>
-                    <span></span>
-                </div>
-                </form>
-
-                <a href="#" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></a>
-            </div>
-            </li>
-            <li class="item">
-            <a href="#">
-                <div class="item-image">
-                <img width="230" height="230" src="assets/images/products/item3.jpg" alt="9320450250_1_1_1">
-                <span class="price">
-                    <span class="amount">3.00$</span>
-                </span>
-                </div>
-            </a>
-            <h3>Basic denim shorts</h3> 
-            <div class="product-info">
-                <form class="star-rate">
-                <div class="stars">
-                    <input type="radio" name="star" class="star-1" id="star-1" />
-                    <label class="star-1" for="star-1">1</label>
-                    <input type="radio" name="star" class="star-2" id="star-2" />
-                    <label class="star-2" for="star-2">2</label>
-                    <input type="radio" name="star" class="star-3" id="star-3" />
-                    <label class="star-3" for="star-3">3</label>
-                    <input type="radio" name="star" class="star-4" id="star-4" />
-                    <label class="star-4" for="star-4">4</label>
-                    <input type="radio" name="star" class="star-5" id="star-5" />
-                    <label class="star-5" for="star-5">5</label>
-                    <span></span>
-                </div>
-                </form>
-
-                <a href="#" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></a>
-            </div>
-            </li>
-            <li class="item">
-            <a href="#">
-                <div class="item-image">
-                <img width="230" height="230" src="assets/images/products/item2.jpg" alt="9320450250_1_1_1">
-                <span class="price">
-                    <span class="amount">3.00$</span>
-                </span>
-                </div>
-            </a>
-            <h3>Basic denim shorts</h3> 
-            <div class="product-info">
-                <form class="star-rate">
-                <div class="stars">
-                    <input type="radio" name="star" class="star-1" id="star-1" />
-                    <label class="star-1" for="star-1">1</label>
-                    <input type="radio" name="star" class="star-2" id="star-2" />
-                    <label class="star-2" for="star-2">2</label>
-                    <input type="radio" name="star" class="star-3" id="star-3" />
-                    <label class="star-3" for="star-3">3</label>
-                    <input type="radio" name="star" class="star-4" id="star-4" />
-                    <label class="star-4" for="star-4">4</label>
-                    <input type="radio" name="star" class="star-5" id="star-5" />
-                    <label class="star-5" for="star-5">5</label>
-                    <span></span>
-                </div>
-                </form>
-
-                <a href="#" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></a>
-            </div>
-            </li>
         </ul>
         </div>
         <div class="paging">

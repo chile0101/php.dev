@@ -11,6 +11,7 @@ require('classes/Messages.php');
 
 require('controllers/admin/authadmin.php');
 require('controllers/admin/users.php');
+require('controllers/admin/products.php');
 require('controllers/auth.php');
 require('controllers/home.php');
 
@@ -19,6 +20,7 @@ require('models/auth.php');
 require('models/home.php');
 
 require('models/user.php');
+require('models/product.php');
 
 
 
