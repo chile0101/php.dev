@@ -1,7 +1,10 @@
 <?php
 $name = $price = $code  =$image= "";
 $nameErr = $priceErr = $codeErr = $imageErr = "" ;
+
 if(isset($_POST['submit'])){
+
+ 
 
   if(empty($_POST['name'])){
     $nameErr="Missing a field name";
@@ -21,10 +24,8 @@ if(isset($_POST['submit'])){
     $code=$_POST['code'];
   }
 
-  if(empty($_POST['image'])){
+  if(empty($_FILES['image'])){
     $imageErr="Missing a field image";
-  }else{
-    $image=$_POST['image'];
   }
 
 }
@@ -33,7 +34,7 @@ if(isset($_POST['submit'])){
 
 <div class="container">
  
-  <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
+  <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data">
     <div class="form-group row" style="margin-top:20px;">
       <div class="col-sm-3"></div>
       <div class="col-sm-6 text-center"><h2>New Product</h2></div>
@@ -87,7 +88,7 @@ if(isset($_POST['submit'])){
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right">Image</label>
       <div class="col-sm-6">
-        <input type="file" class="form-control-file" name="image">  
+        <input type="file" class="form-control-file" name="image" accept="image/*">  
       </div>
       <div class="col-sm-3">
       <p  class="text-danger"><?php echo $imageErr; ?></p>

@@ -77,8 +77,8 @@
         <div class="paging">
         <ul>
             <li>Prev</li>
-            <li>1</li>
-            <li>2</li>
+            <li><a href="<?php echo ROOT_URL; ?>">1</a></li>
+            <li><a href="<?php echo ROOT_URL; ?>?page=2">2</a></li>
             <li>3</li>
             <li>Next</li>
         </ul>

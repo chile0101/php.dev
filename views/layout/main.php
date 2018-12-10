@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/shop.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/star-rate.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/sign_style.css">
+  <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/cart.css">
+  <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/contact.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
@@ -30,7 +32,7 @@
         <ul> 
           <li><a href="#">Shop</a></li>
           <li><a href="#">Features</a></li>
-          <li><a href="#">Contact us</a></li>
+          <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a></li>
         </ul>
       </div>
       <div class="header-search">
@@ -40,8 +42,13 @@
           <input type="submit" class="search-submit" value="Search" />
         </form>
       </div>
+      <div class="cart-content">
+        <a href="<?php echo ROOT_URL; ?>cart/view">
+          <span class="cart-image" id="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/cart-icon.png" alt="cart-icon"></span>
+        </a>
+      </div>
       <?php if(isset($_SESSION['user_logged_in'])): ?>
-      <div class="cart-content"><span class="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/cart-icon.png" alt="cart-icon"></span></div>
+     
         <div class="sign-content"><a><?php echo $_SESSION['user_data']['fullname']; ?>  </a>| <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a>  </div>  
   
       <?php else: ?>

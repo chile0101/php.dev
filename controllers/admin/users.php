@@ -26,8 +26,7 @@ class Users extends Controller{
         $this->ReturnView($viewmodel->edit($this->id));
     }
     protected function delete(){
-        $this->lock_path();
-
+        $this->lock_path_admin();
         $viewmodel= new UserModel();
         $this->ReturnView($viewmodel->delete($this->id));
     }

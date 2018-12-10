@@ -16,7 +16,18 @@ class Bootstrap{
 				$this->controller=$request['param2'];
 				if($request['param3']==""){
 					$this->action="index";
-				}elseif( filter_var($request['param3'], FILTER_VALIDATE_INT) === false ) {
+					
+				}elseif($request['param3']=="man"){
+					$this->action="index";
+					$this->id="man";
+				}elseif($request['param3']=="woman"){
+					$this->action="index";
+					$this->id="woman";
+				}elseif($request['param3']=="search"){
+					$this->action="index";
+					$this->id="search";
+				}
+				elseif( filter_var($request['param3'], FILTER_VALIDATE_INT) === false ) {
 					$this->action=$request['param3'];
 				}else{
 					$this->id=$request['param3'];

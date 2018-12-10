@@ -55,7 +55,7 @@ class UserModel extends Model{
 					return ;
 			}
 			$this->query('	UPDATE users 
-							SET fullname = :fullname, email = :email, phone=:phone, address=:address
+							SET fullname = :fullname, email = :email, phone=:phone, address=:address,update_at=:update_at
 							WHERE id = :id' );
 
 			$this->bind(':id',$id);
@@ -63,6 +63,7 @@ class UserModel extends Model{
 			$this->bind(':email', $post['email']);
 			$this->bind(':phone', $post['phone']);
 			$this->bind(':address', $post['address']);
+			$this->bind(':update_at',date ("Y-m-d H:i:s", $phptime));
 
 			$this->execute();
 			header('Location: '.ROOT_URL.'admin/users');

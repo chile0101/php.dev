@@ -5,4 +5,7 @@ class HomeModel extends Model{
 		$rows = $this->resultSet();
 		return $rows;
 	}
+	public function Contact(){
+		return;
+	}
 }
