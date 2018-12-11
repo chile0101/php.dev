@@ -12,10 +12,11 @@
         url:     './models/addcart.php',
         data:    product,
         dataType: 'json',
-        //alert(data);
+        
         success: function(data) 
-        {
-        //alert(data);
+        {   
+            // Messages::setMsg('meassage','error');
+           // alert($_SESSION['']);
         }   
         });
 }

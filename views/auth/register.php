@@ -44,10 +44,10 @@
 
 
 
-<div class="login" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/bg_login.jpg);">
+<div class="register" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/bg_login.jpg);">
     <div class="loginbox signup">
     <img src="<?php echo ROOT_PATH; ?>assets/images/icons/avatar.jpeg" class="avatar">
-      <h1>Sign Up Here</h1>
+      <h1>Register Here</h1>
       <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
         <input type="text" name="fullname" placeholder="Full Name">    
           <small class="text-danger"><?php echo $fullnameErr; ?></small>          

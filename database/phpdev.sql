@@ -239,3 +239,12 @@ CREATE TABLE orders_products(
 INSERT INTO orders_products (order_id,product_id,quantity) VALUES (1,1,1);
 INSERT INTO orders_products (order_id,product_id,quantity) VALUES (1,2,1);
 
+CREATE TABLE contact_us(
+    id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255),
+    email varchar(255) NOT NULL,
+    subject varchar(255),
+    message text,
+    create_at datetime DEFAULT CURRENT_TIMESTAMP
+);
+INSERT INTO contact_us(id, name, email, subject, message) VALUES (NULL, 'John Brah','johnbrah@gmail.com','T-shirt','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.');

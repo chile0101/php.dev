@@ -1,3 +1,11 @@
+<?php 
+  $emailErr="";
+  if(isset($_POST['contact_us'])){
+    if(empty($_POST['email'])){
+      $emailErr="Please enter the email";
+    }
+  }
+?>
 <div id="contact" class="container">
   <div id="contact-content" class="contact-content row">
     <div class="col-sm-12 col-md-12 col-lg-12">
@@ -25,20 +33,20 @@
             <div class="col-md-6">
               <h3 class="contact-us underline">SEND US AN EMAIL</h3>
               <div class="form-send-mail">
-                <form action="/action_page.php">
-                  <label for="yname">Your Name (required)</label>
-                  <input type="text" id="yname" name="yourname" placeholder="Your name..">
+                <form method = "POST"  action="<?php $_SERVER['PHP_SELF'] ?>">
+                  <label >Your Name (required)</label>
+                  <input type="text" id="name" name="yourname" placeholder="Your name..">
 
-                  <label for="yemail">Your Email (required)</label>
-                  <input type="text" id="yemail" name="email" placeholder="Your email..">
+                  <label style="margin-right:20px;">Your Email (required)</label><small class= "text-danger"><?php echo $emailErr; ?></small>
+                  <input type="text" id="email" name="email" placeholder="Your email..">
+                  
+                  <label >Subject</label>
+                  <input type="text"  name="subject">
 
-                  <label for="subject">Subject</label>
-                  <input type="text" id="subject" name="subject">
+                  <label>Your Message</label>
+                  <textarea name="message" placeholder="Write something.." style="height:200px"></textarea>
 
-                  <label for="ymessage">Your Message</label>
-                  <textarea id="ymessage" name="ymessage" placeholder="Write something.." style="height:200px"></textarea>
-
-                  <input type="submit" value="Send">
+                  <input type="submit" name="contact_us" value="Send">
                 </form>
               </div>
             </div>

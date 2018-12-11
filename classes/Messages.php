@@ -3,7 +3,7 @@ class Messages{
 	public static function setMsg($text, $type){
 		if($type == 'error'){
 			$_SESSION['errorMsg'] = $text;
-		} else {
+		}else {
 			$_SESSION['successMsg'] = $text;
 		}
 	}
@@ -11,7 +11,7 @@ class Messages{
 	public static function display(){
 		if(isset($_SESSION['errorMsg'])){
 			
-			echo '<div class="alert alert-danger" role="alert" style="width:100%;">'.  $_SESSION['errorMsg']  .'</div>';
+			echo $_SESSION['errorMsg'] ;
 			unset($_SESSION['errorMsg']);
 		}
 

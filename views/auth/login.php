@@ -13,7 +13,7 @@
 <div class="login" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/bg_login.jpg);">
     <div class="loginbox signin">
         <img src="<?php echo ROOT_PATH; ?>assets/images/icons/avatar.jpeg" class="avatar">
-        <h1>Sign In Here</h1>
+        <h1>Login Here</h1>
         <small class="text-danger">* <?php echo $error; ?></small>
         <div >
             <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">

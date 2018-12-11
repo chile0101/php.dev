@@ -1,0 +1,9 @@
+.message{
+    position:relative;
+    margin-top:200px;
+    width:100%;
+
+}
+.message > span:hover{
+        color: black;
+}

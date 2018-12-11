@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../classes/Messages.php');  
 // $product_id=$_POST['id'];
 
 if(!empty($_POST['id'])){
@@ -21,7 +22,9 @@ if(!empty($_POST['id'])){
 
 
     }
+   Messages::setMsg('chiel','error');
 }
+
 echo json_decode(1);
 
 ?>

@@ -6,6 +6,25 @@ class HomeModel extends Model{
 		return $rows;
 	}
 	public function Contact(){
+		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+		
+		if($post['contact_us']){
+			
+			if($post['email']==""){
+				return;
+			}
+			$this->query('INSERT INTO contact_us (name, email, subject, message) VALUES (:name, :email, :subject,:message)');
+			$this->bind(':name', $post['name']);
+			$this->bind(':email', $post['email']);
+			$this->bind(':subject', $post['subject']);
+			$this->bind(':message', $post['message']);
+
+			$this->execute();
+			// Verify
+			if($this->lastInsertId()){
+				header('Location: '.ROOT_URL);
+			}
+		}
 		return;
 	}
 	public function Detail($id){

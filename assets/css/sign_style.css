@@ -3,7 +3,16 @@
   width: 100%;
   /* background: url(images/clothing.jpg); */
   background-size: cover;
-  height: 600px;
+  height: 510px;
+  padding: 200px 0px 0px 0px;
+
+}
+.register{
+  position: relative;
+  width: 100%;
+  /* background: url(images/clothing.jpg); */
+  background-size: cover;
+  height: 800px;
   padding: 200px 0px 0px 0px;
 
 }
@@ -21,12 +30,12 @@
 
 .signin{
   width: 320px;
-  height: 420px;
+  height: 460px;
 }
 
 .signup{
   width: 320px;
-  height: 500px;
+  height: 95%;
 }
 
 .loginbox h1{

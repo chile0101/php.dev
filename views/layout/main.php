@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/sign_style.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/cart.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/contact.css">
+  <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/message.css">
+
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/detail_style.css">
 
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
@@ -58,7 +60,10 @@
       <?php endif ?>
     </div>  
   </header>
-    
+      <div class="alert alert-danger message" role="alert">
+      <span onclick="this.parentElement.style.display='none';">&times;</span> 
+        <?php Messages::display(); ?>
+      </div>
       <?php require($view); ?>
 
   <footer>
@@ -94,7 +99,8 @@
       <p>CREATED BY TEAM C2H2. THANK YOU !</p>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"> -->
+    <script src="<?php echo ROOT_PATH; ?>assets/js/jquery-3.3.1.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/popper.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/menu-icon.js" ></script>
