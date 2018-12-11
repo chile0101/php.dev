@@ -1,5 +1,5 @@
 <?php
-$name = $price = $code  =$image= "";
+$name = $price = $code  =$image=$description= "";
 $nameErr = $priceErr = $codeErr = $imageErr = "" ;
 
 if(isset($_POST['submit'])){
@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
   }
 
   if(empty($_POST['price'])){
-    $priceError="Missing a field price";
+    $priceErr="Missing a field price";
   }else{
     $price=$_POST['price'];
   }
@@ -24,7 +24,11 @@ if(isset($_POST['submit'])){
     $code=$_POST['code'];
   }
 
-  if(empty($_FILES['image'])){
+  if(!empty($_POST['description'])){
+    $description=$_POST['description'];
+  }
+
+  if(empty($_POST['image'])){
     $imageErr="Missing a field image";
   }
 
@@ -43,10 +47,10 @@ if(isset($_POST['submit'])){
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right">Name</label>
       <div class="col-sm-6">
-        <input type="text" name="name" class="form-control" value="">
+        <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
         
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3" style="margin-top:5px;">
         <p class="text-danger"><?php echo $nameErr; ?></p>
       </div>
     </div>
@@ -54,10 +58,10 @@ if(isset($_POST['submit'])){
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right">Price</label>
       <div class="col-sm-6">
-        <input type="number" name="price"  min="1" max="1000" style="width:100px ;margin-right:5px; "> $
+        <input type="number" name="price"  min="1" max="1000" value="<?php echo $price; ?>" style="width:100px ;margin-right:5px; " > $
       </div>
       <div class="col-sm-3">
-       
+        <p class="text-danger"><?php echo $priceErr; ?></p>
       </div>
     </div>
 
@@ -65,7 +69,7 @@ if(isset($_POST['submit'])){
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right">Code</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control" name="code">
+        <input type="text" class="form-control" name="code" value="<?php echo $code; ?>">
         
       </div>
       <div class="col-sm-3">
@@ -77,7 +81,7 @@ if(isset($_POST['submit'])){
     <div class="form-group row">
       <label class="col-sm-3 col-form-label text-right">Description</label>
       <div class="col-sm-6">
-        <textarea  class="form-control" name="description" ></textarea>
+        <textarea  class="form-control" name="description" value="<?php echo $description; ?>" ></textarea>
         
       </div>
       <div class="col-sm-3">
@@ -91,7 +95,7 @@ if(isset($_POST['submit'])){
         <input type="file" class="form-control-file" name="image" accept="image/*">  
       </div>
       <div class="col-sm-3">
-      <p  class="text-danger"><?php echo $imageErr; ?></p>
+        <p  class="text-danger"><?php echo $imageErr; ?></p>
       </div>
     </div>
 

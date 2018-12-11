@@ -10,4 +10,10 @@ class HomeModel extends Model{
 		// );
 		return $rows;
 	}
+	public function Detail($id){
+		$this->query('SELECT * FROM products WHERE id = :id');
+		$this->bind(':id',$id);
+		$product=$this->single();
+		return $product;
+	}
 }

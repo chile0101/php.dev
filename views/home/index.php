@@ -63,7 +63,7 @@
         
         <?php foreach ($viewmodel as $product) : ?>
             <li class="item">
-            <a href="#">
+            <a href="<?php echo ROOT_URL; ?>home/detail/<?php echo $product['id']; ?>">
                 <div class="item-image">
                 <img width="230" height="230" src="<?php echo $product['image'];?> " alt="product">
                 <span class="price">

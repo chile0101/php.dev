@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/sign_style.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/cart.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/contact.css">
+  <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/detail_style.css">
+
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
