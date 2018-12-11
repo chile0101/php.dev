@@ -50,8 +50,8 @@
         </a>
       </div>
       <?php if(isset($_SESSION['user_logged_in'])): ?>
-     
-        <div class="sign-content"><a><?php echo $_SESSION['user_data']['fullname']; ?>  </a>| <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a>  </div>  
+        <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/profile/<?php echo $_SESSION['user_data']['id']; ?>"><?php echo $_SESSION['user_data']['fullname']; ?>  </a>| <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a></div>
+         
   
       <?php else: ?>
         <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/login">Log in </a>|<a href="<?php echo ROOT_URL; ?>auth/register"> Register</a></div>
@@ -84,7 +84,7 @@
         <h3>GET IN TOUCH</h3>
         <p>If you want to be updated regularly on our newest updates, events, and always be on top of things, leave your email and have no worries.</p>
         <form role="search" method="get" class="subscribe-form" action="#">
-          <input type="text" class="subscribe-field" placeholder=" Email" value="email"  title="Subscribe" />
+          <input type="text" class="subscribe-field" placeholder=" Email" value=""  title="Subscribe" />
           <input type="hidden" name="lang" />
           <input type="submit" class="subscribe-submit" value="Subscribe" />
         </form>

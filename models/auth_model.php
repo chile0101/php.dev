@@ -69,42 +69,8 @@ class AuthModel extends Model{
 	public function logout(){
 		unset($_SESSION['user_logged_in']);
 		unset($_SESSION['user_data']);
-		//session_destroy();
+		session_destroy();
 		header('Location: '.ROOT_URL);
 	}
-
-
-	public function profile($id){
-		
-		$this->query('SELECT * FROM users WHERE id = :id');
-		$this->bind(':id',$id);
-		$user=$this->single();
-		return $user;
-	}
-	public function edit($id){
-		$user=$this->profile($id);
-		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-		
-		if($post['submit']){
-
-			if(	empty($post['fullname']) || empty($post['phone']) || empty($post['address'])  || 
-				!filter_var($post['email'], FILTER_VALIDATE_EMAIL)){
-					return ;
-			}
-			$this->query('	UPDATE users 
-							SET fullname = :fullname, email = :email, phone=:phone, address=:address
-							WHERE id = :id' );
-
-			$this->bind(':id',$id);
-			$this->bind(':fullname', $post['fullname']);
-			$this->bind(':email', $post['email']);
-			$this->bind(':phone', $post['phone']);
-			$this->bind(':address', $post['address']);
-
-			$this->execute();
-
-			header('Location: '.ROOT_URL.'');
-		}
-		return $user;
-	}
+	
 }

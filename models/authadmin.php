@@ -33,7 +33,7 @@ class AuthAdminModel extends Model{
 	public function logout(){
 		unset($_SESSION['admin_logged_in']);
 		unset($_SESSION['admin_data']);
-		session_destroy();
+		//session_destroy();
 		header('Location: '.ROOT_URL.'admin/');
 	}
 }

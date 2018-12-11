@@ -13,7 +13,7 @@ class Auth extends Controller{
         $viewmodel = new AuthModel();
         $this->ReturnView($viewmodel->logout());
     }
-    protected function profile(){
+     protected function profile(){
         $viewmodel=new AuthModel();
         $this->ReturnView($viewmodel->profile($this->id));
     }
@@ -21,7 +21,6 @@ class Auth extends Controller{
          $viewmodel=new AuthModel();
         $this->ReturnView($viewmodel->edit($this->id));
     }
-
 }
 
 ?>

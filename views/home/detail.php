@@ -1,3 +1,24 @@
+
+<script type="text/javascript">
+ function addCart(id){
+    var quantity= document.getElementById("quantity").value;
+    product={
+        'id': id,
+        'quantity':quantity
+    };
+    $.ajax(
+        {     
+        type:    'post',
+        url:     '../../models/addcart.php',
+        data:    product,
+        dataType: 'json',
+        success: function(data) 
+        {
+        //alert(data);
+        }   
+        });
+}
+</script>
 <div class="container detail">
   <div class="main row">
     <div class="col-md-6 col-xs-12">
@@ -26,10 +47,10 @@
         </div>
         <div class="ty-field-group">
           <label class="type-label">Quantity:</label>
-          <input type="number" name="quantity" style="width:30px; text-align: center;" placeholder="1">
+          <input type="number" id="quantity" style="width:30px; text-align: center;" value="1" min="1">
         </div>
         <div class="ty-button">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-primary">
             ADD TO CART
           </button>
         </div>
