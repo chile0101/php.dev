@@ -1,3 +1,24 @@
+<script type="text/javascript">
+ function deleteItem(id){
+     //alert('chile');
+	 product={
+        'id': id
+    };
+    $.ajax(
+        {     
+        type:    'post',
+        url:     '../models/deleteItem.php',
+        data:    product,
+        dataType: 'json',
+        //alert(data);
+        success: function(data) 
+        {
+        //alert(data);
+        }   
+        });
+}
+</script>
+
 <div class="container">
 	<div class="row form-content">
 		<form class="list-cart-content col-md-11">
@@ -10,13 +31,13 @@
 				    <th scope="col">Price</th>
 				</thead>
 				<tbody>
-					<?php foreach ($viewmodel as $product) : ?>
+					<?php foreach ($viewmodel[0] as $product) : ?>
 						<tr>
-							<td class="product-remove"><a href="" class="remove">x</a></td>
-	      					<td><img width="100" height="100" src="<?php echo $product['image'];?> " alt="product"></td>
+							<td class="product-remove"><a href="" onclick="deleteItem(<?php echo $product['id'] ; ?>)"  class="remove">x</a></td>
+	      					<td><img width="100" height="100" src="<?php echo ROOT_PATH.$product['image'];?> " alt="product"></td>
 					      	<td><?php echo $product['name'];?></td>
-					      	<td><input type="number" name="quantity" style="width:30px; text-align: center;" placeholder="1"></td>
-					      	<td><?php echo $product['price'];?>$	</td>
+					      	<td><?php echo $product['quantity'] ?></td>
+					      	<td><?php echo $product['total_price'];?>$	</td>
 						</tr>
 				     <?php endforeach ?>
 				     <tr>
@@ -38,15 +59,9 @@
 			<table class="table">
 				<tbody>
 					<tr>
-						<th>Subtotal</th>
-						<td data-title="Subtotal">
-							<span class="woocommerce-Price-amount amount">$</span>
-						</td>
-					</tr>
-					<tr>
 						<th>Total</th>
 						<td data-title="Total">
-							<strong><span class="woocommerce-Price-amount amount">$</span></strong>
+							<strong><span class="woocommerce-Price-amount amount"><?php echo $viewmodel[1] ?> $</span></strong>
 						</td>
 					</tr>
 				</tbody>

@@ -40,7 +40,7 @@ CREATE TABLE products (
     id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     image varchar(255) NOT NULL,
-    price int(10) NOT NULL,
+    price decimal(5,1) NOT NULL,
     code varchar(20) NOT NULL,
     description text ,
     type_gender_id int(11) NOT NULL,
@@ -225,7 +225,7 @@ INSERT INTO products (id,name,image,price,code,description,type_gender_id)
 CREATE TABLE orders (
     id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     user_id int(11) NOT NULL,
-    total int(11),
+    total decimal(5,1),
     FOREIGN KEY (user_id) REFERENCES users(id) 
 );
 INSERT INTO orders (id,user_id,total) VALUES (NULL,1,149.44);

@@ -1,4 +1,26 @@
 
+<script type="text/javascript">
+ function addCart(id){
+      //alert(id///.p);
+    product={
+        'id': id,
+        'quantity':1
+    };
+    $.ajax(
+        {     
+        type:    'post',
+        url:     './models/addcart.php',
+        data:    product,
+        dataType: 'json',
+        //alert(data);
+        success: function(data) 
+        {
+        //alert(data);
+        }   
+        });
+}
+
+</script>
 <div class="container">
     <div class="row">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -67,7 +89,7 @@
                 </div>
                 </form>
 
-                <a href="#" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></a>
+                <p id="addCart" onclick="addCart(<?php echo $product['id']; ?>);" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></p>
             </div>
             </li>
         <?php endforeach ?>
@@ -83,4 +105,6 @@
             <li>Next</li>
         </ul>
         </div>
+
 </div>
+

@@ -92,8 +92,9 @@
       <p>CREATED BY TEAM C2H2. THANK YOU !</p>
     </div>
   </footer>
-    <script src="<?php echo ROOT_PATH; ?>assets/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
     <script src="<?php echo ROOT_PATH; ?>assets/js/popper.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo ROOT_PATH; ?>assets/js/menu-icon.js" ></script>
 </body>
 </html>

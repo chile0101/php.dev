@@ -9,6 +9,7 @@ class Home extends Controller{
         $viewmodel = new HomeModel();
         $this->ReturnView($viewmodel->Contact());
     }
+
 }
 
 ?>

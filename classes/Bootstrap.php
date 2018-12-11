@@ -52,7 +52,7 @@ class Bootstrap{
 				$this->action=$request['param2'];
 			}
 
-			// $this->id=$request['param3'];
+			 $this->id=$request['param3'];
 		}
 
 		echo "controller".$this->controller."<br>";

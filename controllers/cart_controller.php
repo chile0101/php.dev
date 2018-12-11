@@ -7,6 +7,7 @@ class Cart extends Controller{
 	}
 	protected function view(){
 		$viewmodel = new CartModel();
+		//echo $viewmodel->view();
 		$this->ReturnView($viewmodel->view());
 	}
 }

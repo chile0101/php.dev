@@ -15,6 +15,8 @@ require('controllers/admin/products.php');
 require('controllers/auth.php');
 require('controllers/home.php');
 require('controllers/cart_controller.php');
+// require('controllers/addcart.php');
+
 
 require('models/authadmin.php');
 require('models/auth.php');
