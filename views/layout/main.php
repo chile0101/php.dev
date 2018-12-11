@@ -32,7 +32,7 @@
       </div>
       <div class="menu-primary">
         <ul> 
-          <li><a href="#">Shop</a></li>
+          <li><a href="<?php echo ROOT_URL; ?>home/shop">Shop</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a></li>
         </ul>

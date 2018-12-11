@@ -1,25 +1,22 @@
 
 <script type="text/javascript">
- function addCart(id){
-      //alert(id///.p);
-    product={
-        'id': id,
-        'quantity':1
-    };
-    $.ajax(
-        {     
-        type:    'post',
-        url:     './models/addcart.php',
-        data:    product,
-        dataType: 'json',
-        //alert(data);
-        success: function(data) 
-        {
-        //alert(data);
-        }   
+    function addCart(id){
+          //alert(id///.p);
+        product={
+            'id': id,
+            'quantity':1
+        };
+        $.ajax({     
+            type:    'post',
+            url:     './models/addcart.php',
+            data:    product,
+            dataType: 'json',
+            //alert(data);
+            success: function(data){
+            //alert(data);
+            }   
         });
-}
-
+    }
 </script>
 <div class="container">
     <div class="row">
@@ -46,22 +43,10 @@
         </div>
     </div>
 
-        <h1 class="page-title">Shop</h1>
-        <div class="shop-page">
-        <p class="result-count">Showing 1-12 of 24 results</p>
-        <form class="ordering" method="get">
-            <select name="orderby" class="orderby">
-            <option value="menu_order" selected='selected'>Default sorting</option>
-            <option value="popularity">Sort by popularity</option>
-            <option value="rating">Sort by average rating</option>
-            <option value="date">Sort by newness</option>
-            <option value="price">Sort by price: low to high</option>
-            <option value="price-desc">Sort by price: high to low</option>
-            </select>
-        </form>
+    <br><br>
+    <div class="row">
         <ul class="products">
-        
-        <?php foreach ($viewmodel as $product) : ?>
+            <?php foreach ($viewmodel as $product) : ?>
             <li class="item">
             <a href="<?php echo ROOT_URL; ?>home/detail/<?php echo $product['id']; ?>">
                 <div class="item-image">
@@ -89,22 +74,15 @@
                 </div>
                 </form>
 
-                <p id="addCart" onclick="addCart(<?php echo $product['id']; ?>);" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></p>
+                <p id="addCart" onclick="addCart(<?php echo $product['id']; ?>);" class="add-to-card"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></p>
             </div>
             </li>
-        <?php endforeach ?>
-            
+            <?php endforeach ?>
         </ul>
-        </div>
-        <div class="paging">
-        <ul>
-            <li>Prev</li>
-            <li><a href="<?php echo ROOT_URL; ?>">1</a></li>
-            <li><a href="<?php echo ROOT_URL; ?>?page=2">2</a></li>
-            <li>3</li>
-            <li>Next</li>
-        </ul>
-        </div>
-
+    </div>
+    <div class="row ty-see-product">
+        <a class="btn btn-dark" href="<?php echo ROOT_URL; ?>home/shop">SEE ALL PRODUCTS</a>
+    </div>
 </div>
+
 
