@@ -49,15 +49,15 @@
     <img src="<?php echo ROOT_PATH; ?>assets/images/icons/avatar.jpeg" class="avatar">
       <h1>Register Here</h1>
       <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
-        <input type="text" name="fullname" placeholder="Full Name">    
+        <input type="text" name="fullname" placeholder="Full Name" value="<?php echo $fullname; ?>">    
           <small class="text-danger"><?php echo $fullnameErr; ?></small>          
-        <input type="text" name="email" placeholder="Email">       
+        <input type="text" name="email" placeholder="Email" value="<?php echo $email; ?>">       
           <small class="text-danger"><?php echo $emailErr; ?></small>
-        <input type="text" name="phone" placeholder="Phone Number"> 
+        <input type="text" name="phone" placeholder="Phone Number" value="<?php echo $phone; ?>"> 
           <small class="text-danger"><?php echo $phoneErr; ?></small>  
-        <input type="text" name="address" placeholder="Address">   
+        <input type="text" name="address" placeholder="Address" value="<?php echo $address; ?>">   
           <small class="text-danger"><?php echo $addressErr; ?></small>
-        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="password" placeholder="Password" value="<?php echo $password; ?>">
           <small class="text-danger"><?php echo $passwordErr; ?></small>        
         <input type="password" name="password_confirm" placeholder="Confirm Password">   
           <small class="text-danger"><?php echo $passwordcfErr; ?></small>     

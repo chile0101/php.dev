@@ -1,4 +1,3 @@
-<?php echo $viewmodel['image']; ?>
 <div class="container">
     <div class="row" style="margin-top:25px;">
         <div class="col-lg-4">

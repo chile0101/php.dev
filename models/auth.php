@@ -26,7 +26,6 @@ class AuthModel extends Model{
 			$this->execute();
 			// Verify
 			if($this->lastInsertId()){
-				// Redirect
 				header('Location: '.ROOT_URL.'auth/login');
 			}
 		}
@@ -59,8 +58,9 @@ class AuthModel extends Model{
 					"email"	=> $row['email']
 				);
 				header('Location: '.ROOT_URL);
+				
 			} else {
-				return "Email or Password is in invalid";
+				return;
 			}
 		}
 		return;

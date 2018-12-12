@@ -38,7 +38,7 @@ class ProductModel extends Model{
 				if(move_uploaded_file($_FILES['image']['tmp_name'],$img_url )){
 					echo 'ok';
 				}else{
-					die('die');
+					die('Image not upload');
 				}
 								
 			}else{

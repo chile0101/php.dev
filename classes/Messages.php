@@ -11,7 +11,7 @@ class Messages{
 	public static function display(){
 		if(isset($_SESSION['errorMsg'])){
 			
-			echo $_SESSION['errorMsg'] ;
+			echo '<div class="messagess">'.$_SESSION['errorMsg'].'</div>';
 			unset($_SESSION['errorMsg']);
 		}
 
