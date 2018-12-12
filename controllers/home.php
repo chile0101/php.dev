@@ -17,7 +17,10 @@ class Home extends Controller{
     	$viewmodel = new HomeModel();
     	$this->ReturnView($viewmodel->Detail($this->id));
     }
-
+    protected function about(){
+        $viewmodel = new HomeModel();
+        $this->ReturnView($viewmodel->About());
+    }
 }
 
 ?>

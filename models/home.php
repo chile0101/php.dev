@@ -38,4 +38,7 @@ class HomeModel extends Model{
 		$product=$this->single();
 		return $product;
 	}
+	public function About(){
+		return;
+	}
 }
