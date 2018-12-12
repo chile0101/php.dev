@@ -1,4 +1,3 @@
-
 <script type="text/javascript">
  function addCart(id){
       //alert(id///.p);
@@ -29,19 +28,17 @@
                 var element = document.getElementById("p_element");
                 element.parentNode.removeChild(element);
                 mess.classList.remove("messagess");
-               
-                 }, 3000);
-            //clearTimeout()
-            //return;<div data-notify="container" class="col-xs-11 col-sm-4 alert alert-success animated fadeInDown" role="alert" data-notify-position="top-right" style="display: inline-block; margin: 0px auto; position: fixed; transition: all 0.5s ease-in-out 0s; z-index: 999999; top: 20px; right: 20px; animation-iteration-count: 1;"><button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button><span data-notify="icon"></span> <span data-notify="title"></span> <span data-notify="message"><strong>Cập nhật giỏ hàng</strong> - Đã thêm sản phẩm vào giỏ hàng.</span><a href="#" target="_blank" data-notify="url"></a></div>
+                
+                 },2000);
+                 
+            
         }   
         });
     }
 </script>
 <div id="alert">
 </div>
-<!-- <div class="alert alert-success messagess" role="alert" >
-    <p>error</p>
-</div> -->
+
 <div class="container">
     <div class="row">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

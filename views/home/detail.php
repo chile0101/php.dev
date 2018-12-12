@@ -1,4 +1,3 @@
-
 <script type="text/javascript">
  function addCart(id){
     var quantity= document.getElementById("quantity").value;
@@ -14,11 +13,29 @@
         dataType: 'json',
         success: function(data) 
         {
-        //alert(data);
+        
+          var mess = document.getElementById("alert");
+            
+            // mess.setAttribute("class", "alert alert-success");
+             mess.classList.add("messagess");
+             var p = document.createElement("p");
+             p.setAttribute("id", "p_element");
+             var t = document.createTextNode("Added products to cart");
+             p.appendChild(t);
+             mess.appendChild(p);
+             setTimeout(function(){ 
+                 var element = document.getElementById("p_element");
+                 element.parentNode.removeChild(element);
+                 mess.classList.remove("messagess");
+                 
+                  },2000);
+
         }   
         });
 }
 </script>
+<div id="alert">
+</div>
 <div class="container detail">
   <div class="main row">
     <div class="col-md-6 col-xs-12">

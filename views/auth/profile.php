@@ -174,7 +174,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <!-- <button type="submit" class="btn btn-success" name="submit"><i class="fa fa-user-plus"></i> Register</button> -->
-                <input class="btn btn-success" name="submit" type="submit" value=" Update User "/>
+                <input class="btn btn-dark" name="submit" type="submit" value=" Update User "/>
             </div>
         </div>
     </form>

@@ -1,22 +1,43 @@
 <script type="text/javascript">
-    function addCart(id){
-          //alert(id///.p);
-        product={
-            'id': id,
-            'quantity':1
-        };
-        $.ajax({     
-            type:    'post',
-            url:     '../models/addcart.php',
-            data:    product,
-            dataType: 'json',
+ function addCart(id){
+      //alert(id///.p);
+    product={
+        'id': id,
+        'quantity':1
+    };
+    $.ajax(
+        {     
+        type:    'post',
+        url:     '../models/addcart.php',
+        data:    product,
+        dataType: 'json',
+        
+        success: function(data) 
+        {   
             //alert(data);
-            success: function(data){
-            //alert(data);
-            }   
+            var mess = document.getElementById("alert");
+            
+           // mess.setAttribute("class", "alert alert-success");
+            mess.classList.add("messagess");
+            var p = document.createElement("p");
+            p.setAttribute("id", "p_element");
+            var t = document.createTextNode("Added products to cart");
+            p.appendChild(t);
+            mess.appendChild(p);
+            setTimeout(function(){ 
+                var element = document.getElementById("p_element");
+                element.parentNode.removeChild(element);
+                mess.classList.remove("messagess");
+                
+                 },2000);
+                 
+            
+        }   
         });
     }
 </script>
+<div id="alert">
+</div>
 
 <div class="container">
     <h1 class="page-title">Shop</h1>
