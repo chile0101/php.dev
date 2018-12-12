@@ -110,3 +110,14 @@
 </div>
 
 
+<section class="home-section header-about module" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/about/home.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/home.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="module-title font-alt">SHOPERA</h1>
+                <div class="module-subtitle font-serif">We are Shopera. We are an empowering, bold and forward thinking online fashion brand, inspired by real life. We design and create product informed by you, our customers, our friends and global influences: Catwalk, celebrity, social media, bloggers and street style, creating an online fashion destination that encompasses and celebrates everything it means to be a girl in a digitally immersed world today.</div>
+            </div>
+        </div>
+    </div>
+</section>
+

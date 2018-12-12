@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/cart.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/contact.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/message.css">
-
+  <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/about.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/detail_style.css">
 
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
@@ -34,7 +34,7 @@
       <div class="menu-primary">
         <ul> 
           <li><a href="<?php echo ROOT_URL; ?>home/shop">Shop</a></li>
-          <li><a href="#">Features</a></li>
+          <li><a href="<?php echo ROOT_URL; ?>home/about">About</a></li>
           <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a></li>
         </ul>
       </div>
