@@ -22,7 +22,7 @@ if(!empty($_POST['id'])){
 
 
     }
-   Messages::setMsg('chiel','error');
+   //Messages::setMsg('chiel','error');
 }
 
 echo json_decode(1);

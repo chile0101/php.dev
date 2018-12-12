@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
   <link rel="icon" href="<?php echo ROOT_PATH;?>assets/images/icons/logo-icon.png"  sizes="20x20">
-
 </head>
 <body>
   <header>
@@ -34,7 +33,7 @@
       </div>
       <div class="menu-primary">
         <ul> 
-          <li><a href="#">Shop</a></li>
+          <li><a href="<?php echo ROOT_URL; ?>home/shop">Shop</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a></li>
         </ul>
@@ -60,10 +59,7 @@
       <?php endif ?>
     </div>  
   </header>
-      <div class="alert alert-danger message" role="alert">
-      <span onclick="this.parentElement.style.display='none';">&times;</span> 
-        <?php Messages::display(); ?>
-      </div>
+  
       <?php require($view); ?>
 
   <footer>

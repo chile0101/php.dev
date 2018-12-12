@@ -16,7 +16,7 @@ class CartModel extends Model{
 			foreach ($_SESSION['cart'] as $key =>$value){
 				$this->query('SELECT * FROM products WHERE id=:id');
 				$this->bind(':id',$key);
-				$product=$this->single();
+				$product=$this->single();	
 				$product['quantity']=$value;
 				$product['total_price']=$value*$product['price'];
 				$total+=$product['total_price'];

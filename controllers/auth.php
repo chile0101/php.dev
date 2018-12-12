@@ -17,10 +17,10 @@ class Auth extends Controller{
         $viewmodel=new AuthModel();
         $this->ReturnView($viewmodel->profile($this->id));
     }
-    protected function edit(){
-         $viewmodel=new AuthModel();
-        $this->ReturnView($viewmodel->edit($this->id));
-    }
+    // protected function edit(){
+    //      $viewmodel=new AuthModel();
+    //     $this->ReturnView($viewmodel->edit($this->id));
+    // }
 
 }
 

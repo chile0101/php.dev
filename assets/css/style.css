@@ -23,7 +23,6 @@ header{
   border-bottom: 3px solid #cc5200;
   height: 100px;
   width: 100%;
-
   z-index: 3;
   overflow: hidden;
 }

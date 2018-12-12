@@ -15,13 +15,33 @@
         
         success: function(data) 
         {   
-            // Messages::setMsg('meassage','error');
-           // alert($_SESSION['']);
+            //alert(data);
+            var mess = document.getElementById("alert");
+            
+           // mess.setAttribute("class", "alert alert-success");
+            mess.classList.add("messagess");
+            var p = document.createElement("p");
+            p.setAttribute("id", "p_element");
+            var t = document.createTextNode("Added products to cart");
+            p.appendChild(t);
+            mess.appendChild(p);
+            setTimeout(function(){ 
+                var element = document.getElementById("p_element");
+                element.parentNode.removeChild(element);
+                mess.classList.remove("messagess");
+               
+                 }, 3000);
+            //clearTimeout()
+            //return;<div data-notify="container" class="col-xs-11 col-sm-4 alert alert-success animated fadeInDown" role="alert" data-notify-position="top-right" style="display: inline-block; margin: 0px auto; position: fixed; transition: all 0.5s ease-in-out 0s; z-index: 999999; top: 20px; right: 20px; animation-iteration-count: 1;"><button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button><span data-notify="icon"></span> <span data-notify="title"></span> <span data-notify="message"><strong>Cập nhật giỏ hàng</strong> - Đã thêm sản phẩm vào giỏ hàng.</span><a href="#" target="_blank" data-notify="url"></a></div>
         }   
         });
-}
-
+    }
 </script>
+<div id="alert">
+</div>
+<!-- <div class="alert alert-success messagess" role="alert" >
+    <p>error</p>
+</div> -->
 <div class="container">
     <div class="row">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -47,22 +67,10 @@
         </div>
     </div>
 
-        <h1 class="page-title">Shop</h1>
-        <div class="shop-page">
-        <p class="result-count">Showing 1-12 of 24 results</p>
-        <form class="ordering" method="get">
-            <select name="orderby" class="orderby">
-            <option value="menu_order" selected='selected'>Default sorting</option>
-            <option value="popularity">Sort by popularity</option>
-            <option value="rating">Sort by average rating</option>
-            <option value="date">Sort by newness</option>
-            <option value="price">Sort by price: low to high</option>
-            <option value="price-desc">Sort by price: high to low</option>
-            </select>
-        </form>
+    <br><br>
+    <div class="row">
         <ul class="products">
-        
-        <?php foreach ($viewmodel as $product) : ?>
+            <?php foreach ($viewmodel as $product) : ?>
             <li class="item">
             <a href="<?php echo ROOT_URL; ?>home/detail/<?php echo $product['id']; ?>">
                 <div class="item-image">
@@ -90,22 +98,15 @@
                 </div>
                 </form>
 
-                <p id="addCart" onclick="addCart(<?php echo $product['id']; ?>);" class="add-to-card"><img src="assets/images/icons/cart-icon.png" width="30" height="30"></p>
+                <p id="addCart" onclick="addCart(<?php echo $product['id']; ?>);" class="add-to-card"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></p>
             </div>
             </li>
-        <?php endforeach ?>
-            
+            <?php endforeach ?>
         </ul>
-        </div>
-        <div class="paging">
-        <ul>
-            <li>Prev</li>
-            <li><a href="<?php echo ROOT_URL; ?>">1</a></li>
-            <li><a href="<?php echo ROOT_URL; ?>?page=2">2</a></li>
-            <li>3</li>
-            <li>Next</li>
-        </ul>
-        </div>
-
+    </div>
+    <div class="row ty-see-product">
+        <a class="btn btn-dark" href="<?php echo ROOT_URL; ?>home/shop">SEE ALL PRODUCTS</a>
+    </div>
 </div>
+
 

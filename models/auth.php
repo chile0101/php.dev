@@ -79,10 +79,7 @@ class AuthModel extends Model{
 		$this->query('SELECT * FROM users WHERE id = :id');
 		$this->bind(':id',$id);
 		$user=$this->single();
-		return $user;
-	}
-	public function edit($id){
-		$user=$this->profile($id);
+		
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 		
 		if($post['submit']){
@@ -102,9 +99,13 @@ class AuthModel extends Model{
 			$this->bind(':address', $post['address']);
 
 			$this->execute();
+			$_SESSION['user_data']['fullname']=$post['fullname'];
+			$_SESSION['user_data']['email']=$post['email'];
 
 			header('Location: '.ROOT_URL.'');
 		}
 		return $user;
 	}
-}
+
+	}
+
