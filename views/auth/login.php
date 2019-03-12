@@ -3,14 +3,17 @@
     if(isset($_POST['submit'])){
         if(empty($_POST['email']) || empty($_POST['password'])){
             $error="Please fill in all required fields";
+        }else{
+            if(!empty($viewmodel)){
+                $error=$viewmodel;
+                
+            }
         }
     }
-    if(!empty($viewmodel)){
-        $error=$viewmodel;
-    }
+   
 ?>
 
-<div class="login" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/bg_login.jpg);">
+<div class="login" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/slides/banner1.jpg); margin-bottom:50px;">
     <div class="loginbox signin">
         <img src="<?php echo ROOT_PATH; ?>assets/images/icons/avatar.jpeg" class="avatar">
         <h1>Login Here</h1>

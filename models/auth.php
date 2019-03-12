@@ -60,7 +60,7 @@ class AuthModel extends Model{
 				header('Location: '.ROOT_URL);
 				
 			} else {
-				return;
+				return "Email or Password invalid";
 			}
 		}
 		return;

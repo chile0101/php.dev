@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/detail_style.css">
 
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
-  <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
   <link rel="icon" href="<?php echo ROOT_PATH;?>assets/images/icons/logo-icon.png"  sizes="20x20">
 
@@ -28,14 +27,14 @@
   <header>
     <div class="header-container">
       <div class="site-title">
-        <a href="<?php echo ROOT_URL; ?>"><h2>SHOPERA</h2></a>
+        <a href="<?php echo ROOT_URL; ?>"><img  src="<?php echo ROOT_PATH;?>assets/images/logo-final.png" alt="logo"></a>
       </div>
       <div class="menu-icon" >
         <img src="<?php echo ROOT_PATH;?>assets/images/icons/menu-icon.png" alt="menu-icon" >
       </div>
       <div class="menu-primary">
         <ul> 
-          <li><a href="<?php echo ROOT_URL; ?>home/shop">Shop</a></li>
+          <li><a href="<?php echo ROOT_URL; ?>home/shop">Store</a></li>
           <li><a href="<?php echo ROOT_URL; ?>home/about">About</a></li>
           <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a></li>
         </ul>
@@ -49,7 +48,7 @@
       </div>
       <div class="cart-content">
         <a href="<?php echo ROOT_URL; ?>cart/view">
-          <span class="cart-image" id="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/cart-icon.png" alt="cart-icon"></span>
+          <span class="cart-image" id="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/shopping-cart.png" alt="cart-icon"></span>
         </a>
       </div>
       <?php if(isset($_SESSION['user_logged_in'])): ?>
@@ -63,28 +62,34 @@
   </header>
       
       <?php require($view); ?>
-
-  <footer>
-    <div class="footer-container">
-      <div class="about-us">
-        <h3>ABOUT US</h3>
-        <p> <img src="<?php echo ROOT_PATH;?>assets/images/icons/logo-icon.png" alt="logo-icon" style="width: 40px; height: 40px; background: #fff; border-radius: 50%"> Lorem ipsum dolori sit amet, consectec tur adipiscing elit. I Mauris sed consequat nibh. Nunc blandit tellus in sollicitudin tempus. Proin id iaculis odio, sedi sagittis risus.</p>
+   
+<div class="container">
+    <div class=" row" style="margin-bottom:30px;">
+      <div class="col">
+        <h4>Contact</h4>
         <hr>
-        <p>quisquam beatae nesciunt iusto molestiae delectus temporibus ullam quasi</p>
+        
+        <a href="mailto:example@mail.com"><h6><i style="margin-right:5px;" class="fa fa-envelope" aria-hidden="true"></i> ex@mail.com</h6></a>
+        <h6> <i style="margin-right:5px;" class="fa fa-phone" aria-hidden="true"></i> +18045678834</h6>
+        <h6><i style="margin-right:5px;" class="fa fa-map-marker" aria-hidden="true"></i> 4th Avenue,London</h6>
+      
+	
       </div>
-      <div class="recent-posts">
-        <h3>RECENT POSTS</h3>
+
+      <div class="col">
+        <h4>News</h4>
+        <hr>
         <ul>
-          <li><a href="#">Mauris nisi tempor, aliquam sem pellentesque</a></li>
-          <li><a href="#">Mauris nisi tempor, aliquam sem pellente sque</a></li>
-          <li><a href="#">Mauris nisi tempor, aliquam sem pellent esque</a></li>
-          <li><a href="#">Mauris nisi tempor, aliquam sem pellent esque</a></li>
-          <li><a href="#">Mauris nisi tempor, aliquam sem pellent esque</a></li>
-          <li><a href="#">Mauris nisi tempor, aliquam sem pellen tesque</a></li>
+          <li><a href="https://store.steampowered.com/about/">Abous Steam and how to install</a></li>
+          <li><a href="https://store.steampowered.com/explore/new/">Games new</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Copyright_and_video_games">Copyright and video games</a></li>
         </ul>
       </div>
-      <div class="get-touch">
-        <h3>GET IN TOUCH</h3>
+
+
+      <div class="col">
+        <h4>Subcribe</h4>
+        <hr>
         <p>If you want to be updated regularly on our newest updates, events, and always be on top of things, leave your email and have no worries.</p>
         <form role="search" method="get" class="subscribe-form" action="#">
           <input type="text" class="subscribe-field" placeholder=" Email" value=""  title="Subscribe" />
@@ -93,14 +98,18 @@
         </form>
       </div>
     </div>
+</div>
+
     <div class="info">
-      <p>CREATED BY TEAM C2H2. THANK YOU !</p>
+      <p>© 2017 Games Zone. All Rights Reserved</p>
     </div>
-  </footer>
+
     <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"> -->
     <script src="<?php echo ROOT_PATH; ?>assets/js/jquery-3.3.1.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/popper.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/menu-icon.js" ></script>
+
+
 </body>
 </html>

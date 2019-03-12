@@ -2,7 +2,7 @@
     <div class="row" style="margin-top:25px;">
         <div class="col-lg-4">
             <div class="card mx-auto" style="width: 18rem;">
-                <img class="card-img-top" src="<?php echo  ROOT_PATH.$viewmodel['image']; ?>" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo $viewmodel['image']; ?>" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text"></p>
                 </div>
@@ -24,14 +24,40 @@
                     <td><?php echo $viewmodel['code']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">Price</th>
-                    <td><?php echo $viewmodel['price']; ?></td>
+                    <th scope="row">Old Price</th>
+                    <td><?php echo $viewmodel['priceold']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">Type Gender</th>
-                    <td><?php if($viewmodel['type_gender_id']==1){ echo 'Man'; }else{echo 'Woman';}
+                    <th scope="row">New Price</th>
+                    <td><?php echo $viewmodel['pricenew']; ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">Type Product</th>
+                    <td><?php
+                     $op=$viewmodel['type_product_id']; 
+                     if($op==1){ 
+                         echo 'Action'; 
+                        }elseif($op==2){
+                            echo 'Advanture';
+                        }elseif($op==3){
+                            echo 'Casual';
+                        }else{
+                        echo "Indie";
+                    }
                     ?>
                     </td>
+                </tr>
+                <tr>
+                    <th scope="row">Link Origin</th>
+                    <td><a href="<?php echo $viewmodel['link_origin'] ?>"><?php echo $viewmodel['link_origin'] ?></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">Date Release</th>
+                    <td><?php echo $viewmodel['date_release'] ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">Link Trailer</th>
+                    <td><a href="<?php echo 'https://www.youtube.com/embed/'.$viewmodel['link_trailer'] ?>"><?php echo 'https://www.youtube.com/embed/'.$viewmodel['link_trailer'] ?></a></td>
                 </tr>
                 <tr>
                     <th scope="row">Create at</th>

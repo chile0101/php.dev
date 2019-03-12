@@ -17,17 +17,21 @@ body{
 }
 
 header{
+  background:url(../images/banner3.jpg) no-repeat 0px 0px;
+		min-height:87px;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-bottom: 3px solid #cc5200;
   height: 100px;
   width: 100%;
   z-index: 3;
+  color: white;
   overflow: hidden;
 }
 
 .header-container{
+
   display: grid;
   grid-column: 2;
   grid-template-columns: 1fr 40px 300px 3fr 80px 160px;
@@ -35,8 +39,8 @@ header{
 
 .site-title{
   grid-column: 1 ;
-  padding-top: 20px;
-  padding-left: 10px;
+  padding-top: 0px;
+  margin-top: -40px;
 }
 
 .site-title:hover{
@@ -53,7 +57,11 @@ header{
 }
 .site-title a:hover{
   text-decoration: none;
-  color: #000;  
+  color: #fff;  
+}
+.site-title img{
+  width: 180px;
+  height: auto;
 }
 
 .menu-primary{
@@ -79,7 +87,7 @@ header{
 
 .menu-primary > ul > li > a, .sign-content a{
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 18px;
 }
@@ -103,7 +111,7 @@ header{
 }
 
 .search-submit:hover{
-  background: #000;
+  background: #ef484c;
   color: #fff;
   cursor: pointer;
 }
@@ -121,6 +129,7 @@ header{
   padding-top: 25px;
   width: 50px;
   height: 50px;
+  color: white;
 }
 
 .sign-content{
@@ -132,11 +141,11 @@ footer{
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 1fr 80px;
-  background-color: #353533;
+  background-color: white;
   width: 100%;
   color: #9c9c9c;
-  line-height: 1.5em;
-  font-size: 16px;
+  /* line-height: 1.5em; */
+
 }
 
 .footer-container{
@@ -144,8 +153,11 @@ footer{
   grid-area: 1 / 2;
   grid-template-rows: 20px 1fr 40px;
   grid-template-columns: 1fr 20px 1fr 20px 1fr;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+ 
+  color: black;
 }
+
 
 .footer-container > div > h3{
   color: #fff;
@@ -182,6 +194,7 @@ footer{
   width: 100%;
   height: 35px;
   display: block;
+  border: 1px;
 }
 
 .subscribe-field{
@@ -203,11 +216,18 @@ footer{
 }
 
 .info{
+  border-top:1px solid;
   grid-column: 1 / -1;
   grid-row: 2 ;
-  background:  #2e2e2e;
+  background:  white;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.txtTrend{
+  text-align: center;
+  color: #e91e63;
+  margin-bottom: 50px;
 }
 
 @-webkit-keyframes swing
@@ -334,6 +354,12 @@ footer{
     padding-left: 10%;
     margin: 0 auto;
   }
+  /* input[type=search] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  } */
 
   .cart-content,.sign-content{
     display: inline-block;
@@ -356,5 +382,4 @@ footer{
     margin: 0 auto;
   }
 }
-
 

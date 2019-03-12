@@ -17,13 +17,20 @@ class Bootstrap{
 				if($request['param3']==""){
 					$this->action="index";
 					
-				}elseif($request['param3']=="man"){
+				}elseif($request['param3']=="action"){
 					$this->action="index";
-					$this->id="man";
-				}elseif($request['param3']=="woman"){
+					$this->id="action";
+				}elseif($request['param3']=="advanture"){
 					$this->action="index";
-					$this->id="woman";
-				}elseif($request['param3']=="search"){
+					$this->id="advanture";
+				}elseif($request['param3']=="casual"){
+					$this->action="index";
+					$this->id="casual";
+				}elseif($request['param3']=="indie"){
+					$this->action="index";
+					$this->id="indie";
+				}
+				elseif($request['param3']=="search"){
 					$this->action="index";
 					$this->id="search";
 				}
@@ -55,9 +62,9 @@ class Bootstrap{
 			 $this->id=$request['param3'];
 		}
 
-		// echo "controller".$this->controller."<br>";
-		// echo "action".$this->action."<br>";
-		// echo "id".$this->id;
+		echo "controller".$this->controller."<br>";
+		echo "action".$this->action."<br>";
+		echo "id".$this->id;
 		
 	}
 	public function createController(){

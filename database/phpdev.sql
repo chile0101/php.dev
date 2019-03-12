@@ -1,5 +1,5 @@
-CREATE DATABASE db_phpdev;
-USE db_phpdev;
+-- CREATE DATABASE db_phpdev;
+-- USE db_phpdev;
 
 CREATE TABLE admins (
     id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -27,224 +27,83 @@ INSERT INTO users (id, email, password, fullname, phone, address)
             VALUES (NULL, 'ha@gmail.com', '1234', 'ha vo', '1695669219', 'KTX KHu B');
 
 
-CREATE TABLE type_gender(
+CREATE TABLE type_product(
     id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name varchar(255),
     create_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO type_gender (id,name) VALUES (NULL,'man');
-INSERT INTO type_gender (id,name) VALUES (NULL,'woman');
+INSERT INTO type_product (id,name) VALUES (NULL,'Action');
+INSERT INTO type_product (id,name) VALUES (NULL,'Advanture');
+INSERT INTO type_product (id,name) VALUES (NULL,'Casual');
+INSERT INTO type_product (id,name) VALUES (NULL,'Indie');
+
 
 CREATE TABLE products (
     id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     image varchar(255) NOT NULL,
-    price decimal(5,1) NOT NULL,
+    priceold decimal(5,1) NOT NULL,
+    pricenew decimal(5,1) NOT NULL,
     code varchar(20) NOT NULL,
     description text ,
-    type_gender_id int(11) NOT NULL,
+    link_origin text,
+    date_release text,
+    developer varchar(255),
+    link_trailer text,
+    type_product_id int(11) NOT NULL,
     create_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     update_at datetime,
     -- size,color,category
-    FOREIGN KEY (type_gender_id) REFERENCES type_gender(id) 
+    FOREIGN KEY (type_product_id) REFERENCES type_product(id) 
 );
 
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/1.jpg',25.2,'001',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/2.jpg',134.24,'002',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/3.jpg',24.2,'003',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/4.jpg',25.2,'004',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/5.jpg',25.2,'005',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/6.jpg',25.2,'006',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/7.jpg',25.2,'007',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/8.jpg',25.2,'008',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/9.jpg',25.2,'009',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/10.jpg',25.2,'010',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/11.jpg',25.2,'011',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/12.jpg',25.2,'012',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/13.jpg',25.2,'013',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/14.jpg',25.2,'014',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/15.jpg',25.2,'015',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/16.jpg',25.2,'016',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/17.jpg',25.2,'017',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/18.jpg',25.2,'018',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/19.jpg',25.2,'019',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/20.jpg',25.2,'020',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/21.jpg',25.2,'021',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/22.jpg',25.2,'022',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/23.jpg',25.2,'023',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/24.jpg',25.2,'024',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/25.jpg',25.2,'025',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/26.jpg',25.2,'026',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/27.jpg',25.2,'027',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/28.jpg',25.2,'028',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/29.jpg',25.2,'029',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'T-Shirt','assets/images/products/man/30.jpg',25.2,'030',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',1);
+INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
+            VALUES (NULL,'ARK: Survival Evolved','https://s3-ap-southeast-1.amazonaws.com/htcstore/gam1.png',371,149,'vncur 346110','As a man or woman stranded naked, freezing & starving on a mysterious island, you must hunt, harvest, craft items, grow crops, & build shelters to survive. Use skill & cunning to kill, tame, breed, & ride Dinosaurs & primeval creatures living on ARK, and team up with hundreds of players or play locally!',
+            'https://store.steampowered.com/app/346110/ARK_Survival_Evolved/','28 Aug 2017','Studio Wildcard','aQM8yWoiy5s',1);
 
--- ==================================================================================================
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal','assets/images/products/woman/1.jpg',12.1,'100',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/2.jpg',30.5,'101',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/3.jpg',29.7,'102',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
 
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/4.jpg',35.9,'103',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
+INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
+            VALUES (NULL,'Left 4 Dead 2','https://s3-ap-southeast-1.amazonaws.com/htcstore/game2.png',
+            371,115,'vncur 550 idcur','Set in the zombie apocalypse, Left 4 Dead 2 (L4D2) is the highly anticipated sequel to the award-winning Left 4 Dead, the #1 co-op game of 2008. This co-operative action horror FPS takes you and your friends through the cities, swamps and cemeteries of the Deep South, from Savannah to New Orleans ',
+            'https://store.steampowered.com/app/550/Left_4_Dead_2/','17 Nov, 2009','Valve','9XIle_kLHKU',1);
 
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/5.jpg',140.5,'104',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
 
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/6.jpg',38,'105',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
+INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
+            VALUES (NULL,'The Forest','https://s3-ap-southeast-1.amazonaws.com/htcstore/game3.png',
+            256,120,'vncur 644','As a man or woman stranded naked, freezing & starving on a mysterious island, you must hunt, harvest, craft items, grow crops, & build shelters to survive. Use skill & cunning to kill, tame, breed, & ride Dinosaurs & primeval creatures living on ARK, and team up with hundreds of players or play locally!',
+            'https://store.steampowered.com/agecheck/app/242760/','28 Aug 2017','Studio Wildcard',"76dHkDhOZ04",1);
 
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/7.jpg',26.4,'106',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
 
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/8.jpg',21.5,'107',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/9.jpg',45,'108',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/10.jpg',25.2,'109',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/11.jpg',20.8,'110',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/12.jpg',100.2,'111',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/13.jpg',25.2,'112',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/14.jpg',25.2,'113',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/15.jpg',78.2,'114',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/16.jpg',25.2,'115',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/17.jpg',24.6,'116',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/18.jpg',18.4,'117',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/19.jpg',18.4,'118',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
-INSERT INTO products (id,name,image,price,code,description,type_gender_id)
-            VALUES (NULL,'SHEIN Tribal ','assets/images/products/woman/20.jpg',19.5,'119',
-            'This Hanes classic is comfortable, stylish and versatile. Perfect as an outer or under layer, the men hooded sweatshirt has become a staple in any wardrobe. Kangaroo-style front pocket is perfect for your phone, keys or anything else you want to stash.',2);
-
+INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
+            VALUES (NULL,'Terraria','https://s3-ap-southeast-1.amazonaws.com/htcstore/game4.png',371,149,
+            'vncur 105600 vncur','Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!',
+            'https://store.steampowered.com/app/105600/Terraria/','17 May, 2011','Re-Logic','w7uOhFTrrq0',1);
 
 
 CREATE TABLE orders (
     id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     user_id int(11) NOT NULL,
-    total decimal(5,1),
-    FOREIGN KEY (user_id) REFERENCES users(id) 
-);
-INSERT INTO orders (id,user_id,total) VALUES (NULL,1,149.44);
-
-CREATE TABLE orders_products(
-    order_id int(11) NOT NULL,
     product_id int(11) NOT NULL,
     quantity int(11) NOT NULL,
-    FOREIGN KEY (product_id)  REFERENCES products(id)
+    status int(1) NOT NULL,
+    create_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_at datetime,
+    FOREIGN KEY (product_id)  REFERENCES products(id),
+    FOREIGN KEY (user_id) REFERENCES users(id) 
 );
-INSERT INTO orders_products (order_id,product_id,quantity) VALUES (1,1,1);
-INSERT INTO orders_products (order_id,product_id,quantity) VALUES (1,2,1);
 
-CREATE TABLE contact_us(
-    id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name varchar(255),
-    email varchar(255) NOT NULL,
-    subject varchar(255),
-    message text,
-    create_at datetime DEFAULT CURRENT_TIMESTAMP
-);
-INSERT INTO contact_us(id, name, email, subject, message) VALUES (NULL, 'John Brah','johnbrah@gmail.com','T-shirt','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.');
+INSERT INTO orders(id,user_id,product_id,quantity,status)
+        VALUES  (NULL,1,1,4,1);
+
+
+
+-- CREATE TABLE contact_us(
+--     id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--     name varchar(255),
+--     email varchar(255) NOT NULL,
+--     subject varchar(255),
+--     message text,
+--     create_at datetime DEFAULT CURRENT_TIMESTAMP
+-- );
+-- INSERT INTO contact_us(id, name, email, subject, message) VALUES (NULL, 'John Brah','johnbrah@gmail.com','T-shirt','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.');

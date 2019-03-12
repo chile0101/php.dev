@@ -1,7 +1,6 @@
 <?php 
 session_start();
 require('../classes/Messages.php');  
-// $product_id=$_POST['id'];
 
 if(!empty($_POST['id'])){
    

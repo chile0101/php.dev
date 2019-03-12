@@ -7,15 +7,25 @@ class ProductModel extends Model{
 			$this->query('SELECT * FROM products ORDER BY create_at DESC');
 			$rows = $this->resultSet();
 			return $rows;
-		}elseif($id=="man"){
-			$this->query('SELECT * FROM products WHERE type_gender_id= 1 ORDER BY create_at DESC');
+		}elseif($id=="action"){
+			$this->query('SELECT * FROM products WHERE type_product_id= 1 ORDER BY create_at DESC');
 			$rows = $this->resultSet();
 			return $rows;
-		}elseif($id=="woman"){
-			$this->query('SELECT * FROM products WHERE type_gender_id= 2 ORDER BY create_at DESC');
+		}elseif($id=="advanture"){
+			$this->query('SELECT * FROM products WHERE type_product_id= 2 ORDER BY create_at DESC');
 			$rows = $this->resultSet();
 			return $rows;
-		}else{
+		}elseif($id=="casual"){
+			$this->query('SELECT * FROM products WHERE type_product_id= 3 ORDER BY create_at DESC');
+			$rows = $this->resultSet();
+			return $rows;
+		}elseif($id=="indie"){
+			$this->query('SELECT * FROM products WHERE type_product_id= 4 ORDER BY create_at DESC');
+			$rows = $this->resultSet();
+			return $rows;
+		}
+
+		else{
 			echo "search";
 		}
 		
@@ -27,38 +37,30 @@ class ProductModel extends Model{
 		if($post['submit']){
 			
 			// validation
-			if(empty($post['name']) || empty($post['price']) || empty($post['code']) || empty($_FILES['image'])){
-				return;
-			}
-
-			$uploads_dir = 'assets/images/products/';
-
-			if($post['type_gender_id']==1){
-				$img_url = $uploads_dir .'man/'. basename($_FILES['image']['name']);
-				if(move_uploaded_file($_FILES['image']['tmp_name'],$img_url )){
-					echo 'ok';
-				}else{
-					die('Image not upload');
-				}
-								
-			}else{
-				$img_url =  $uploads_dir. "woman/" . $post['image'];		
-				move_uploaded_file ($post['image'] , $uploads_dir."woman" );				
-
-			}	
-			
-			$this->query('INSERT INTO products (name, price, code, description,image,type_gender_id) VALUES(:name, :price, :code, :description,:image,:type_gender_id)');
+			// if(empty($post['name']) || empty($post['price']) || empty($post['code']) || empty($_FILES['image'])){
+			// 	return;
+			// }
+		
+	
+		$this->query('INSERT INTO products (name, priceold,pricenew, code, description,link_origin,date_release,developer,link_trailer,image,type_product_id) VALUES(:name, :priceold,:pricenew, :code, :description,:link_origin,:date_release,:developer,:link_trailer,:image,:type_product_id)');
 			$this->bind(':name', $post['name']);
-			$this->bind(':price', $post['price']);
+			$this->bind(':priceold', $post['priceold']);
+			$this->bind(':pricenew', $post['pricenew']);
 			$this->bind(':code', $post['code']);
 			$this->bind(':description', $post['description']);
-			$this->bind(':image', $img_url);
-			$this->bind(':type_gender_id', $post['type_gender_id']);
+			$this->bind(':link_origin',$post['link_origin']);
+			$this->bind(':date_release',$post['date_release']);
+			$this->bind(':developer',$post['developer']);
+			$this->bind(':link_trailer',$post['link_trailer']);
+			$this->bind(':image', $post['image']);
+			$this->bind(':type_product_id', $post['type_product_id']);
 			
 			$this->execute();
 			// Verify
 			if($this->lastInsertId()){
 				header('Location: '.ROOT_URL.'admin/products');
+			}else{
+				die('err');
 			}
 		}
 		return;
@@ -77,30 +79,35 @@ class ProductModel extends Model{
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 		
 		if($post['submit']){
-				
-			if(empty($_POST['name']) || empty($_POST['price']) || empty($_POST['code']) || empty($_POST['image'])){
-				return;
-			}
+		
+			$this->query('	UPDATE products 
+							SET name = :name, priceold = :priceold, pricenew=:pricenew, code=:code,description=:description,link_origin=:link_origin,date_release=:date_release,developer=:developer,link_trailer=:link_trailer,image=:image,type_product_id=:type_product_id,update_at=:update_at
+							WHERE id = :id' );
+		$this->bind(':id',$id);
+		$this->bind(':name', $post['name']);
+		$this->bind(':priceold', $post['priceold']);
+		$this->bind(':pricenew', $post['pricenew']);
+		$this->bind(':code', $post['code']);
+		$this->bind(':description', $post['description']);
+		$this->bind(':link_origin',$post['link_origin']);
+		$this->bind(':date_release',$post['date_release']);
+		$this->bind(':developer',$post['developer']);
+		$this->bind(':link_trailer',$post['link_trailer']);
+		$this->bind(':image', $post['image']);
+		$this->bind(':type_product_id', $post['type_product_id']);
+		$this->bind(':update_at',date ("Y-m-d H:i:s"));
 
-			if($post['type_gender_id']==1){
-				$img_url = ROOT_URL .'assets/images/products/man/'. $post['image'];				
-			}else{
-				$img_url = ROOT_URL .'/assets/images/products/woman/'. $post['image'];				
-			}
-
-			$this->query('INSERT INTO products (name, price, code, description,image,type_gender_id) VALUES(:name, :price, :code, :description,:image,:type_gender_id)');
-			$this->bind(':name', $post['name']);
-			$this->bind(':price', $post['price']);
-			$this->bind(':code', $post['code']);
-			$this->bind(':description', $post['description']);
-			$this->bind(':image', $img_url);
-			$this->bind(':type_gender_id', $post['type_gender_id']);
-
-			$this->execute();
+		$this->execute();
 			header('Location: '.ROOT_URL.'admin/products');
+		}else{
+			//die('err');
 		}
+		
 		return $product;
 	}
+
+
+	
 
 	public function delete($id){
 			$this->query('SELECT * FROM products WHERE id = :id');

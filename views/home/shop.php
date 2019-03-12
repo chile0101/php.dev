@@ -40,25 +40,32 @@
 </div>
 
 <div class="container">
-    <h1 class="page-title">Shop</h1>
-    <div class="shop-page">
-    <p class="result-count">Showing 1-12 of 24 results</p>
-    <form class="ordering" method="get">
-        <select name="orderby" class="orderby">
-        <option value="menu_order" selected='selected'>Default sorting</option>
-        <option value="price">Sort by price: low to high</option>
-        <option value="price-desc">Sort by price: high to low</option>
-        </select>
-    </form>
+    <div class="row" style="margin-top:20px;">
+        <div class="col">
+            <h1>Shop</h1>
+            <p class="result-count">Showing 1-12 of 24 results</p>
+            <br><br>
+        </div>
+       
+        <div class="col">
+        <select class="form-control float-right" style="margin-top:20px;width:180px;" >
+            <option>Action</option>
+            <option>Advanture</option>
+            <option>Casual</option>
+            <option>Indie</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
     <ul class="products">
 
     <?php foreach ($viewmodel as $product) : ?>
         <li class="item">
         <a href="<?php echo ROOT_URL; ?>home/detail/<?php echo $product['id']; ?>">
             <div class="item-image">
-            <img width="230" height="230" src="<?php echo ROOT_PATH.$product['image'];?> " alt="product">
+            <img width="230" height="230" src="<?php echo $product['image'] ?>" alt="product">
             <span class="price">
-                <span class="amount"><?php echo $product['price']; ?> $</span>
+                <span class="amount"><?php echo $product['pricenew']; ?> $</span>
             </span>
             </div>
         </a>
@@ -86,6 +93,7 @@
     <?php endforeach ?>
         
     </ul>
+    </div>
     </div>
     
 </div>

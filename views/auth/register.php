@@ -44,7 +44,7 @@
 
 
 
-<div class="register" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/bg_login.jpg);">
+<div class="register" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/slides/banner1.jpg);">
     <div class="loginbox signup">
     <img src="<?php echo ROOT_PATH; ?>assets/images/icons/avatar.jpeg" class="avatar">
       <h1>Register Here</h1>

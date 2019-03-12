@@ -1,9 +1,9 @@
-<section class="header-about module" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/about/about.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/about-data.jpg">
+<section class="header-about module" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/slides/banner1.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/about-data.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h1 class="module-title font-alt">About us</h1>
-				<div class="module-subtitle font-serif">We are Shopera. We are an empowering, bold and forward thinking online fashion brand, inspired by real life. We design and create product informed by you, our customers, our friends and global influences: Catwalk, celebrity, social media, bloggers and street style, creating an online fashion destination that encompasses and celebrates everything it means to be a girl in a digitally immersed world today.</div>
+				<h1 class="module-title font-alt">Access Games Instantly</h1>
+				<div class="module-subtitle font-serif">With nearly 30,000 games from AAA to indie and everything in-between. Enjoy exclusive deals, automatic game updates, and other great perks.</div>
 			</div>
 		</div>
 	</div>
@@ -22,7 +22,7 @@
 	</div>
 </section>
 
-<section class="module about-page-vide bg-dark" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/about/about-page.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/about-page.jpg">
+<section class="module about-page-vide bg-dark" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/slides/banner3.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/about-page.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">

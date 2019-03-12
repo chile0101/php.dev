@@ -63,7 +63,7 @@ class UserModel extends Model{
 			$this->bind(':email', $post['email']);
 			$this->bind(':phone', $post['phone']);
 			$this->bind(':address', $post['address']);
-			$this->bind(':update_at',date ("Y-m-d H:i:s", $phptime));
+			$this->bind(':update_at',date ("Y-m-d H:i:s"));
 
 			$this->execute();
 			header('Location: '.ROOT_URL.'admin/users');
