@@ -21,7 +21,7 @@ class CartModel extends Model{
 				$this->execute();
 				if($this->lastInsertId()){
 					//echo 'success';
-					$to = "chilevan74@gmail.com";
+					$to = "anphawolf@gmail.com";
 					$subject = "Test Mail Subject";
 					$body = "Hi<br/>Test Mail<br/>Amazon SES"; // HTML  tags
 					Send_Mail($to,$subject,$body);

@@ -2,15 +2,15 @@
 function Send_Mail($to,$subject,$body)
 {
 require 'class.phpmailer.php';
-$from = "from@email.com";
+$from = "chilevan74@gmail.com";
 $mail = new PHPMailer();
 $mail->IsSMTP(true); // SMTP
 $mail->SMTPAuth   = true;  // SMTP authentication
 $mail->Mailer = "smtp";
 $mail->Host       = "tls://smtp.gmail.com"; // Amazon SES server, note "tls://" protocol
 $mail->Port       = 465;                    // set the SMTP port
-$mail->Username   = "anphawolf@gmail.com";  // SES SMTP  username
-$mail->Password   = "anphawolf@%)$1997";  // SES SMTP password
+$mail->Username   = "chilevan74@gmail.com";  // SES SMTP  username
+$mail->Password   = "thohuynh1512";  // SES SMTP password
 $mail->SetFrom($from, 'From Name');
 $mail->AddReplyTo($from,'9lessons Labs');
 $mail->Subject = $subject;
