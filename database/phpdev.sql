@@ -59,7 +59,7 @@ CREATE TABLE products (
 );
 
 INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
-            VALUES (NULL,'ARK: Survival Evolved','https://s3-ap-southeast-1.amazonaws.com/htcstore/gam1.png',371,149,'vncur 346110','As a man or woman stranded naked, freezing & starving on a mysterious island, you must hunt, harvest, craft items, grow crops, & build shelters to survive. Use skill & cunning to kill, tame, breed, & ride Dinosaurs & primeval creatures living on ARK, and team up with hundreds of players or play locally!',
+            VALUES (NULL,'ARK Survival Evolved','https://s3-ap-southeast-1.amazonaws.com/htcstore/gam1.png',371,149,'vncur 346110','As a man or woman stranded naked, freezing & starving on a mysterious island, you must hunt, harvest, craft items, grow crops, & build shelters to survive. Use skill & cunning to kill, tame, breed, & ride Dinosaurs & primeval creatures living on ARK, and team up with hundreds of players or play locally!',
             'https://store.steampowered.com/app/346110/ARK_Survival_Evolved/','28 Aug 2017','Studio Wildcard','aQM8yWoiy5s',1);
 
 
