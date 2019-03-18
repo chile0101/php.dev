@@ -26,6 +26,7 @@ class CartModel extends Model{
 					$subject = "Test Mail Subject";
 					$body = "Hi<br/>Test Mail<br/>Amazon SES"; // HTML  tags
 					Send_Mail($to,$subject,$body);
+					die('die');
 				}else{
 					echo 'err';
 				}
