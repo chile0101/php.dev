@@ -198,9 +198,13 @@ footer{
 }
 
 .subscribe-field{
-  width: 70%;
+  width: 65%;
   height: 100%;
-  border: 0;
+ 
+}
+.subscribe-field input[type=text] {
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .subscribe-submit{
