@@ -8,9 +8,9 @@ class CartModel extends Model{
 		if(!empty($_SESSION['cart'])){
 	
 			foreach ($_SESSION['cart'] as $key =>$value){
-				// $this->query('SELECT * FROM products WHERE id=:id');
-				// $this->bind(':id',$key);
-				// $product=$this->single(); //Get product obj
+				 $this->query('SELECT * FROM products WHERE id=:id');
+				 $this->bind(':id',$key);
+				 $product=$this->single(); //Get product obj
 		
 				$this->query("INSERT INTO orders (user_id,product_id,quantity,status) VALUES (:user_id,:product_id,:quantity,:status)");
 				$this->bind(':user_id',$_SESSION['user_data']['id']);
@@ -22,8 +22,8 @@ class CartModel extends Model{
 				if($this->lastInsertId()){
 					//echo 'success';
 					require 'Send_Mail.php';
-					$to = "chilevan74@gmail.com";
-					$subject = "Test Mail Subject";
+					$to = $_SESSION['user_data']['email'];
+					$subject = $product['name']." Steam Code"; //fix
 					$body ="
 					<html>
 						<head>
@@ -49,24 +49,21 @@ class CartModel extends Model{
 						
 										<tr>
 											<td style=\"padding-top: 32px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif; font-weight: bold;\">
-												Hello,					</td>
+												Hello ".$_SESSION['user_data']['fullname'].",					</td>
 										</tr>
 										<tr>
 											<td style=\"padding-top: 10px; padding-bottom: 30px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif;\">
-												You're almost done!					</td>
+												This is Steam code for ".$product['name']."!					</td>
 										</tr>
 						
-										<tr>
-											<td style=\"font-size: 14px; padding: 16px; background-color:#121a25; color:#FFF\" >
-												Verify your email address to complete creating your Steam account.					</td>
-										</tr>
+									
 						
 										<tr>
 											<td style=\"padding: 16px; background-color:#121a25;\">
 												<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">
 													<tr>
 																							<td style=\"background: #799905;height: 32px;text-align: center\" align=\"center\" >
-																<a href=\"https://store.steampowered.com/account/newaccountverification?stoken=a1278144ef4ba366df309f5c2a39e42ac2342d37d24428b5ab6fd2836bf185b7f5424b68dd4c81293ad8d16934c57695&creationid=5082360689227967975\" style=\"border-radius: 2px; padding: 1px; display: block; text-decoration: none; color: #D2E885; background: #799905; background: -webkit-linear-gradient( top, #799905 5%, #536904 95%);background: linear-gradient( to bottom, #799905 5%, #536904 95%);text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );\" >
+																<a  style=\"border-radius: 2px; padding: 1px; display: block; text-decoration: none; color: #D2E885; background: #799905; background: -webkit-linear-gradient( top, #799905 5%, #536904 95%);background: linear-gradient( to bottom, #799905 5%, #536904 95%);text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );\" >
 																<span style=\"border-radius: 2px; display: block; padding: 0; font-size: 20px; line-height: 32px; \">
 																	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create My Account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 																</span>
@@ -79,23 +76,10 @@ class CartModel extends Model{
 						
 										<tr>
 											<td style=\"padding-top: 16px; font-size: 12px; line-height: 17px; color: #6d7880;\">
-												Steam requires a verified email address so you can take full advantage of Steam features like Steam Guard security, the Steam Community Market, Steam Trading - and so you can safely recover your account in the future.					</td>
+											Thanks for using our service.					</td>
 										</tr>
 						
-										<tr>
-											<td style=\"padding-top: 16px; font-size: 12px; line-height: 17px; color: #6d7880;\" >
-												Thanks for helping us ensure your new account is secure.					</td>
-										</tr>
-						
-										<tr>
-											<td style=\"font-size: 12px; color: #6d7880; padding-top: 16px; \">
-												- The Steam Team					</td>
-										</tr>
-						
-										<tr>
-											<td style=\"padding-top: 40px; font-size: 12px; line-height: 17px; color: #6d7880; \">
-												*If you didn't recently attempt to create a new account with this email address, you can safely disregard this email.					</td>
-										</tr>
+										
 						
 									</table>
 								</td>
@@ -127,7 +111,7 @@ class CartModel extends Model{
 
 					
 					Send_Mail($to,$subject,$body);
-					die('die');
+					//die('die');
 				}else{
 					echo 'err';
 				}
