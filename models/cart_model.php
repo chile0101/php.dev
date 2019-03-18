@@ -25,6 +25,7 @@ class CartModel extends Model{
 					$to = $_SESSION['user_data']['email'];
 					$subject = $product['name']. " Steam Code"; //fix
 					echo $subject;
+					echo $to;
 					$body ="
 					<html>
 						<head>
