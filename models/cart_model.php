@@ -23,7 +23,8 @@ class CartModel extends Model{
 					//echo 'success';
 					require 'Send_Mail.php';
 					$to = $_SESSION['user_data']['email'];
-					$subject = $product['name']." Steam Code"; //fix
+					$subject = $product['name']. " Steam Code"; //fix
+					echo $subject;
 					$body ="
 					<html>
 						<head>
