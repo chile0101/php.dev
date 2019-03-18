@@ -1,5 +1,5 @@
--- CREATE DATABASE db_phpdev;
--- USE db_phpdev;
+CREATE DATABASE db_phpdev;
+USE db_phpdev;
 
 CREATE TABLE admins (
     id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
