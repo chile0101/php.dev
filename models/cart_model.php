@@ -23,9 +23,9 @@ class CartModel extends Model{
 					//echo 'success';
 					require 'Send_Mail.php';
 					$to = $_SESSION['user_data']['email'];
-					$subject = $product['name']. " Steam Code"; //fix
-					echo $subject;
-					echo $to;
+					$subject = $product['name']." Steam Code"; 
+					//echo $subject;
+					//echo $to;
 					$body ="
 					<html>
 						<head>
@@ -51,11 +51,11 @@ class CartModel extends Model{
 						
 										<tr>
 											<td style=\"padding-top: 32px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif; font-weight: bold;\">
-												Hello ".$_SESSION['user_data']['fullname'].",					</td>
+												Hello,					</td>
 										</tr>
 										<tr>
 											<td style=\"padding-top: 10px; padding-bottom: 30px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif;\">
-												This is Steam code for ".$product['name']."!					</td>
+												This is Steam code for !					</td>
 										</tr>
 						
 									
