@@ -202,10 +202,7 @@ footer{
   height: 100%;
  
 }
-.subscribe-field input[type=text] {
-  padding-left: 6px;
-  padding-right: 6px;
-}
+
 
 .subscribe-submit{
   width: 28%;
