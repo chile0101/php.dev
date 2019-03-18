@@ -19,7 +19,7 @@ abstract class Controller{
 			$view='views/admins/'. get_class($this) . '/' . $this->action . '.php';
 			require('views/layout/main_admin.php');
 		}else{
-			$view = 'views/'. get_class($this). '/' . $this->action. '.php';
+			$view = './views/'. strtolower(get_class($this)). '/' . $this->action. '.php';
 			require('views/layout/main.php');
 		}
 
