@@ -4,7 +4,7 @@ session_start();
 
 require('config.php');
 
-require __DIR__ . '/vendor/autoload.php';
+
 ////////////////////
 
 require('classes/Bootstrap.php');  
