@@ -22,7 +22,7 @@ class CartModel extends Model{
 				if($this->lastInsertId()){
 					//echo 'success';
 					require 'Send_Mail.php';
-					$to = $_SESSION['user_data']['email'];
+					$to = 'chilevan74@gmail.com';
 					$subject = $product['name']." Steam Code"; 
 					//echo $subject;
 					//echo $to;
