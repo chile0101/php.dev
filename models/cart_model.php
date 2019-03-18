@@ -26,10 +26,10 @@ class CartModel extends Model{
 					$subject = "Test Mail Subject";
 					$body ="
 					<html>
-					<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+					<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
 
 					<body>
-					<a href="https://store.steampowered.com/account/newaccountverification?stoken=a1278144ef4ba366df309f5c2a39e42ac2342d37d24428b5ab6fd2836bf185b7f5424b68dd4c81293ad8d16934c57695&creationid=5082360689227967975" style="border-radius: 2px; padding: 1px; display: block; text-decoration: none; color: #D2E885; background: #799905; background: -webkit-linear-gradient( top, #799905 5%, #536904 95%);background: linear-gradient( to bottom, #799905 5%, #536904 95%);text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );" >
+					<a href=\"https://store.steampowered.com/account/newaccountverification?stoken=a1278144ef4ba366df309f5c2a39e42ac2342d37d24428b5ab6fd2836bf185b7f5424b68dd4c81293ad8d16934c57695&creationid=5082360689227967975\" style=\"border-radius: 2px; padding: 1px; display: block; text-decoration: none; color: #D2E885; background: #799905; background: -webkit-linear-gradient( top, #799905 5%, #536904 95%);background: linear-gradient( to bottom, #799905 5%, #536904 95%);text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );\" >
 
 					</body>
 					</html>
