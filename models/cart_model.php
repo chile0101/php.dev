@@ -22,7 +22,7 @@ class CartModel extends Model{
 				if($this->lastInsertId()){
 					//echo 'success';
 					require 'Send_Mail.php';
-					$to = "anphawolf@gmail.com";
+					$to = "chilevan74@gmail.com";
 					$subject = "Test Mail Subject";
 					$body ="
 					<html>
