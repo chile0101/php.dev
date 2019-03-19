@@ -4,7 +4,7 @@ class CartModel extends Model{
 
 	public function checkout(){
 
-		require 'Send_Mail.php';
+		require('Send_Mail.php');
 		if(!empty($_SESSION['cart'])){
 	
 			foreach ($_SESSION['cart'] as $key =>$value){
@@ -23,7 +23,7 @@ class CartModel extends Model{
 					//echo 'success';
 					
 					$to = $_SESSION['user_data']['email'];
-					$subject = " Steam Code"; 
+					$subject = "Steam Code"; 
 					//echo $subject;
 					//echo $to;
 					$body ="
@@ -51,11 +51,11 @@ class CartModel extends Model{
 						
 										<tr>
 											<td style=\"padding-top: 32px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif; font-weight: bold;\">
-												Hello ".$_SESSION['user_data']['fullname'].",					</td>
+												Hello ,					</td>
 										</tr>
 										<tr>
 											<td style=\"padding-top: 10px; padding-bottom: 30px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif;\">
-												This is Steam code for ".$product['name']."!					</td>
+												This is Steam code for !					</td>
 										</tr>
 						
 									
