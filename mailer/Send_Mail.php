@@ -2,7 +2,7 @@
 function Send_Mail($to,$subject,$body)
 {
 require 'class.phpmailer.php';
-$from = "noreply@htcstore.com";
+$from = "anphawolf@gmail.com";
 $mail = new PHPMailer();
 $mail->IsSMTP(true); // SMTP
 $mail->SMTPAuth   = true;  // SMTP authentication
@@ -12,7 +12,7 @@ $mail->Port       = 465;                    // set the SMTP port
 $mail->Username   = "anphawolf@gmail.com";  // SES SMTP  username
 $mail->Password   = "anphawolf@%)$1997";  // SES SMTP password
 $mail->SetFrom($from, 'HTCstore');
-//$mail->AddReplyTo($from,'HTC Store');
+$mail->AddReplyTo($from,'HTC Store');
 $mail->Subject = $subject;
 $mail->MsgHTML($body);
 $address = $to;

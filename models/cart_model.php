@@ -20,7 +20,7 @@ class CartModel extends Model{
 				$this->execute();
 				if($this->lastInsertId()){
 					//echo 'success';
-					require('Send_Mail.php');
+					//require('Send_Mail.php');
 					
 					$to = $_SESSION['user_data']['email'];
 					$subject = $product['name']." Steam Code"; 
