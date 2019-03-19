@@ -27,6 +27,29 @@ class CartModel extends Model{
 		}
 	}
 
+	public function generateCode(){
+		$code = array("2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","U","V","W","X","Y","Z");
+	
+		$RndCode = "";
+		for($x=0;$x<5;$x++){
+		$z = rand(0,31);
+		$RndCode .= $code[$z];
+		}
+		$RndCode .="-";
+
+		for($x=0;$x<5;$x++){
+		$z = rand(0,31);
+		$RndCode .= $code[$z];
+		}
+		$RndCode .="-";
+		for($x=0;$x<3;$x++){
+		$z = rand(0,31);
+		$RndCode .= $code[$z];
+		}
+
+		return $RndCode;
+	}
+
 	public function checkout(){
 
 		if(!empty($_SESSION['cart'])){
@@ -89,7 +112,7 @@ class CartModel extends Model{
 																						<td style=\"background: #799905;height: 32px;text-align: center\" align=\"center\" >
 															<a  style=\"border-radius: 2px; padding: 1px; display: block; text-decoration: none; color: #D2E885; background: #799905; background: -webkit-linear-gradient( top, #799905 5%, #536904 95%);background: linear-gradient( to bottom, #799905 5%, #536904 95%);text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );\" >
 															<span style=\"border-radius: 2px; display: block; padding: 0; font-size: 20px; line-height: 32px; \">
-																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create My Account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$this->generateCode()."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 															</span>
 															</a>
 														</td>
@@ -104,11 +127,11 @@ class CartModel extends Model{
 									$body .="
 									
 									<tr>
-									<td style=\"padding-top: 16px; font-size: 12px; line-height: 17px; color: #6d7880;\">
-									Thank you for your order.					</td>
-										</tr>
-										</table>
-								</td>
+										<td style=\"padding-top: 16px; font-size: 12px; line-height: 17px; color: #6d7880;\">
+										Thank you for your order.					</td>
+											</tr>
+											</table>
+									</td>
 							</tr>
 							<tr style=\"background-color: #000000;\">
 								<td style=\"padding: 12px 24px;\">
@@ -133,9 +156,6 @@ class CartModel extends Model{
 										
 						
 										
-						
-									
-				
 					$this->sentMail($to,$subject,$body);
 					
 				
