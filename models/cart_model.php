@@ -76,9 +76,8 @@ class CartModel extends Model{
 											<td style=\"padding-top: 10px; padding-bottom: 30px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif;\">
 												This is Steam code for ".$product['name']." !					</td>
 										</tr>
-										".for($x=0;$x<$value;$x++){."
-
-											<tr>
+											<?php echo CHILE; ?>
+										<tr>
 											<td style=\"padding: 16px; background-color:#121a25;\">
 												<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">
 													<tr>
@@ -93,9 +92,6 @@ class CartModel extends Model{
 												</table>
 											</td>
 										</tr>
-
-											".}."
-										
 						
 										<tr>
 											<td style=\"padding-top: 16px; font-size: 12px; line-height: 17px; color: #6d7880;\">
