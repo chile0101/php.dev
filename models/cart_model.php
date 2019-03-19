@@ -16,14 +16,14 @@ class CartModel extends Model{
 				$this->bind(':user_id',$_SESSION['user_data']['id']);
 				$this->bind(':product_id',$key );
 				$this->bind(':quantity',$value );
-				$this->bind(':status',1);   // 1-> Chua xu ly
+				$this->bind(':status',0);   // 1-> Chua xu ly
  
 				$this->execute();
 				if($this->lastInsertId()){
 					//echo 'success';
 					
 					$to = $_SESSION['user_data']['email'];
-					$subject = "Steam Code"; 
+					$subject = $product['name']." Steam Code"; 
 					//echo $subject;
 					//echo $to;
 					$body ="
@@ -51,11 +51,11 @@ class CartModel extends Model{
 						
 										<tr>
 											<td style=\"padding-top: 32px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif; font-weight: bold;\">
-												Hello ,					</td>
+												Hello ".$_SESSION['user_data']['fullname'].",					</td>
 										</tr>
 										<tr>
 											<td style=\"padding-top: 10px; padding-bottom: 30px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif;\">
-												This is Steam code for !					</td>
+												This is Steam code for ".$product['name']."!					</td>
 										</tr>
 						
 									
