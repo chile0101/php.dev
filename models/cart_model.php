@@ -18,10 +18,9 @@ class CartModel extends Model{
 				$this->bind(':status',0);   // 1-> Chua xu ly
  
 				$this->execute();
-				//if($this->lastInsertId()){
-					
-
-
+				// if($this->lastInsertId()){
+					//echo 'success';
+					//require('Send_Mail.php');
 					
 					$to = $_SESSION['user_data']['email'];
 					$subject = $product['name']." Steam Code"; 
