@@ -21,39 +21,25 @@ class CartModel extends Model{
 				if($this->lastInsertId()){
 					//echo 'success';
 					//require('Send_Mail.php');
-					$mail = new PHPMailer(true);
-					try {
-						//Server settings
-						$mail->SMTPDebug = 2;                                       // Enable verbose debug output
-						$mail->isSMTP();                                            // Set mailer to use SMTP
-						$mail->Host       = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers
-						$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-						$mail->Username   = 'anphawolf@gmail.com';                     // SMTP username
-						$mail->Password   = 'anphawolf@%)$1997';                               // SMTP password
-						$mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-						$mail->Port       = 587;                                    // TCP port to connect to
-					
-						//Recipients
-						$mail->setFrom('anphawolf@gmail.com', 'HTCstore');
-						//$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-						$mail->addAddress('levanchi74@gmail.com');               // Name is optional
-						//$mail->addReplyTo('info@example.com', 'Information');
-					
-					
-						// Attachments
-						//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-						//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-					
-						// Content
-						$mail->isHTML(true);                                  // Set email format to HTML
-						$mail->Subject = 'Here is the subject';
-						$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-						$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-					
-						$mail->send();
-						echo 'Message has been sent';
-					} catch (Exception $e) {
-						echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+					$mail = new PHPMailer(); // create a new object
+					$mail->IsSMTP(); // enable SMTP
+					$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+					$mail->SMTPAuth = true; // authentication enabled
+					$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+					$mail->Host = "smtp.gmail.com";
+					$mail->Port = 465; // or 587
+					$mail->IsHTML(true);
+					$mail->Username = "anphawolf@gmail.com";
+					$mail->Password = "anphawolf@%)$1997";
+					$mail->SetFrom("anphawolf@gmail.com");
+					$mail->Subject = "Test";
+					$mail->Body = "hello";
+					$mail->AddAddress("chilevan74@gmail.com");
+
+					if(!$mail->Send()) {
+						echo "Mailer Error: " . $mail->ErrorInfo;
+					} else {
+						echo "Message has been sent";
 					}
 					
 					//sleep(3);
