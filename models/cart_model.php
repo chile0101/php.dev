@@ -5,7 +5,7 @@ class CartModel extends Model{
 		$mail = new PHPMailer\PHPMailer\PHPMailer();
 	
 		$mail->IsSMTP(); // enable SMTP
-		$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+		$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
 		$mail->SMTPAuth = true; // authentication enabled
 		$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 		$mail->Host = "smtp.gmail.com";
@@ -44,8 +44,7 @@ class CartModel extends Model{
 				if($this->lastInsertId()){
 					$to = $_SESSION['user_data']['email'];
 					$subject = $product['name']." Steam Code"; 
-					echo $subject;
-					echo $to;
+					
 					$body ="
 					<html>
 						<head>
@@ -75,12 +74,11 @@ class CartModel extends Model{
 										</tr>
 										<tr>
 											<td style=\"padding-top: 10px; padding-bottom: 30px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif;\">
-												This is Steam code for ".$product['name']."!					</td>
+												This is Steam code for ".$product['name']." !					</td>
 										</tr>
-						
-									
-						
-										<tr>
+										".for($x=0;$x<$value;$x++){."
+
+											<tr>
 											<td style=\"padding: 16px; background-color:#121a25;\">
 												<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">
 													<tr>
@@ -95,10 +93,13 @@ class CartModel extends Model{
 												</table>
 											</td>
 										</tr>
+
+											".}."
+										
 						
 										<tr>
 											<td style=\"padding-top: 16px; font-size: 12px; line-height: 17px; color: #6d7880;\">
-											Thanks for using our service.					</td>
+											Thank you for your order.					</td>
 										</tr>
 						
 										
