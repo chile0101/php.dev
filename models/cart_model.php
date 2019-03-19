@@ -113,6 +113,7 @@ class CartModel extends Model{
 
 					
 					Send_Mail($to,$subject,$body);
+					sleep(3);
 					//die('die');
 				}else{
 					echo 'err';
