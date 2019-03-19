@@ -7,7 +7,13 @@ require('config.php');
 
 ////////////////////
 
-require('mailer/Send_Mail.php');
+//require('mailer/Send_Mail.php');
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
+
+// require 'PHPMailer/src/Exception.php';
+// require 'PHPMailer/src/PHPMailer.php';
+// require 'PHPMailer/src/SMTP.php';
 //////
 
 require('classes/Bootstrap.php');  

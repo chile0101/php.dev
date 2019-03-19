@@ -18,9 +18,10 @@ class CartModel extends Model{
 				$this->bind(':status',0);   // 1-> Chua xu ly
  
 				$this->execute();
-				if($this->lastInsertId()){
-					//echo 'success';
-					//require('Send_Mail.php');
+				//if($this->lastInsertId()){
+					
+
+
 					
 					$to = $_SESSION['user_data']['email'];
 					$subject = $product['name']." Steam Code"; 
@@ -113,11 +114,11 @@ class CartModel extends Model{
 
 					
 					Send_Mail($to,$subject,$body);
-					sleep(3);
+					//sleep(3);
 					//die('die');
-				}else{
-					echo 'err';
-				}
+				// }else{
+				// 	echo 'err';
+				// }
 				
 			}
 				
