@@ -62,9 +62,9 @@ class Bootstrap{
 			 $this->id=$request['param3'];
 		}
 
-		echo "controller".$this->controller."<br>";
-		echo "action".$this->action."<br>";
-		echo "id".$this->id;
+		// echo "controller".$this->controller."<br>";
+		// echo "action".$this->action."<br>";
+		// echo "id".$this->id;
 		
 	}
 	public function createController(){
