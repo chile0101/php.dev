@@ -4,7 +4,6 @@ class CartModel extends Model{
 
 	public function checkout(){
 
-		require('Send_Mail.php');
 		if(!empty($_SESSION['cart'])){
 	
 			foreach ($_SESSION['cart'] as $key =>$value){
@@ -21,6 +20,7 @@ class CartModel extends Model{
 				$this->execute();
 				if($this->lastInsertId()){
 					//echo 'success';
+					require('Send_Mail.php');
 					
 					$to = $_SESSION['user_data']['email'];
 					$subject = $product['name']." Steam Code"; 
