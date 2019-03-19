@@ -13,7 +13,8 @@ class CartModel extends Model{
 		$mail->IsHTML(true);
 		$mail->Username = "anphawolf@gmail.com";
 		$mail->Password = "anphawolf@%)$1997";
-		$mail->SetFrom("anphawolf@gmail.com");
+		$mail->SetFrom("anphawolf@gmail.com","HTC Store");
+		
 		$mail->Subject = $subject;
 		$mail->Body = $body;
 		$mail->AddAddress($to);
@@ -21,7 +22,8 @@ class CartModel extends Model{
 		if(!$mail->Send()) {
 			echo "Mailer Error: " . $mail->ErrorInfo;
 		} else {
-			echo "Message has been sent";
+			//echo "Message has been sent";
+			return true;
 		}
 	}
 
@@ -76,31 +78,36 @@ class CartModel extends Model{
 											<td style=\"padding-top: 10px; padding-bottom: 30px; font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif;\">
 												This is Steam code for ".$product['name']." !					</td>
 										</tr>
-											<?php echo CHILE; ?>
+											";
+
+									for($x=0;$x<$value;$x++){
+										$body.="
 										<tr>
-											<td style=\"padding: 16px; background-color:#121a25;\">
-												<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">
-													<tr>
-																							<td style=\"background: #799905;height: 32px;text-align: center\" align=\"center\" >
-																<a  style=\"border-radius: 2px; padding: 1px; display: block; text-decoration: none; color: #D2E885; background: #799905; background: -webkit-linear-gradient( top, #799905 5%, #536904 95%);background: linear-gradient( to bottom, #799905 5%, #536904 95%);text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );\" >
-																<span style=\"border-radius: 2px; display: block; padding: 0; font-size: 20px; line-height: 32px; \">
-																	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create My Account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																</span>
-																</a>
-															</td>
-																					</tr>
-												</table>
-											</td>
-										</tr>
-						
-										<tr>
-											<td style=\"padding-top: 16px; font-size: 12px; line-height: 17px; color: #6d7880;\">
-											Thank you for your order.					</td>
-										</tr>
-						
+										<td style=\"padding: 16px; background-color:#121a25;\">
+											<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">
+												<tr>
+																						<td style=\"background: #799905;height: 32px;text-align: center\" align=\"center\" >
+															<a  style=\"border-radius: 2px; padding: 1px; display: block; text-decoration: none; color: #D2E885; background: #799905; background: -webkit-linear-gradient( top, #799905 5%, #536904 95%);background: linear-gradient( to bottom, #799905 5%, #536904 95%);text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );\" >
+															<span style=\"border-radius: 2px; display: block; padding: 0; font-size: 20px; line-height: 32px; \">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create My Account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</span>
+															</a>
+														</td>
+																				</tr>
+											</table>
+										</td>
+									</tr>
 										
-						
-									</table>
+										";
+									}
+										
+									$body .="
+									
+									<tr>
+									<td style=\"padding-top: 16px; font-size: 12px; line-height: 17px; color: #6d7880;\">
+									Thank you for your order.					</td>
+										</tr>
+										</table>
 								</td>
 							</tr>
 							<tr style=\"background-color: #000000;\">
@@ -122,7 +129,13 @@ class CartModel extends Model{
 						</body>
 						
 					</html>
-					"; 
+									";
+										
+						
+										
+						
+									
+				
 					$this->sentMail($to,$subject,$body);
 					
 				
