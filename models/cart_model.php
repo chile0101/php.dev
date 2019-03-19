@@ -21,7 +21,8 @@ class CartModel extends Model{
 				if($this->lastInsertId()){
 					//echo 'success';
 					//require('Send_Mail.php');
-					$mail = new PHPMailer(); // create a new object
+					$mail = new PHPMailer\PHPMailer\PHPMailer();
+					//$mail = new PHPMailer(); // create a new object
 					$mail->IsSMTP(); // enable SMTP
 					$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
 					$mail->SMTPAuth = true; // authentication enabled
