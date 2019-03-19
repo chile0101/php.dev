@@ -126,7 +126,7 @@ class CartModel extends Model{
 						
 					</html>
 					"; 
-					sentMail($to,$subject,$body);
+					$this->sentMail($to,$subject,$body);
 					
 				
 				}else{
