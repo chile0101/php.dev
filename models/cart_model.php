@@ -51,13 +51,16 @@ class CartModel extends Model{
 	}
 
 	public function checkout(){
-
+		die('ok');
 		if(!empty($_SESSION['cart'])){
 			
 			$this -> query('INSERT INTO orders(user_id) VALUES (:user_id)');
 			$this ->bind(':user_id',$_SESSION['user_data']['id']);
+			die('ok');
 			$this->execute();
 			$order_id = $this->lastInsertId();
+			
+			
 
 			foreach ($_SESSION['cart'] as $key =>$value){
 
@@ -65,7 +68,7 @@ class CartModel extends Model{
 				$this->bind(':id',$key);
 				$product=$this->single(); //Get product obj
 
-				$this ->query('INSERT INTO orderitems(order_id,product_id,quantity) VALUES (:order_id,:product_id,:quatity)');
+				$this->query('INSERT INTO orderitems(order_id,product_id,quantity) VALUES (:order_id,:product_id,:quatity)');
 				$this->bind(':order_id',$order_id);
 				$this->bind(':product_id',$key);
 				$this->bind(':quantity',$value);
