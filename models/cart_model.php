@@ -51,15 +51,15 @@ class CartModel extends Model{
 	}
 
 	public function checkout(){
-		die('ok');
+		
 		if(!empty($_SESSION['cart'])){
 			
 			$this -> query('INSERT INTO orders(user_id) VALUES (:user_id)');
 			$this ->bind(':user_id',$_SESSION['user_data']['id']);
-			die('ok');
+		
 			$this->execute();
 			$order_id = $this->lastInsertId();
-			
+			echo $order_id;
 			
 
 			foreach ($_SESSION['cart'] as $key =>$value){
