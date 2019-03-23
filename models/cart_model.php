@@ -53,18 +53,24 @@ class CartModel extends Model{
 	public function checkout(){
 
 		if(!empty($_SESSION['cart'])){
-	
+			
+			$this -> query('INSERT INTO orders(user_id) VALUES (:user_id)');
+			$this ->bind(':user_id',$_SESSION['user_data']['id']);
+			$this->execute();
+			$order_id = $this->lastInsertId();
+
 			foreach ($_SESSION['cart'] as $key =>$value){
-				 $this->query('SELECT * FROM products WHERE id=:id');
-				 $this->bind(':id',$key);
-				 $product=$this->single(); //Get product obj
-		
-				$this->query("INSERT INTO orders (user_id,product_id,quantity,status) VALUES (:user_id,:product_id,:quantity,:status)");
-				$this->bind(':user_id',$_SESSION['user_data']['id']);
-				$this->bind(':product_id',$key );
-				$this->bind(':quantity',$value );
-				$this->bind(':status',0);   // 1-> Chua xu ly
- 
+
+				$this->query('SELECT * FROM products WHERE id=:id');
+				$this->bind(':id',$key);
+				$product=$this->single(); //Get product obj
+
+				$this ->query('INSERT INTO orderitems(order_id,product_id,quantity) VALUES (:order_id,:product_id,:quatity)')
+				$this->bind(':order_id',$order_id);
+				$this->bind(':product_id',$key);
+				$this->bind(':quantity',$value);
+				$this->execute();  		// Luu vao database
+			
 				$this->execute();
 				if($this->lastInsertId()){
 					$to = $_SESSION['user_data']['email'];
@@ -152,13 +158,9 @@ class CartModel extends Model{
 						</body>
 						
 					</html>
-									";
-										
-						
-										
+									";										
 					$this->sentMail($to,$subject,$body);
 					
-				
 				}else{
 					echo 'err';
 				}
