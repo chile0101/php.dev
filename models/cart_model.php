@@ -65,7 +65,7 @@ class CartModel extends Model{
 				$this->bind(':id',$key);
 				$product=$this->single(); //Get product obj
 
-				$this ->query('INSERT INTO orderitems(order_id,product_id,quantity) VALUES (:order_id,:product_id,:quatity)')
+				$this ->query('INSERT INTO orderitems(order_id,product_id,quantity) VALUES (:order_id,:product_id,:quatity)');
 				$this->bind(':order_id',$order_id);
 				$this->bind(':product_id',$key);
 				$this->bind(':quantity',$value);
