@@ -93,7 +93,7 @@ CREATE TABLE orders (
 );
 
 INSERT INTO orders(user_id) 
-       VALUES (1)
+       VALUES (1);
 
 CREATE TABLE orderitems(
     id INT UNSIGNED AUTO_INCREMENT,
@@ -106,6 +106,9 @@ CREATE TABLE orderitems(
     FOREIGN KEY(product_id) REFERENCES products(id)
 
 );
+
+INSERT INTO orderitems(order_id,product_id,quantity) VALUES (2,1,2);
+
 
 CREATE TABLE reviews(
     

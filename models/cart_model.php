@@ -59,7 +59,7 @@ class CartModel extends Model{
 		
 			$this->execute();
 			$order_id = $this->lastInsertId();
-			echo $order_id;
+			
 			
 
 			foreach ($_SESSION['cart'] as $key =>$value){
@@ -68,7 +68,7 @@ class CartModel extends Model{
 				$this->bind(':id',$key);
 				$product=$this->single(); //Get product obj
 
-				$this->query('INSERT INTO orderitems(order_id,product_id,quantity) VALUES (:order_id,:product_id,:quatity)');
+				$this->query('INSERT INTO orderitems(order_id,product_id,quantity) VALUES (:order_id,:product_id,:quantity)');
 				$this->bind(':order_id',$order_id);
 				$this->bind(':product_id',$key);
 				$this->bind(':quantity',$value);
