@@ -127,8 +127,8 @@
   page_id="641878059586112">
 </div>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js">
-    
+  
+    <script src="<?php echo ROOT_PATH; ?>assets/js/jquery-3.3.1.min.js"></script>    
     <script src="<?php echo ROOT_PATH; ?>assets/js/popper.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo ROOT_PATH; ?>assets/js/menu-icon.js" ></script>

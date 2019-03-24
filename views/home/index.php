@@ -1,10 +1,12 @@
-<!-- <script type="text/javascript">
+<script type="text/javascript">
+
  function addCart(id){
       //alert(id///.p);
     product={
         'id': id,
         'quantity':1
     };
+
     $.ajax(
         {     
         type:    'post',
@@ -14,20 +16,20 @@
         
         success: function(data) 
         {   
-            //alert(data);
-            var mess = document.getElementById("alert");
+             var mess = document.getElementById("alert")
             
-           // mess.setAttribute("class", "alert alert-success");
-            mess.classList.add("messagess");
             var p = document.createElement("p");
-            p.setAttribute("id", "p_element");
-            var t = document.createTextNode("Added products to cart");
-            p.appendChild(t);
+            var text = document.createTextNode("Added products to cart");
+            p.appendChild(text);
             mess.appendChild(p);
+            mess.classList.add("messagess");
+            
             setTimeout(function(){ 
-                var element = document.getElementById("p_element");
-                element.parentNode.removeChild(element);
-                mess.classList.remove("messagess");
+            
+                while (mess.firstChild) {
+                    mess.removeChild(mess.firstChild);
+                }
+                mess.className = mess.className.replace(/\bmessagess\b/g, "");
                 
                  },2000);
                  
@@ -35,37 +37,13 @@
         }   
         });
     }
-</script> -->
-<script src="<?php echo ROOT_PATH; ?>assets/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    function addCart(id){
-        product={
-        'id': id,
-        'quantity':1
-        };
-        $.ajax({
-            url:"./models/addcart.php",
-            method:"POST",
-            data:product,
-            dataType:"json",
-            success:function(data)
-            {
-                alert('ok');
-                // $('#cart_details').html(data.cart_details);
-                // $('.total_price').text(data.total_price);
-                // $('.badge').text(data.total_item);
-            }
-        });
-    }
-
-});
-
-
 </script>
 
-<div id="alert">
-</div>
+
+
+<!-- <div id="alert"> -->
+    <div id = "alert"></div>
+<!-- </div> -->
 
 <div class="container">
     <div class="row">
