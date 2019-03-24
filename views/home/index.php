@@ -36,6 +36,7 @@
         });
     }
 </script> -->
+<script src="<?php echo ROOT_PATH; ?>assets/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
     function addCart(id){
