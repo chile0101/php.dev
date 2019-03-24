@@ -36,7 +36,7 @@
         });
     }
 </script> -->
-<script>
+<script type="text/javascript">
 $(document).ready(function(){
     function addCart(id){
         product={
