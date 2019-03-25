@@ -30,8 +30,8 @@
             setTimeout(function(){ 
                 
 
-                var div = document.getElementById('alert');
-                while (div.hasChildNodes()) {
+                //var div = document.getElementById('alert');
+                while (div.firstChild) {
                     div.removeChild(div.firstChild);
                 }
                 div.className = div.className.replace(/\bmessagess\b/g, "");
