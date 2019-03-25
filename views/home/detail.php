@@ -16,27 +16,21 @@
         
         success: function(data) 
         {   
-            //var mess = document.getElementById("alert")
-            var div = document.createElement('div');
-            div.setAttribute("id","alert");
-
-            
+            var mess = document.getElementById("alert")
             var p = document.createElement("p");
             var text = document.createTextNode("Added products to cart");
             p.appendChild(text);
-            div.appendChild(p);
-            div.classList.add("messagess");
+            mess.appendChild(p);
+            mess.classList.add("messagess");
             
             setTimeout(function(){ 
-                
-
-                //var div = document.getElementById('alert');
-                while (div.firstChild) {
-                    div.removeChild(div.firstChild);
+            
+                while (mess.hasChildNodes()) {
+                    mess.removeChild(mess.firstChild);
                 }
-                div.className = div.className.replace(/\bmessagess\b/g, "");
+                mess.className = mess.className.replace(/\bmessagess\b/g, "");
                 
-            },1500);
+            },1000);
                  
             
         }   
@@ -44,10 +38,8 @@
     }
 </script>
 
+<div id = "alert"></div>
 
-
-<!-- <div id="alert">
-</div> -->
 <div class="container detail">
   <div class="main row">
     <div class="col">
