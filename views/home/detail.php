@@ -1,39 +1,44 @@
 <script type="text/javascript">
+
  function addCart(id){
-    var quantity= document.getElementById("quantity").value;
+      //alert(id///.p);
     product={
         'id': id,
-        'quantity':quantity
+        'quantity':1
     };
+
     $.ajax(
         {     
         type:    'post',
-        url:     '../../models/addcart.php',
+        url:     './models/addcart.php',
         data:    product,
         dataType: 'json',
-        success: function(data) 
-        {
         
-          var mess = document.getElementById("alert");
+        success: function(data) 
+        {   
+            var mess = document.getElementById("alert")
+            var p = document.createElement("p");
+            var text = document.createTextNode("Added products to cart");
+            p.appendChild(text);
+            mess.appendChild(p);
+            mess.classList.add("messagess");
             
-            // mess.setAttribute("class", "alert alert-success");
-             mess.classList.add("messagess");
-             var p = document.createElement("p");
-             p.setAttribute("id", "p_element");
-             var t = document.createTextNode("Added products to cart");
-             p.appendChild(t);
-             mess.appendChild(p);
-             setTimeout(function(){ 
-                 var element = document.getElementById("p_element");
-                 element.parentNode.removeChild(element);
-                 mess.classList.remove("messagess");
+            setTimeout(function(){ 
+            
+                while (mess.hasChildNodes()) {
+                    mess.removeChild(mess.firstChild);
+                }
+                mess.className = mess.className.replace(/\bmessagess\b/g, "");
+                
+            },1500);
                  
-                  },2000);
-
+            
         }   
         });
-}
+    }
 </script>
+
+
 <div id="alert">
 </div>
 <div class="container detail">

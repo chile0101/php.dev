@@ -16,8 +16,7 @@
         
         success: function(data) 
         {   
-             var mess = document.getElementById("alert")
-            
+            var mess = document.getElementById("alert")
             var p = document.createElement("p");
             var text = document.createTextNode("Added products to cart");
             p.appendChild(text);
@@ -26,12 +25,12 @@
             
             setTimeout(function(){ 
             
-                while (mess.firstChild) {
+                while (mess.hasChildNodes()) {
                     mess.removeChild(mess.firstChild);
                 }
                 mess.className = mess.className.replace(/\bmessagess\b/g, "");
                 
-                 },2000);
+            },1500);
                  
             
         }   
