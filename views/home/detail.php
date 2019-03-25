@@ -31,7 +31,7 @@
                 
 
                 var div = document.getElementById('alert');
-                while (mess.hasChildNodes()) {
+                while (div.hasChildNodes()) {
                     div.removeChild(div.firstChild);
                 }
                 div.className = div.className.replace(/\bmessagess\b/g, "");
@@ -46,8 +46,8 @@
 
 
 
-<div id="alert">
-</div>
+<!-- <div id="alert">
+</div> -->
 <div class="container detail">
   <div class="main row">
     <div class="col">
