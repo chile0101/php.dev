@@ -10,7 +10,7 @@
     $.ajax(
         {     
         type:    'post',
-        url:     './models/addcart.php',
+        url:     '../../models/addcart.php',
         data:    product,
         dataType: 'json',
         
@@ -37,6 +37,7 @@
         });
     }
 </script>
+
 
 
 <div id="alert">
