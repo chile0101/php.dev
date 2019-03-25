@@ -16,19 +16,25 @@
         
         success: function(data) 
         {   
-            var mess = document.getElementById("alert")
+            //var mess = document.getElementById("alert")
+            var div = document.createElement('div');
+            div.setAttribute("id","alert");
+
+            
             var p = document.createElement("p");
             var text = document.createTextNode("Added products to cart");
             p.appendChild(text);
-            mess.appendChild(p);
-            mess.classList.add("messagess");
+            div.appendChild(p);
+            div.classList.add("messagess");
             
             setTimeout(function(){ 
-            
+                
+
+                var div = document.getElementById('alert');
                 while (mess.hasChildNodes()) {
-                    mess.removeChild(mess.firstChild);
+                    div.removeChild(div.firstChild);
                 }
-                mess.className = mess.className.replace(/\bmessagess\b/g, "");
+                div.className = div.className.replace(/\bmessagess\b/g, "");
                 
             },1500);
                  
