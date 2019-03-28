@@ -1,3 +1,7 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <section class="header-about module" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/slides/banner1.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/about-data.jpg">
 	<div class="container">
 		<div class="row">

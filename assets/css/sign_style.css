@@ -15,14 +15,14 @@
   background-size: cover;
   height: 680px;
   padding: 70px 0px 0px 0px;
-  margin-bottom: 60px;
+  
 
 }
 
 .loginbox{
   opacity: 0.9;
-  background: #a9f6fe;
-  color: black;
+  background: #444444;
+  color: white;
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
@@ -36,7 +36,7 @@
 }
 
 .signup{
-  width: 450px;
+  width: 320px;
   height: 95%;
 }
 
@@ -46,6 +46,7 @@
   text-align: center;
   font-size: 22px;
   font-weight: bold;
+
 }
 
 .loginbox p{
@@ -57,6 +58,7 @@
 .loginbox input{
   width: 100%;
   margin-bottom: 20px;
+
 }
 
 .loginbox input[type="text"], input[type="password"]{
@@ -65,8 +67,9 @@
   background: transparent;
   outline: none;
   height: 40px;
-  color: black;
+  color: white;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .loginbox input[type="submit"]{
@@ -83,12 +86,15 @@
   background: #001d92;
   color: white;
 }
-
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+color: #D7D7D7;
+.text-semi-bold;
+}
 .loginbox a{
   text-decoration: none;
   font-size: 14px;
   line-height: 20px;
-  color: darkgrey;
+  color: white;
 }
 
 .loginbox a:hover{

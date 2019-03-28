@@ -9,6 +9,6 @@ define("DB_NAME","db_phpdev");
 // Define URL
 
 define("ROOT_PATH","/php.dev/");
-define("ROOT_URL","/");
+define("ROOT_URL","/php.dev/");
 define("ROOT_URL_ADMIN","/admin/");
 

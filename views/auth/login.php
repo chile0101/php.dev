@@ -1,3 +1,4 @@
+
 <?php
     $error="";
     if(isset($_POST['submit'])){
@@ -18,7 +19,7 @@
         <img src="<?php echo ROOT_PATH; ?>assets/images/icons/avatar.jpeg" class="avatar">
         <h1>Login Here</h1>
         <small class="text-danger">* <?php echo $error; ?></small>
-        <div >
+        
             <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
                 
                 <p>Email</p>
@@ -29,6 +30,6 @@
                 <a href="#">Lost your password?</a><br>
                 <a href="#">Don't have an account?</a>
             </form>
-        </div>
+        
     </div>
 </div>

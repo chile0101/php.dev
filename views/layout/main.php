@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Shopera</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -64,7 +65,7 @@
       <?php require($view); ?>
    
 <div class="container">
-    <div class=" row" style="margin-bottom:30px;">
+    <div class=" row" >
       <div class="col">
         <h4>Contact</h4>
         <hr>
