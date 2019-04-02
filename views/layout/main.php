@@ -71,16 +71,23 @@
           <span class="cart-image" id="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/cart-icon.png" alt="cart-icon"></span>
         </a>
       </div>
+      
       <?php if(isset($_SESSION['user_logged_in'])): ?>
-        <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/profile/<?php echo $_SESSION['user_data']['id']; ?>"><?php echo $_SESSION['user_data']['fullname']; ?>  </a> <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a></div>
+
+        <div class="sign-content" ><a href="<?php echo ROOT_URL; ?>auth/profile/<?php echo $_SESSION['user_data']['id']; ?>"><?php echo $_SESSION['user_data']['fullname']; ?>  </a> <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a>
+        </div>
          
   
       <?php else: ?>
-        <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/login">Log in </a>
-          <p class="register-button">
-          <a href="<?php echo ROOT_URL; ?>auth/register"> Register</a></div>
+        <div class="sign-content" style="display:inline-flex;height: 30px;">
+          <a href="<?php echo ROOT_URL; ?>auth/login" >Log in </a>
+          <p class="register-button btn-outline-success" style="margin-top:-2px;">
+          <a href="<?php echo ROOT_URL; ?>auth/register"> Register</a>
           </p>
+         
+        </div>  
       <?php endif ?>
+      
     </div>  
   </header>
       
