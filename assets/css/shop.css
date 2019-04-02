@@ -79,13 +79,13 @@ li.item{
   position: relative;
   display: list-item;
   list-style: none;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0 2px 0 #48B02C, 0 1px 1px 0 #48B02C;
 }
 
 li.item:hover{
-  box-shadow: 1px 1px rgba(244,82,69,.9),
-              2px 2px rgba(244,82,69,.9),
-              3px 3px rgba(244,82,69,.9);
+  box-shadow: 1px 1px #48B02C,
+              2px 2px #48B02C,
+              3px 3px #48B02C;
   -webkit-transform: translateX(3px);
   transform: translateX(3px);
 }
@@ -100,22 +100,26 @@ li.item:hover{
 .price{
   position: absolute;
   bottom: 116px;
-  background: rgba(244,82,69,.9);
+  /*background: rgba(244,82,69,.9);*/
+  background-color:green;
   margin: 0 auto;
   left: 50%;
   transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   color: #fff;
-  font-size: 14px;
-  padding: 9px 15px;
+  font-size: 17px;
+  padding: 9px 40px;
   line-height: 14px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .amount{
   height: 24px;
   line-height: 24px;
   display: inline-block;
+  background-color: green;
 }
 
 .item h3 {
@@ -123,8 +127,10 @@ li.item:hover{
   color: #7e7e7e;
   font-weight: 600;
   text-transform: none;
-  font-size: 14px;
+  font-size: 20px;
   padding: 10px;
+  margin-top:25px;
+
 }
 
 .add-to-card{
@@ -153,6 +159,7 @@ form.star-rate{
   float: left;
   width: 50%;
   margin: 20px 0;
+  
 }
 
 #addCart:hover {

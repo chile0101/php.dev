@@ -1,3 +1,8 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
 <script type="text/javascript">
 
  function addCart(id){
@@ -62,46 +67,58 @@
 <div id = "alert"></div>
 
 <div class="container detail">
-  <div class="main row">
+  <div class="main row" ;">
     <div class="col">
       <div class="img-detail">
         <img src="<?php echo $viewmodel['image']; ?>" alt="image product detail">
       </div>
-      <div style="text-align:center; margin-top:10px;">
-        <h4>$ <?php echo $viewmodel['pricenew'] ?> </h4>
-    </div>
+      <div style="width: 100%;">
+        <div class="kind" style="width: 100%;float:left;padding-top:10px;">
+            <button type="button" class="btn btn-primary btn-sm">Free to play</button>
+            <button type="button" class="btn btn-secondary btn-sm">MOBA</button>
+            <button type="button" class="btn btn-primary btn-sm">Strategy</button>
+            <button type="button" class="btn btn-secondary btn-sm">Mutiplayer</button>
+            <button type="button" class="btn btn-primary btn-sm">Pvp</button>
+            <br><br>
+            
+        </div>
+        
+      </div>
       
     </div>
     <div class="col">
-      <h3><?php echo $viewmodel['name']; ?></h3>
-      <p><?php echo $viewmodel['description']; ?>
-      </p><br>
-      <label style="margin-right:20px;">Release date:</label> <?php echo $viewmodel['date_release']; ?> <br>
-        <label style="margin-right:45px;">Developer:</label> <a href=""><?php echo $viewmodel['developer']; ?></a><br>
-        <a href="<?php echo $viewmodel['link_origin']; ?>"> Original link product</a><br>
-       <label> Popular user-defined tags for this product: </label><br>
-        <button type="button" class="btn btn-primary btn-sm">Free to play</button>
-        <button type="button" class="btn btn-secondary btn-sm">MOBA</button>
-        <button type="button" class="btn btn-primary btn-sm">Strategy</button>
-        <button type="button" class="btn btn-secondary btn-sm">Mutiplayer</button>
-        <button type="button" class="btn btn-primary btn-sm">Pvp</button>
-        <br><br>
-        
-    
-          <label class="type-label">Quantity:</label>
-          <input type="number" id="quantity" style="width:30px; text-align: center;" value="1" min="1">
-     
-        
-          <button style="margin-left:20px;" type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
-            ADD TO CART
-          </button>
+      <div class="info-product" style="color:white;">
+        <h3><?php echo $viewmodel['name']; ?></h3>
+        <p style="color:#007BFF; font-size:16px;"><?php echo $viewmodel['description']; ?>
+        </p><br>
+        <label >Release date:</label> <?php echo $viewmodel['date_release']; ?> <br>
+          <label style="margin-right:45px;">Developer:</label> <a href=""><?php echo $viewmodel['developer']; ?></a><br>
+          <a href="<?php echo $viewmodel['link_origin']; ?>"> Original link product</a><br>
+         <label> Popular user-defined tags for this product: </label><br>
+
+          
+      
+            <label class="type-label">Quantity:</label>
+            <input type="number" id="quantity" style="width:30px; text-align: center;" value="1" min="1">
+        </div>
+
         
 
         <!-- /<button type="button" class="btn btn-danger">Add to Cart</button> -->
 
   </div>
+  <div style="width: 100%; margin: 0 auto;display: table-cell;vertical-align: middle;">
+    <div style="text-align:center; width: 50%;float:left;border:solid 2px;border-color:#007BFF; padding-top: 10px ; background-color:white; ">
+            <h4>$ <?php echo $viewmodel['pricenew'] ?> </h4>
+    </div>
+    <div class="addcart" style="float:left;width: 50%;">
 
- 
+            <button style="margin:0 auto;width:95%;height:41px;background-color:#007BFF;border: none; " type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
+              ADD TO CART
+            </button>
+    </div>
+  </div>
+
   </div>
 
     <div class="tab">

@@ -1,12 +1,21 @@
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+
 <?php 
   $emailErr="";
   if(isset($_POST['contact_us'])){
     if(empty($_POST['email'])){
       $emailErr="Please enter the email";
-    }
+    
   }
 ?>
-<div id="contact" class="container" >
+<div id="contact" class="container">
   <div id="contact-content" class="contact-content row">
     <div class="col-sm-12 col-md-12 col-lg-12"  >
       <div id="content">

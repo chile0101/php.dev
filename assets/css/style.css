@@ -11,13 +11,16 @@ a{
 }
 
 body{
+  /*background-image:url(../images/bg-main.jpg);*/
   background: #f2f2f2;
   font-size: 18px;
   font-weight: 18;
+background-image:url(../images/bg/bg-6.png);
+
 }
 
 header{
-  background:url(../images/banner3.jpg) no-repeat 0px 0px;
+  background:url(../images/bg/bg-6.jpg) no-repeat 0px 0px;
 		min-height:87px;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
@@ -26,10 +29,41 @@ header{
   height: 100px;
   width: 100%;
   z-index: 3;
-  color: white;
+  color: green;
   overflow: hidden;
 }
+.footer{
+  background-color:#000000;
+  color:green;width: 80%;
+  margin:0 auto;
+  border-color: green;
+  border:solid 1px;
+  border-radius: 10px;
+  padding: 15px 20px 8px 20px;
+  margin-bottom: 5px;
 
+}
+.container{
+  background-image:url(../images/bg/bg-3.png);
+  color: green;
+}
+.col h4{
+  font-weight: bold;
+}
+.col ul li {
+  font-size:12px;
+}
+.col h6 {
+ font-size:12px;
+}
+.col p{
+  font-size:12px;
+  text-align: justify;
+}
+.form-control{
+  padding-top: 0px; 
+  padding-bottom: 0px;
+}
 .header-container{
 
   display: grid;
@@ -82,19 +116,30 @@ header{
 
 .menu-primary >ul > li:hover{
   cursor: pointer;
-  background: #ff3300;
+  background:green;
 }
 
 .menu-primary > ul > li > a, .sign-content a{
   text-decoration: none;
   color: #fff;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  
 }
-
-.header-search{
+.register-button{
+  border: solid 1px;
+  
+  border-color: green;
+  margin: 0px 5px 0 5px;
+  color:#fff;
+  text-align: center;
+  width: 80px;
+}
+.header-search {
   grid-column: 4;
-  padding-top: 33px;
+  padding-top: 5px;
+  
+  
 }
 
 .search-field{
@@ -210,6 +255,8 @@ footer{
   border: 0;
   color: #fff;
   background: red;
+  padding: 0 7px;
+  background-color:#BB0000;
 }
 
 .subscribe-submit:hover{
@@ -227,10 +274,13 @@ footer{
 }
 .txtTrend{
   text-align: center;
-  color: #e91e63;
+  color: green;
   margin-bottom: 50px;
+ 
 }
-
+.txtTrend h2{
+   font-weight: bold;
+}
 @-webkit-keyframes swing
 {
   15%

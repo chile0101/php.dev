@@ -1,3 +1,9 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>shop</title>
+</head>
 <script type="text/javascript">
 
  function addCart(id){
@@ -157,12 +163,12 @@
 
 
     <div class="row ty-see-product">
-        <a class="btn btn-dark" href="<?php echo ROOT_URL; ?>home/shop">SEE ALL PRODUCTS</a>
+        <a class="btn btn-dark" href="<?php echo ROOT_URL; ?>home/shop" style="background-color:green; padding:10px 60px;">SEE ALL PRODUCTS</a>
     </div>
 </div>
 
 
-<section class="home-section header-about module" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/slides/banner3.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/home.jpg">
+<!-- section class="home-section header-about module" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/slides/banner3.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/home.jpg">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -172,5 +178,5 @@ With nearly 30,000 games from AAA to indie and everything in-between. Enjoy excl
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
