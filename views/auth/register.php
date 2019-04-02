@@ -42,10 +42,10 @@
     }
 
 ?>
-<div class="register" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/slides/banner1.jpg);">
+<div class="register" style="background:url(<?php echo ROOT_PATH; ?>/assets/images/bg-main.jpg);">
     <div class="loginbox signup">
-        <img src="<?php echo ROOT_PATH; ?>assets/images/icons/avatar.jpeg" class="avatar">
-            <h1>Register Here</h1>
+        <img src="<?php echo ROOT_PATH; ?>assets/images/icons/avatar1.png" class="avatar">
+            <h1 style="font-size:30px;color:#48B02C;">Register Here</h1>
                     <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
                         
                         <input type="text" name="fullname" placeholder="Your Full Name" value="<?php echo $fullname;?>">

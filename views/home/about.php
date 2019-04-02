@@ -1,8 +1,14 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<section class="header-about module" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/slides/banner1.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/about-data.jpg">
+<div class="container">
+  <img src="../assets/images/about/about-1.png" class="card-img-top" alt="...">
+</div>
+  <!-- <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div> -->
+ 
+
+<!-- <section class="header-about module" style="background-image: url('<?php echo ROOT_PATH;?>assets/images/slides/banner1.jpg');" data-background="<?php echo ROOT_PATH;?>assets/images/about/about-data.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
@@ -12,6 +18,7 @@
 		</div>
 	</div>
 </section>
+	
 
 <section class="our-team">
 	<div class="container">
@@ -38,3 +45,4 @@
 		</div>
 	</div>
 </section>
+ -->

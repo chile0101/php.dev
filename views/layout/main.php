@@ -24,6 +24,7 @@
 
 
 </head>
+
 <body>
   <header>
     <div class="header-container">
@@ -35,42 +36,63 @@
       </div>
       <div class="menu-primary">
         <ul> 
-          <li><a href="<?php echo ROOT_URL; ?>home/shop">Store</a></li>
+          <li><a href="<?php echo ROOT_URL; ?>home/shop">Categories</a></li>
           <li><a href="<?php echo ROOT_URL; ?>home/about">About</a></li>
-          <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a></li>
+
+
+           
+
+          <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a>
+
+          </li>
+          
         </ul>
-      </div>
-      <div class="header-search">
-        <form role="search" method="get" class="search-form" action="page_404.html">
+      </div> 
+
+
+
+       <div class="header-search">
+        <!-- <form role="search" method="get" class="search-form" action="page_404.html">
           <input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:" />
           <input type="hidden" name="lang" value="" />
           <input type="submit" class="search-submit" value="Search" />
+        </form> -->
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-4" type="submit">Search</button>
         </form>
-      </div>
+      </div> 
+
+      
+
+
       <div class="cart-content">
         <a href="<?php echo ROOT_URL; ?>cart/view">
-          <span class="cart-image" id="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/shopping-cart.png" alt="cart-icon"></span>
+          <span class="cart-image" id="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/cart-icon.png" alt="cart-icon"></span>
         </a>
       </div>
       <?php if(isset($_SESSION['user_logged_in'])): ?>
-        <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/profile/<?php echo $_SESSION['user_data']['id']; ?>"><?php echo $_SESSION['user_data']['fullname']; ?>  </a>| <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a></div>
+        <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/profile/<?php echo $_SESSION['user_data']['id']; ?>"><?php echo $_SESSION['user_data']['fullname']; ?>  </a> <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a></div>
          
   
       <?php else: ?>
-        <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/login">Log in </a>|<a href="<?php echo ROOT_URL; ?>auth/register"> Register</a></div>
+        <div class="sign-content"><a href="<?php echo ROOT_URL; ?>auth/login">Log in </a>
+          <p class="register-button">
+          <a href="<?php echo ROOT_URL; ?>auth/register"> Register</a></div>
+          </p>
       <?php endif ?>
     </div>  
   </header>
       
       <?php require($view); ?>
    
-<div class="container">
-    <div class=" row" >
+<div class="footer" >
+    <div class=" row" style="margin-bottom:3px;">
       <div class="col">
         <h4>Contact</h4>
         <hr>
         
-        <a href="mailto:example@mail.com"><h6><i style="margin-right:5px;" class="fa fa-envelope" aria-hidden="true"></i> ex@mail.com</h6></a>
+        <a href="mailto:example@mail.com" style="color:green;"><h6><i style="margin-right:5px;" class="fa fa-envelope" aria-hidden="true"></i> ex@mail.com</h6></a>
         <h6> <i style="margin-right:5px;" class="fa fa-phone" aria-hidden="true"></i> +18045678834</h6>
         <h6><i style="margin-right:5px;" class="fa fa-map-marker" aria-hidden="true"></i> 4th Avenue,London</h6>
       
@@ -81,9 +103,9 @@
         <h4>News</h4>
         <hr>
         <ul>
-          <li><a href="https://store.steampowered.com/about/">Abous Steam and how to install</a></li>
-          <li><a href="https://store.steampowered.com/explore/new/">Games new</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Copyright_and_video_games">Copyright and video games</a></li>
+          <li><a href="https://store.steampowered.com/about/" style="color:green;">Abous Steam and how to install</a></li>
+          <li><a href="https://store.steampowered.com/explore/new/" style="color:green;">Games new</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Copyright_and_video_games" style="color:green;">Copyright and video games</a></li>
         </ul>
       </div>
 
@@ -101,7 +123,7 @@
     </div>
 </div>
 
-    <div class="info">
+    <div class="info" style="font-size:12px; background:#000000;color:white;border: none;">
       <p>© 2017 Games Zone. All Rights Reserved</p>
     </div>
     <!-- Load Facebook SDK for JavaScript -->

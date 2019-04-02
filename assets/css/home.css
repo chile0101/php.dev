@@ -7,7 +7,7 @@
 }
 .mb.btn:hover{
     transform: translateY(-2px);
-    box-shadow: 2px 2px 5px hsla(0, 0%, 20%, 1);
+    box-shadow: 2px 2px 5px #48B02C;
 }
 .mb.card{
     border-radius: 0px / 0px;

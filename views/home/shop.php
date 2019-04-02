@@ -1,5 +1,8 @@
  
-
+<head>
+  <title>Shopera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <script type="text/javascript">
  function addCart(id){
       //alert(id///.p);
@@ -66,20 +69,21 @@
         <a href="<?php echo ROOT_URL; ?>home/detail/<?php echo $product['id']; ?>">
             <div class="item-image">
             <img width="230" height="230" src="<?php echo $product['image'] ?>" alt="product">
-            <span class="price">
-                <span class="amount"><?php echo $product['pricenew']; ?> $</span>
+            <span class="price" >
+                <span class="amount" style="background-color:green;"><?php echo $product['pricenew']; ?> $</span>
             </span>
             </div>
         </a>
-        <h3><?php echo $product['name']; ?></h3> 
+        <h3 ><?php echo $product['name']; ?></h3> 
         <div class="product-info">
-            <form class="star-rate">
+            <form class="star-rate"> 
             <div class="stars">
                 <input type="radio" name="star" class="star-1" id="star-1" />
                 <label class="star-1" for="star-1">1</label>
                 <input type="radio" name="star" class="star-2" id="star-2" />
                 <label class="star-2" for="star-2">2</label>
-                <input type="radio" name="star" class="star-3" id="star-3" />
+                <input type="radio" name="star" class="
+                " id="star-3" />
                 <label class="star-3" for="star-3">3</label>
                 <input type="radio" name="star" class="star-4" id="star-4" />
                 <label class="star-4" for="star-4">4</label>
@@ -89,7 +93,10 @@
             </div>
             </form>
 
-            <p id="addCart" onclick="addCart(<?php echo $product['id']; ?>);" class="add-to-card"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></p>
+            <p id="addCart" onclick="addCart(<?php echo $product['id']; ?>);" class="add-to-card">
+                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                <!-- <img src="php.dev/assets/images/icons/cart-icon.png"> -->
+            </p>
         </div>
         </li>
     <?php endforeach ?>
