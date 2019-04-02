@@ -43,7 +43,6 @@ CREATE TABLE products (
     date_release DATE,         
     developer VARCHAR(255),
     link_trailer TINYTEXT,
-    rating_avg DECIMAL(1,1),
     type_product_id INT UNSIGNED NOT NULL,
     create_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     update_at DATETIME,

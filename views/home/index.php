@@ -40,9 +40,9 @@
 
 
 
-<!-- <div id="alert"> -->
-    <div id = "alert"></div>
-<!-- </div> -->
+
+<div id = "alert"></div>
+
 
 <div class="container">
     <div class="row">

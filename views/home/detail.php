@@ -36,6 +36,27 @@
         }   
         });
     }
+
+    function fetchReview(productId){
+    
+    $.ajax(
+        {     
+        type:    'post',
+        url:     '../../models/fetchReview.php',
+        data:    productId,
+        dataType: 'json',
+        
+        success: function(data) 
+        {   
+           
+            
+        }   
+        });
+    }
+
+
+
+
 </script>
 
 <div id = "alert"></div>
@@ -125,13 +146,14 @@
     </div>
 
     <div id="Tokyo" class="tabcontent" style="padding-bottom:50px;">
-      <p>There are no reviews for this product.</p><br>
+      <!-- <p>There are no reviews for this product.</p><br> -->
+      
+
       <h4>Write Review</h4><br>
 
       
       <form>
-      *Name: <br>
-        <input type="text" ><br><br>
+      
       *Content <br>
       <textarea rows="4" cols="50"> </textarea><br>
       Note: Not support HTML! <br><br>
