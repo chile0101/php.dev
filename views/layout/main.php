@@ -22,6 +22,12 @@
 
   <link rel="icon" href="<?php echo ROOT_PATH;?>assets/images/icons/logo-icon.png"  sizes="20x20">
 
+  <script src="<?php echo ROOT_PATH; ?>assets/js/jquery-3.1.1.min.js"></script>
+    <script src="<?php echo ROOT_PATH; ?>assets/js/popper.min.js"></script>
+    <script src="<?php echo ROOT_PATH; ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo ROOT_PATH; ?>assets/js/menu-icon.js" ></script>
+
+
   <meta charshet="utf-8" />
 </head>
 
@@ -63,7 +69,7 @@
         </form>
       </div> 
 
-      
+      >
 
 
       <div class="cart-content">
@@ -157,11 +163,7 @@
   page_id="641878059586112">
 </div>
 
-    <script src="<?php echo ROOT_PATH; ?>assets/js/jquery-3.1.1.min.js"></script>
-    <script src="<?php echo ROOT_PATH; ?>assets/js/popper.min.js"></script>
-    <script src="<?php echo ROOT_PATH; ?>assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo ROOT_PATH; ?>assets/js/menu-icon.js" ></script>
-
+   
 
 </body>
 </html>
