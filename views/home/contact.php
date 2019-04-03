@@ -15,13 +15,13 @@
               <h3 class="contact-us underline">CONTACT INFO</h3>
               <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><br>
               <p class="contact-info">
-                <span class="glyphicon glyphicon-home">  Shopera 221B Baker London</span>
+                <span class="glyphicon glyphicon-home">  Bach Khoa University</span>
               </p>
               <p class="contact-info">
-                <span class="glyphicon glyphicon-earphone">  Call: 0934928881</span>
+                <span class="glyphicon glyphicon-earphone">  Call: +84395669219</span>
               </p>
               <p class="contact-info">
-                <span class="glyphicon glyphicon-envelope">  Email: shopera@gmail.com</span>
+                <span class="glyphicon glyphicon-envelope">  Email: anphawolf@gmail.com</span>
               </p>
             </div>
             <div class="col-md-6">
