@@ -110,12 +110,12 @@ input[type=number], select {
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background: white;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
+  background-color: white;
   float: left;
   border: none;
   outline: none;
@@ -127,12 +127,12 @@ input[type=number], select {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #007BFF;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #007BFF;
 }
 
 /* Style the tab content */
@@ -158,4 +158,15 @@ input[type=number], select {
  
   width: 100%;
   height: auto;
+}
+.tablinks{
+  background: white;
+
+}
+.tablinks:hover{
+  background: #007BFF;
+
+}
+.tablinks:active{
+  background: #007BFF;
 }

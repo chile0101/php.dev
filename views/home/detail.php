@@ -66,13 +66,14 @@
       
         <div style="text-align:center; width: 100%;float:left;border:solid 2px;border-color:#007BFF; padding-top: 10px ; background-color:white; ">
                 <h4>$ <?php echo $viewmodel['pricenew'] ?> </h4>
-        </div>
-        <div class="addcart" style="width: 96%;">
+             <div class="addcart" style="width: 100%;">
 
-                <button style="height:41px;background-color:#007BFF;border: none; " type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
+                <button style="width:100vh;height:41px;background-color:#007BFF;border: none; " type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
                   ADD TO CART
                 </button>
+          </div>
         </div>
+       
       
     </div>
     <div class="col">
@@ -102,7 +103,7 @@
   </div>
 
     <div class="tab"6.5>
-      <button class="tab-links" onclick="openCity(event, 'London')">ABOUT THIS GAME</button>
+      <button class="tablinks" onclick="openCity(event, 'London')">ABOUT THIS GAME</button>
       <button class="tablinks" onclick="openCity(event, 'Paris')">SYSTEM REQUIREMENTS</button>
       <button class="tablinks" onclick="openCity(event, 'Tokyo')">ALL REVIEWS</button>
     </div>
@@ -112,10 +113,13 @@
       <p>Join Human Rocket Person on the adventure of a lifetime as he tries to save the universe. Jump your way through different levels on your incredible pogo stick. Fly with special abilities and master the awkward controls.
       </p>
       
-      
-      <object width="420" height="315"
-        data="<?php echo 'https://www.youtube.com/embed/'.$viewmodel['link_trailer'] ?>">
-      </object>
+      <br>
+      <br>
+      <div style="text-align: center;">
+        <object width="700" height="400" 
+          data="<?php echo 'https://www.youtube.com/embed/'.$viewmodel['link_trailer'] ?>">
+        </object>
+      </div>
       
       
       <img src="https://steamcdn-a.akamaihd.net/steam/apps/965340/extras/FeaturesText.png?t=1542813376">
@@ -129,20 +133,20 @@
       <p>This game is incredibly hard, due to the intentional awkward controls and the level design. By the end of the game, you will hate us, the developers. It’s one of those games where you die a lot but in a funny way. We put a great effort into making a unique game full of surprises and weird moments. We hope the fun will overweigh the frustration, and that you will be happy that you overcame the struggles of playing it.</p>
     </div>
 
-    <div id="Paris" class="tabcontent" style="padding-bottom:50px;">
+    <div id="Paris" class="tabcontent" style="padding-bottom:50px;color:green;">
       <p style="font-weight:bold">Minimum:</p>
       <ul style="padding-left:20px;">
-        <li>OS: Windows 7, Windows 8.1, Windows 10 - 64 Bit</li>
-        <li>Processor: 2.0 GHz</li>
-        <li>Memory: 2 GB RAM</li>
-        <li>Graphics: Intel HD 4000, GeForce 8800, ATI 1950 or better<li>
-        <li>DirectX: Version 9.0</li>
-        <li>Storage: 320 MB available space</li>
-        <li>Sound Card: DirectX9.0 compatible sound card</li>
+        <li style="color:green;">OS: Windows 7, Windows 8.1, Windows 10 - 64 Bit</li>
+        <li style="color:green;">Processor: 2.0 GHz</li>
+        <li style="color:green;">Memory: 2 GB RAM</li>
+        <li style="color:green;">Graphics: Intel HD 4000, GeForce 8800, ATI 1950 or better<li>
+        <li style="color:green;">DirectX: Version 9.0</li>
+        <li style="color:green;">Storage: 320 MB available space</li>
+        <li style="color:green;">Sound Card: DirectX9.0 compatible sound card</li>
       </ul>
     </div>
 
-    <div id="Tokyo" class="tabcontent" style="padding-bottom:50px;">
+    <div id="Tokyo" class="tabcontent" style="padding-bottom:50px;color:green;">
       <p>There are no reviews for this product.</p><br>
       <h4>Write Review</h4><br>
 
