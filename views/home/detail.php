@@ -96,7 +96,7 @@
           <button type="button" class="btn btn-secondary btn-sm">Advanture</button>
           </div>
       
-            <label class="type-label" >Quantity:</label>
+            <label >Quantity:</label>
             <input type="number" id="quantity" style="width:28px; text-align: center;height:10px" value="1" min="1">
             <button class="btn btn-primary" type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
                   ADD TO CART
