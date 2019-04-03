@@ -42,22 +42,22 @@
         });
     }
 
-    function fetchReview(productId){
+    // function fetchReview(productId){
     
-    $.ajax(
-        {     
-        type:    'post',
-        url:     '../../models/fetchReview.php',
-        data:    productId,
-        dataType: 'json',
+    // $.ajax(
+    //     {     
+    //     type:    'post',
+    //     url:     '../../models/fetchReview.php',
+    //     data:    productId,
+    //     dataType: 'json',
         
-        success: function(data) 
-        {   
+    //     success: function(data) 
+    //     {   
            
             
-        }   
-        });
-    }
+    //     }   
+    //     });
+    // }
 
 
 
