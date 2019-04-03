@@ -139,7 +139,7 @@
       <p style="color:white;">This game is incredibly hard, due to the intentional awkward controls and the level design. By the end of the game, you will hate us, the developers. It’s one of those games where you die a lot but in a funny way. We put a great effort into making a unique game full of surprises and weird moments. We hope the fun will overweigh the frustration, and that you will be happy that you overcame the struggles of playing it.</p>
     </div>
 
-    <div id="Paris" class="tabcontent" style="padding-bottom:50px; color:color;">
+    <div id="Paris" class="tabcontent" style="padding-bottom:50px; color:white;">
       <p style="font-weight:bold">Minimum:</p>
       <ul style="padding-left:20px;">
         <li>OS: Windows 7, Windows 8.1, Windows 10 - 64 Bit</li>
@@ -152,7 +152,7 @@
       </ul>
     </div>
 
-    <div id="Tokyo" class="tabcontent" style="padding-bottom:50px;">
+    <div id="Tokyo" class="tabcontent" style="padding-bottom:50px;color:white;">
       <!-- <p>There are no reviews for this product.</p><br> -->
       
 
