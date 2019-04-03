@@ -45,7 +45,7 @@ header{
 }
 .container{
   background-image:url(../images/bg/bg-3.png);
-  color: green;
+  /* color: green; */
 }
 .col h4{
   font-weight: bold;
