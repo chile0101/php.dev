@@ -79,10 +79,7 @@
   font-style: normal;
   text-decoration: none;
 }
-.type-label {
-  width: 110px;
- 
-}
+
 
 .ty-in-stock {
   color: #2ecc71;
@@ -163,4 +160,8 @@ input[type=number], select {
   font-size:30px;
   margin:0 auto;
   color: white;
+}
+
+tab-links :hover{
+  color:black;
 }
