@@ -44,7 +44,7 @@
 	</div>
 	<hr>
 	<?php if(!empty($_SESSION['cart'])) : ?>
-		<div class="row form-content" style="background-color:rgba(0, 0, 0, 0.5);">
+		<div class="row form-content" >
 			<form class="list-cart-content col-md-11">
 				<table class="table cart">
 					<thead class="thead-light">
