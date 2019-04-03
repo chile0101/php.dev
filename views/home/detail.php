@@ -89,11 +89,12 @@
           <label style="margin-right:45px;">Developer:</label> <a href="" style="color:#007BFF;"><?php echo $viewmodel['developer']; ?></a>
           <a href="<?php echo $viewmodel['link_origin']; ?>" style="color:#007BFF;"> Original link product</a><br>
          <label> Popular user-defined tags for this product: </label><br>
-          <button type="button" class="btn btn-primary">Early Access</button>
-          <button type="button" class="btn btn-secondary">Action</button>
-          <button type="button" class="btn btn-primary">Free to play</button>
-          <button type="button" class="btn btn-secondary">Advanture</button>
-          
+         <div style="margin-botton:5px;">
+          <button type="button" class="btn btn-primary btn-sm">Early Access</button>
+          <button type="button" class="btn btn-secondary btn-sm">Action</button>
+          <button type="button" class="btn btn-primary btn-sm">Free to play</button>
+          <button type="button" class="btn btn-secondary btn-sm">Advanture</button>
+          </div>
       
             <label class="type-label" style="color:white;">Quantity:</label>
             <input type="number" id="quantity" style="width:28px; text-align: center;height:10px" value="1" min="1">
