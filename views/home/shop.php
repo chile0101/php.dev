@@ -50,14 +50,21 @@
         </div>
        
         <div class="col">
-        <select class="form-control float-right" style="margin-top:20px;width:180px;" >
+        <!-- <select class="form-control float-right" style="margin-top:20px;width:180px;" >
         
-            <option><a  href="<?php echo ROOT_URL; ?>shop/action">All Games</a></option>
+            <option><a  href="shop/action">All Games</a></option>
             <option>Action</option>
             <option>Advanture</option>
             <option>Casual</option>
             <option>Indie</option>
-            </select>
+            </select> -->
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products">All Products</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products/action">Action</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products/advanture">Advanture</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products/casual">Casual</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products/indie">Indie</a>
+        </div>
         </div>
     </div>
     <div class="row">
