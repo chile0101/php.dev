@@ -5,7 +5,7 @@ class HomeModel extends Model{
 		$rows = $this->resultSet();
 		return $rows;
 	}
-	public function Shop(){
+	public function Shop($id){
 		// $this->query('SELECT * FROM products ORDER BY create_at DESC');
 		// $rows = $this->resultSet();
 		// return $rows;
