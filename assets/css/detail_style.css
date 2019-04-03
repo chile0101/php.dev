@@ -20,7 +20,7 @@
 
 }
  .detail div, .detail li {
-  color:#007BFF;
+  
   /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: normal;
@@ -165,4 +165,5 @@ input[type=number], select {
   width: 30%;
   font-size:30px;
   margin:0 auto;
+  color: white;
 }

@@ -67,14 +67,14 @@
 <div id = "alert"></div>
 
 <div class="container detail">
-  <div class="main row" ;">
+  <div class="main row">
     <div class="col">
       <div class="img-detail">
         <img src="<?php echo $viewmodel['image']; ?>" alt="image product detail">
       </div>
      
     
-        <div class="item-price" style="text-align:center">
+        <div class="item-price">
                 $ <?php echo $viewmodel['pricenew'] ?>
         </div>
        
