@@ -62,7 +62,7 @@
         </form>
       </div> 
 
-      >
+      
 
 
       <div class="cart-content">
