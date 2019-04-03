@@ -89,8 +89,8 @@
           <label style="margin-right:45px;">Developer:</label> <a href="" style="color:#007BFF;"><?php echo $viewmodel['developer']; ?></a>
           <a href="<?php echo $viewmodel['link_origin']; ?>" style="color:#007BFF;"> Original link product</a><br>
          <label> Popular user-defined tags for this product: </label><br>
-         <div style="margin-bottom:5px;">
-          <button type="button" class="btn btn-primary btn-sm">Early Access</button>
+         <div style="margin-bottom:25px;">
+          <button type="button" class="btn btn-primary btn-sm" style="height:">Early Access</button>
           <button type="button" class="btn btn-secondary btn-sm">Action</button>
           <button type="button" class="btn btn-primary btn-sm">Free to play</button>
           <button type="button" class="btn btn-secondary btn-sm">Advanture</button>
@@ -104,9 +104,7 @@
 
         </div>
 
-      
 
-        <!-- /<button type="button" class="btn btn-danger">Add to Cart</button> -->
 
   </div>
   
