@@ -111,7 +111,7 @@
 
   </div>
 
-    <div class="tab"6.5>
+    <div class="tab" style="background-color:rgba(0, 0, 0, 0.5);">
       <button class="tab-links" onclick="openCity(event, 'London')">ABOUT THIS GAME</button>
       <button class="tablinks" onclick="openCity(event, 'Paris')">SYSTEM REQUIREMENTS</button>
       <button class="tablinks" onclick="openCity(event, 'Tokyo')">ALL REVIEWS</button>
