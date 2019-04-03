@@ -86,7 +86,7 @@
       </div>
       
         <div class="item-price">
-                <h4>$ <?php echo $viewmodel['pricenew'] ?> </h4>
+                $ <?php echo $viewmodel['pricenew'] ?>
         </div>
         <div class="addcart" style="width: 96%;">
 

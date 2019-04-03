@@ -162,6 +162,6 @@ input[type=number], select {
 
 .item-price{
   text-align: center;
-  padding:5px;
+  padding:3px;
   background: #F45242;
 }
