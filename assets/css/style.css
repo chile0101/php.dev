@@ -20,7 +20,7 @@ background-image:url(../images/bg/bg-6.png);
 }
 
 header{
-  background:url(../images/bg/bg-6.jpg) no-repeat 0px 0px;
+  background:url(../images/bg/bg-6.png) no-repeat 0px 0px;
 		min-height:87px;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
