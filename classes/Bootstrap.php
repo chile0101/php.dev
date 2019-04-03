@@ -53,9 +53,9 @@ class Bootstrap{
 				$this->controller=$request['param1'];
 			}
 
-			if($request['param3']==""){
+			if($request['param2']==""){
 				$this->action="index";
-			}elseif($request['param3']=="shop"){
+			}elseif($request['param2']=="shop"){
 
 				if($request['param3']=="all"){
 					$this->id="all";
@@ -88,7 +88,7 @@ class Bootstrap{
 
 			 $this->id=$request['param3'];
 		}
-		
+		echo "param1".$request['param1']."<br>";
 		echo "controller".$this->controller."<br>";
 		echo "action".$this->action."<br>";
 		echo "id".$this->id;
