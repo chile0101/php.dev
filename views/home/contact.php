@@ -1,13 +1,5 @@
 
 
-<?php 
-  $emailErr="";
-  if(isset($_POST['contact_us'])){
-    if(empty($_POST['email'])){
-      $emailErr="Please enter the email";
-    
-  }
-?>
 <div id="contact" class="container">
   <div id="contact-content" class="contact-content row">
     <div class="col-sm-12 col-md-12 col-lg-12"  >
@@ -39,7 +31,7 @@
                   <label >Your Name (required)</label>
                   <input type="text" id="name" name="yourname" placeholder="Your name..">
 
-                  <label style="margin-right:20px;">Your Email (required)</label><small class= "text-danger"><?php echo $emailErr; ?></small>
+                  <label style="margin-right:20px;">Your Email (required)</label><small class= "text-danger"></small>
                   <input type="text" id="email" name="email" placeholder="Your email..">
                   
                   <label >Subject</label>

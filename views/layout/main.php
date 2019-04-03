@@ -98,9 +98,9 @@
         <h4>Contact</h4>
         <hr>
         
-        <a href="mailto:example@mail.com" style="color:green;"><h6><i style="margin-right:5px;" class="fa fa-envelope" aria-hidden="true"></i> ex@mail.com</h6></a>
-        <h6> <i style="margin-right:5px;" class="fa fa-phone" aria-hidden="true"></i> +18045678834</h6>
-        <h6><i style="margin-right:5px;" class="fa fa-map-marker" aria-hidden="true"></i> 4th Avenue,London</h6>
+        <a href="mailto:example@mail.com" style="color:green;"><h6><i style="margin-right:5px;" class="fa fa-envelope" aria-hidden="true"></i> anphawolf@mail.com</h6></a>
+        <h6> <i style="margin-right:5px;" class="fa fa-phone" aria-hidden="true"></i> +84395669219</h6>
+        <h6><i style="margin-right:5px;" class="fa fa-map-marker" aria-hidden="true"></i> Bach Khoa University</h6>
       
 	
       </div>
