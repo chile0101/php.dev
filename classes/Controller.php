@@ -16,7 +16,7 @@ abstract class Controller{
 	protected function returnView($viewmodel){
 
 		if($this->role=='admin'){
-			$view='views/admins/'. get_class($this) . '/' . $this->action . '.php';
+			$view='views/admins/'. strtolower(get_class($this)) . '/' . $this->action . '.php';
 			require('views/layout/main_admin.php');
 		}else{
 			$view = './views/'. strtolower(get_class($this)). '/' . $this->action. '.php';
