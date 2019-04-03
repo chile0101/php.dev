@@ -164,4 +164,7 @@ input[type=number], select {
   text-align: center;
   padding:3px;
   background: #F45242;
+  width: 30%;
+  font-size:30px;
+  margin:0 auto;
 }

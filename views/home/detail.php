@@ -74,7 +74,7 @@
       </div>
      
     
-        <div class="item-price">
+        <div class="item-price" style="text-align:center">
                 $ <?php echo $viewmodel['pricenew'] ?>
         </div>
         <div class="addcart" style="width: 96%;">
