@@ -22,7 +22,7 @@
 
   <link rel="icon" href="<?php echo ROOT_PATH;?>assets/images/icons/logo-icon.png"  sizes="20x20">
 
-
+  <meta charshet="utf-8" />
 </head>
 
 <body>
@@ -81,7 +81,7 @@
       <?php else: ?>
         <div class="sign-content" style="display:inline-flex;height: 30px;">
           <a href="<?php echo ROOT_URL; ?>auth/login" >Log in </a>
-          <p class="register-button btn-outline-success" style="margin-top:-2px;">
+          <p class="register-button btn-outline-success" style="margin-top:-2px;margin-left:10px;">
           <a href="<?php echo ROOT_URL; ?>auth/register"> Register</a>
           </p>
          

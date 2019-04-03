@@ -64,6 +64,16 @@
         
       </div>
       
+        <div style="text-align:center; width: 100%;float:left;border:solid 2px;border-color:#007BFF; padding-top: 10px ; background-color:white; ">
+                <h4>$ <?php echo $viewmodel['pricenew'] ?> </h4>
+        </div>
+        <div class="addcart" style="width: 96%;">
+
+                <button style="height:41px;background-color:#007BFF;border: none; " type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
+                  ADD TO CART
+                </button>
+        </div>
+      
     </div>
     <div class="col">
       <div class="info-product" style="color:white;">
@@ -71,47 +81,38 @@
         <p style="color:#007BFF; font-size:16px;"><?php echo $viewmodel['description']; ?>
         </p><br>
         <label >Release date:</label> <?php echo $viewmodel['date_release']; ?> <br>
-          <label style="margin-right:45px;">Developer:</label> <a href=""><?php echo $viewmodel['developer']; ?></a><br>
-          <a href="<?php echo $viewmodel['link_origin']; ?>"> Original link product</a><br>
+          <label style="margin-right:45px;">Developer:</label> <a href="" style="color:#007BFF;"><?php echo $viewmodel['developer']; ?></a>
+          <a href="<?php echo $viewmodel['link_origin']; ?>" style="color:#007BFF;"> Original link product</a><br>
          <label> Popular user-defined tags for this product: </label><br>
 
           
       
-            <label class="type-label">Quantity:</label>
+            <label class="type-label" style="color:white;">Quantity:</label>
             <input type="number" id="quantity" style="width:30px; text-align: center;" value="1" min="1">
+
         </div>
 
-        
+      
 
         <!-- /<button type="button" class="btn btn-danger">Add to Cart</button> -->
 
   </div>
-  <div style="width: 100%; margin: 0 auto;display: table-cell;vertical-align: middle;">
-    <div style="text-align:center; width: 50%;float:left;border:solid 2px;border-color:#007BFF; padding-top: 10px ; background-color:white; ">
-            <h4>$ <?php echo $viewmodel['pricenew'] ?> </h4>
-    </div>
-    <div class="addcart" style="float:left;width: 50%;">
-
-            <button style="margin:0 auto;width:95%;height:41px;background-color:#007BFF;border: none; " type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
-              ADD TO CART
-            </button>
-    </div>
-  </div>
+  
 
   </div>
 
-    <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')">ABOUT THIS GAME</button>
+    <div class="tab"6.5>
+      <button class="tab-links" onclick="openCity(event, 'London')">ABOUT THIS GAME</button>
       <button class="tablinks" onclick="openCity(event, 'Paris')">SYSTEM REQUIREMENTS</button>
       <button class="tablinks" onclick="openCity(event, 'Tokyo')">ALL REVIEWS</button>
     </div>
 
-    <div id="London" class="tabcontent" style="padding-bottom:50px;">
-      <img src="https://steamcdn-a.akamaihd.net/steam/apps/965340/extras/Logo.png?t=1542813376">
+    <div id="London" class="tabcontent" style="padding-bottom:50px;color:green;"> 
+      
       <p>Join Human Rocket Person on the adventure of a lifetime as he tries to save the universe. Jump your way through different levels on your incredible pogo stick. Fly with special abilities and master the awkward controls.
       </p>
       
-      <p>Trailer:</p><br>
+      
       <object width="420" height="315"
         data="<?php echo 'https://www.youtube.com/embed/'.$viewmodel['link_trailer'] ?>">
       </object>
@@ -119,10 +120,10 @@
       
       <img src="https://steamcdn-a.akamaihd.net/steam/apps/965340/extras/FeaturesText.png?t=1542813376">
       <ul style="padding-left:20px;">
-        <li>Pogo jumping</li>
-        <li>Platforming</li>
-        <li>Junk physics</li>
-        <li>Lots of ass juice</li>
+        <li style="color:green;">Pogo jumping</li>
+        <li style="color:green;">Platforming</li>
+        <li style="color:green;">Junk physics</li>
+        <li style="color:green;">Lots of ass juice</li>
       </ul>
       <img src="https://steamcdn-a.akamaihd.net/steam/apps/965340/extras/DevNoteText.png?t=1542813376">
       <p>This game is incredibly hard, due to the intentional awkward controls and the level design. By the end of the game, you will hate us, the developers. It’s one of those games where you die a lot but in a funny way. We put a great effort into making a unique game full of surprises and weird moments. We hope the fun will overweigh the frustration, and that you will be happy that you overcame the struggles of playing it.</p>

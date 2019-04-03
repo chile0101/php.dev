@@ -2,6 +2,7 @@
 <head>
   <title>Shopera</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charshet="utf-8" />
 </head>
 <script type="text/javascript">
  function addCart(id){
