@@ -162,7 +162,7 @@
       <form>
       
       *Content <br>
-      <textarea style="background-color:rgba(0, 0, 0, 0.5);" rows="4" cols="50"> </textarea><br>
+      <textarea style="background-color:rgba(0, 0, 0, 0.5); color:white;" rows="4" cols="50"> </textarea><br>
       Note: Not support HTML! <br><br>
 
       Voted: <span class="fa fa-star checked"></span>
