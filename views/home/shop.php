@@ -1,9 +1,5 @@
  
-<head>
-  <title>Shopera</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charshet="utf-8" />
-</head>
+
 <script type="text/javascript">
  function addCart(id){
       //alert(id///.p);
@@ -55,6 +51,8 @@
        
         <div class="col">
         <select class="form-control float-right" style="margin-top:20px;width:180px;" >
+        
+            <option><a  href="<?php echo ROOT_URL; ?>shop/action">All Games</a></option>
             <option>Action</option>
             <option>Advanture</option>
             <option>Casual</option>

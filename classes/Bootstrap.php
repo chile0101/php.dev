@@ -57,8 +57,8 @@ class Bootstrap{
 				$this->action="index";
 			}elseif($request['param2']=="shop"){
 
-				if($request['param3']==""){
-					$this->id="index";
+				if($request['param3']=="all"){
+					$this->id="all";
 				}elseif($request['param3']=="action"){
 					// $this->action="index";
 					$this->id="action";

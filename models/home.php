@@ -9,7 +9,7 @@ class HomeModel extends Model{
 		// $this->query('SELECT * FROM products ORDER BY create_at DESC');
 		// $rows = $this->resultSet();
 		// return $rows;
-		if($id==""){
+		if($id=="all"){
 			$this->query('SELECT * FROM products ORDER BY create_at DESC');
 			$rows = $this->resultSet();
 			return $rows;
