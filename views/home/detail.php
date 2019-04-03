@@ -89,7 +89,7 @@
           <label style="margin-right:45px;">Developer:</label> <a href="" style="color:#007BFF;"><?php echo $viewmodel['developer']; ?></a><br>
           <a href="<?php echo $viewmodel['link_origin']; ?>"> Original link product</a><br>
          <label> Popular user-defined tags for this product: </label><br>
-         <div style="margin-bottom:25px;">
+         <div style="margin-bottom:30px;">
           <button type="button" class="btn btn-primary btn-sm" >Early Access</button>
           <button type="button" class="btn btn-secondary btn-sm">Action</button>
           <button type="button" class="btn btn-primary btn-sm">Free to play</button>
@@ -112,7 +112,7 @@
   </div>
 
     <div class="tab" style="background-color:rgba(0, 0, 0, 0.5);">
-      <button class="tab-links" onclick="openCity(event, 'London')">ABOUT THIS GAME</button>
+      <button style="color:white;" class="tab-links" onclick="openCity(event, 'London')">ABOUT THIS GAME</button>
       <button class="tablinks" onclick="openCity(event, 'Paris')">SYSTEM REQUIREMENTS</button>
       <button class="tablinks" onclick="openCity(event, 'Tokyo')">ALL REVIEWS</button>
     </div>
