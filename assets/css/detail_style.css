@@ -81,12 +81,9 @@
 }
 .type-label {
   width: 110px;
-  color: #1a2128;
+ 
 }
-.type-item {
-  display: inline-block;
-  color: #1a2128;
-}
+
 .ty-in-stock {
   color: #2ecc71;
 }
