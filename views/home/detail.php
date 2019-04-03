@@ -90,7 +90,7 @@
           <a href="<?php echo $viewmodel['link_origin']; ?>" style=""> Original link product</a><br>
          <label> Popular user-defined tags for this product: </label><br>
          <div style="margin-bottom:25px;">
-          <button type="button" class="btn btn-primary btn-sm" style="height:">Early Access</button>
+          <button type="button" class="btn btn-primary " style="height:10px">Early Access</button>
           <button type="button" class="btn btn-secondary btn-sm">Action</button>
           <button type="button" class="btn btn-primary btn-sm">Free to play</button>
           <button type="button" class="btn btn-secondary btn-sm">Advanture</button>
