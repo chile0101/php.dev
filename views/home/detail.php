@@ -77,12 +77,7 @@
         <div class="item-price" style="text-align:center">
                 $ <?php echo $viewmodel['pricenew'] ?>
         </div>
-        <div class="addcart" style="width: 96%;">
-
-                <button style="height:41px;background-color:#007BFF;border: none; " type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
-                  ADD TO CART
-                </button>
-        </div>
+       
       
     </div>
     <div class="col">
@@ -99,6 +94,9 @@
       
             <label class="type-label" style="color:white;">Quantity:</label>
             <input type="number" id="quantity" style="width:30px; text-align: center;" value="1" min="1">
+            <button class="btn btn-primary" type="submit" onclick="addCart(<?php echo $viewmodel['id']; ?>);" class="btn btn-danger">
+                  ADD TO CART
+            </button>
 
         </div>
 
