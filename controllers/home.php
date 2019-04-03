@@ -7,7 +7,7 @@ class Home extends Controller{
     }
     protected function shop(){
         $viewmodel = new HomeModel();
-        $this->ReturnView($viewmodel->Shop());
+        $this->ReturnView($viewmodel->Shop($this->id));
     }
     protected function contact(){
         $viewmodel = new HomeModel();

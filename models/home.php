@@ -6,9 +6,30 @@ class HomeModel extends Model{
 		return $rows;
 	}
 	public function Shop(){
-		$this->query('SELECT * FROM products ORDER BY create_at DESC');
-		$rows = $this->resultSet();
-		return $rows;
+		// $this->query('SELECT * FROM products ORDER BY create_at DESC');
+		// $rows = $this->resultSet();
+		// return $rows;
+		if($id==""){
+			$this->query('SELECT * FROM products ORDER BY create_at DESC');
+			$rows = $this->resultSet();
+			return $rows;
+		}elseif($id=="action"){
+			$this->query('SELECT * FROM products WHERE type_product_id= 1 ORDER BY create_at DESC');
+			$rows = $this->resultSet();
+			return $rows;
+		}elseif($id=="advanture"){
+			$this->query('SELECT * FROM products WHERE type_product_id= 2 ORDER BY create_at DESC');
+			$rows = $this->resultSet();
+			return $rows;
+		}elseif($id=="casual"){
+			$this->query('SELECT * FROM products WHERE type_product_id= 3 ORDER BY create_at DESC');
+			$rows = $this->resultSet();
+			return $rows;
+		}elseif($id=="indie"){
+			$this->query('SELECT * FROM products WHERE type_product_id= 4 ORDER BY create_at DESC');
+			$rows = $this->resultSet();
+			return $rows;
+		}
 	}
 	public function Contact(){
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);

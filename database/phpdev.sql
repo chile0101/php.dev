@@ -155,11 +155,11 @@ INSERT INTO users (id, email, password, fullname, phone, address)
             VALUES (NULL, 'huynh@gmail.com', MD5('123456'), 'HUYNH', '0395669216', 'HCM');
 
 
-INSERT INTO type_product (id,name) VALUES (1,'Hành Động');
-INSERT INTO type_product (id,name) VALUES (2,'Kinh Dị');
-INSERT INTO type_product (id,name) VALUES (3,'Thể Thao');
-INSERT INTO type_product (id,name) VALUES (4,'Nhập Vai');
-INSERT INTO type_product (id,name) VALUES (5,'Đối Kháng');
+INSERT INTO type_product (id,name) VALUES (1,'action');
+INSERT INTO type_product (id,name) VALUES (2,'advanture');
+INSERT INTO type_product (id,name) VALUES (3,'casual');
+INSERT INTO type_product (id,name) VALUES (4,'indie');
+
 
 /* -------------------------------------------Hành Động------------------------------------------------- */
 INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)

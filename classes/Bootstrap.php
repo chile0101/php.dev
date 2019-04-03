@@ -55,9 +55,37 @@ class Bootstrap{
 
 			if($request['param2']==""){
 				$this->action="index";
-			}else{
+			}elseif($request['param2']=="shop"){
+
+				if($request['param3']==""){
+					$this->id="index";
+				}elseif($request['param3']=="action"){
+					// $this->action="index";
+					$this->id="action";
+				}elseif($request['param3']=="advanture"){
+					// $this->action="index";
+					$this->id="advanture";
+				}elseif($request['param3']=="casual"){
+					// $this->action="index";
+					$this->id="casual";
+				}elseif($request['param3']=="indie"){
+					// $this->action="index";
+					$this->id="indie";
+				}else{
+
+				}
+
+			}
+			else{
 				$this->action=$request['param2'];
 			}
+
+			
+
+
+
+
+
 
 			 $this->id=$request['param3'];
 		}
