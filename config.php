@@ -10,6 +10,6 @@ define("CHARSET","utf8");
 // Define URL
 
 define("ROOT_PATH","/");
-define("ROOT_URL","/chilecse.com/");
+define("ROOT_URL","/");
 define("ROOT_URL_ADMIN","/admin/");
 
