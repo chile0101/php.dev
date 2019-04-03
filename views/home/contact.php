@@ -1,10 +1,10 @@
 
 
-<div id="contact" class="container">
+<div id="contact" class="container" style="color:white;">
   <div id="contact-content" class="contact-content row">
     <div class="col-sm-12 col-md-12 col-lg-12"  >
       <div id="content">
-        <h3 class="entry-title">CONTACT US</h3>
+        <h3 class="entry-title" >CONTACT US</h3>
         <div class="entry-content">
           <div class="content-map" >
             <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d2482.4258980362797!2d-0.15843499999999994!3d51.52374779999999!3m2!1i1024!2i768!4f13.1!2m1!1s221B+Baker+St.+London+NW1+6XE!5e0!3m2!1sen!2slv!4v1426078634355" frameborder="0" class="iframe-ggmap"></iframe>
