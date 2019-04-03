@@ -25,7 +25,7 @@ class HomeModel extends Model{
 			$this->query('SELECT * FROM products WHERE type_product_id= 3 ORDER BY create_at DESC');
 			$rows = $this->resultSet();
 			return $rows;
-		}else($id=="indie"){
+		}else{
 			$this->query('SELECT * FROM products WHERE type_product_id= 4 ORDER BY create_at DESC');
 			$rows = $this->resultSet();
 			return $rows;
