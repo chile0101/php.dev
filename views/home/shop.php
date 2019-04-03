@@ -74,7 +74,7 @@
         </div>
     </div>
     <div class="row">
-    <ul class="products">
+    <ul class="products" style="margin:0 auto;">
 
     <?php foreach ($viewmodel as $product) : ?>
         <li class="item">
