@@ -119,7 +119,7 @@
 
     <div id="London" class="tabcontent" style="padding-bottom:50px;"> 
       
-      <p>Join Human Rocket Person on the adventure of a lifetime as he tries to save the universe. Jump your way through different levels on your incredible pogo stick. Fly with special abilities and master the awkward controls.
+      <p style="color:white;">Join Human Rocket Person on the adventure of a lifetime as he tries to save the universe. Jump your way through different levels on your incredible pogo stick. Fly with special abilities and master the awkward controls.
       </p>
       <br><br>
       
@@ -136,10 +136,10 @@
         <li style="color:green;">Lots of ass juice</li>
       </ul>
       <img src="https://steamcdn-a.akamaihd.net/steam/apps/965340/extras/DevNoteText.png?t=1542813376">
-      <p>This game is incredibly hard, due to the intentional awkward controls and the level design. By the end of the game, you will hate us, the developers. It’s one of those games where you die a lot but in a funny way. We put a great effort into making a unique game full of surprises and weird moments. We hope the fun will overweigh the frustration, and that you will be happy that you overcame the struggles of playing it.</p>
+      <p style="color:white;">This game is incredibly hard, due to the intentional awkward controls and the level design. By the end of the game, you will hate us, the developers. It’s one of those games where you die a lot but in a funny way. We put a great effort into making a unique game full of surprises and weird moments. We hope the fun will overweigh the frustration, and that you will be happy that you overcame the struggles of playing it.</p>
     </div>
 
-    <div id="Paris" class="tabcontent" style="padding-bottom:50px;">
+    <div id="Paris" class="tabcontent" style="padding-bottom:50px; color:color;">
       <p style="font-weight:bold">Minimum:</p>
       <ul style="padding-left:20px;">
         <li>OS: Windows 7, Windows 8.1, Windows 10 - 64 Bit</li>
