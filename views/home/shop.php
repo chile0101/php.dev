@@ -46,7 +46,7 @@
 </div>
 
 <div class="container">
-    <div class="row" style="margin-top:20px;">
+    <div class="row" style="margin-top:20px; color:white;">
         <div class="col">
             <h1>Shop</h1>
             <p class="result-count">Showing 1-12 of 24 results</p>
