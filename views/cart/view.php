@@ -78,7 +78,7 @@
 			</form>
 		</div>
 		<div class="cart-totals">
-			<div class="row"><h4>Cart totals</h4></div>
+			
 			<div class="row">
 				<table class="table">
 					<tbody>
