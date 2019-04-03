@@ -164,16 +164,9 @@ INSERT INTO type_product (id,name) VALUES (5,'Đối Kháng');
 /* -------------------------------------------Hành Động------------------------------------------------- */
 INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
             VALUES (NULL,'Grand Theft Auto V','https://hb.imgix.net/ad3f96dfd21531e24ab72c3821a01049c8484982.jpg?auto=compress,format&fit=crop&h=353&w=616&s=9fc123b4c723d329d164b8ab02af5284',
-            459,300,'vncur 550 idcur','Home Sweet Home is a first-person horror adventure game based on Thai myths and beliefs.   The core gameplay focuses on storytelling and stealth to avoid perilous spirits hunting you. Moreover, few puzzles are added into the game, making gameplay more various. While playing this game, you will be thrilled by a horror Thai atmosphere, unpredictable scary moments and challenging gameplay!
-
-',
+            459,300,'vncur 550 idcur','Home Sweet Home is a first-person horror adventure game based on Thai myths and beliefs.   The core gameplay focuses on storytelling and stealth to avoid perilous spirits hunting you. Moreover, few puzzles are added into the game, making gameplay more various. While playing this game, you will be thrilled by a horror Thai atmosphere, unpredictable scary moments and challenging gameplay!',
             'https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/','2013-09-17','Rockstar','YrtCnL62pB8',1);
-INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
-            VALUES (NULL,'Sleeping Dogs','https://images.g2a.com/newlayout/323x433/1x1x0/496cb3355174/590e5046ae653af70d168b89',
-            625,94,'vncur 550 idcur','Home Sweet Home is a first-person horror adventure game based on Thai myths and beliefs.   The core gameplay focuses on storytelling and stealth to avoid perilous spirits hunting you. Moreover, few puzzles are added into the game, making gameplay more various. While playing this game, you will be thrilled by a horror Thai atmosphere, unpredictable scary moments and challenging gameplay!
 
-',
-            'https://store.steampowered.com/app/307690/Sleeping_Dogs_Definitive_Edition/','2014-09-17','United Front Games','lbGs8AJyT_Y',1);
 INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
             VALUES (NULL,'Devil May Cry 5','https://steamcdn-a.akamaihd.net/steam/apps/601150/header.jpg?t=1553635207',
             800,795,'vncur 550 idcur','Home Sweet Home is a first-person horror adventure game based on Thai myths and beliefs.   The core gameplay focuses on storytelling and stealth to avoid perilous spirits hunting you. Moreover, few puzzles are added into the game, making gameplay more various. While playing this game, you will be thrilled by a horror Thai atmosphere, unpredictable scary moments and challenging gameplay!',
@@ -245,7 +238,7 @@ INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_orig
             VALUES (NULL,'Dark Souls 3','https://steamcdn-a.akamaihd.net/steam/apps/374320/header.jpg?t=1553251330',
             800,620,'vncur 644','Home Sweet Home is a first-person horror adventure game based on Thai myths and beliefs.   The core gameplay focuses on storytelling and stealth to avoid perilous spirits hunting you. Moreover, few puzzles are added into the game, making gameplay more various. While playing this game, you will be thrilled by a horror Thai atmosphere, unpredictable scary moments and challenging gameplay!',
             'https://store.steampowered.com/app/374320/DARK_SOULS_III/','2016-02-28','
-FromSoftware',"zDZYrIUgKE",4);
+            FromSoftware',"zDZYrIUgKE",4);
 INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
             VALUES (NULL,'https://us.diablo3.com/en/','https://images.g2a.com/newlayout/600x351/1x1x0/f4440f6cc460/5a141651ae653a29cc660b5e',
             800,720,'vncur 644','Home Sweet Home is a first-person horror adventure game based on Thai myths and beliefs.   The core gameplay focuses on storytelling and stealth to avoid perilous spirits hunting you. Moreover, few puzzles are added into the game, making gameplay more various. While playing this game, you will be thrilled by a horror Thai atmosphere, unpredictable scary moments and challenging gameplay!',
