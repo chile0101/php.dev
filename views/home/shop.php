@@ -63,11 +63,11 @@
           Type Product
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="<?php echo ROOT_URL?>products">All Products</a>
-          <a class="dropdown-item" href="<?php echo ROOT_URL ?>products/action">Action</a>
-          <a class="dropdown-item" href="<?php echo ROOT_URL ?>products/advanture">Advanture</a>
-          <a class="dropdown-item" href="<?php echo ROOT_URL ?>products/casual">Casual</a>
-          <a class="dropdown-item" href="<?php echo ROOT_URL ?>products/indie">Indie</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL?>home/shop">All Products</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL ?>home/shop/action">Action</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL ?>home/shop/advanture">Advanture</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL ?>home/shop/casual">Casual</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL ?>home/shop/indie">Indie</a>
         </div>
         </div>
       </div>
