@@ -87,7 +87,7 @@
         </p><br>
         <label >Release date:</label> <?php echo $viewmodel['date_release']; ?> <br>
           <label style="margin-right:45px;">Developer:</label> <a href="" style="color:#007BFF;"><?php echo $viewmodel['developer']; ?></a><br>
-          <a href="<?php echo $viewmodel['link_origin']; ?>" style=""> Original link product</a><br>
+          <a href="<?php echo $viewmodel['link_origin']; ?>"> Original link product</a><br>
          <label> Popular user-defined tags for this product: </label><br>
          <div style="margin-bottom:25px;">
           <button type="button" class="btn btn-primary btn-sm" >Early Access</button>
