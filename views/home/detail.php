@@ -73,18 +73,7 @@
         <img src="<?php echo $viewmodel['image']; ?>" alt="image product detail">
       </div>
      
-      <div  style="width: 100%;float:left;padding-top:10px;">
-          <button type="button" class="btn btn-primary btn-sm">Free to play</button>
-          <button type="button" class="btn btn-secondary btn-sm">MOBA</button>
-          <button type="button" class="btn btn-primary btn-sm">Strategy</button>
-          <button type="button" class="btn btn-secondary btn-sm">Mutiplayer</button>
-          <button type="button" class="btn btn-primary btn-sm">Pvp</button>
-          <br><br>
-          
-      </div>
-        
     
-      
         <div class="item-price">
                 $ <?php echo $viewmodel['pricenew'] ?>
         </div>
