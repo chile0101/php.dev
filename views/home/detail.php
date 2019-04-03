@@ -121,7 +121,7 @@
       
       <p>Join Human Rocket Person on the adventure of a lifetime as he tries to save the universe. Jump your way through different levels on your incredible pogo stick. Fly with special abilities and master the awkward controls.
       </p>
-      
+      <br><br>
       
       <object width="420" height="315"
         data="<?php echo 'https://www.youtube.com/embed/'.$viewmodel['link_trailer'] ?>">
@@ -183,7 +183,7 @@ function openCity(evt, cityName) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
-    tabcontent[i].style.color = "red";
+    
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
