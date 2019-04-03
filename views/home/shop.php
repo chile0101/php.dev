@@ -58,13 +58,19 @@
             <option>Casual</option>
             <option>Indie</option>
             </select> -->
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products">All Products</a>
-          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products/action">Action</a>
-          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products/advanture">Advanture</a>
-          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products/casual">Casual</a>
-          <a class="dropdown-item" href="<?php echo ROOT_URL_ADMIN ?>products/indie">Indie</a>
+            <div class="dropdown float-right" style="margin-top:20px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Type Product
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="<?php echo ROOT_URL?>products">All Products</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL ?>products/action">Action</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL ?>products/advanture">Advanture</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL ?>products/casual">Casual</a>
+          <a class="dropdown-item" href="<?php echo ROOT_URL ?>products/indie">Indie</a>
         </div>
+        </div>
+      </div>
         </div>
     </div>
     <div class="row">
