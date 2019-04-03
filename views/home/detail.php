@@ -113,11 +113,11 @@
 
     <div class="tab" style="background-color:rgba(0, 0, 0, 0.5);">
       <button style="color:white;" class="tab-links" onclick="openCity(event, 'London')">ABOUT THIS GAME</button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')">SYSTEM REQUIREMENTS</button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">ALL REVIEWS</button>
+      <button style="color:white;" class="tablinks" onclick="openCity(event, 'Paris')">SYSTEM REQUIREMENTS</button>
+      <button style="color:white;" class="tablinks" onclick="openCity(event, 'Tokyo')">ALL REVIEWS</button>
     </div>
 
-    <div id="London" class="tabcontent" style="padding-bottom:50px;color:green;"> 
+    <div id="London" class="tabcontent" style="padding-bottom:50px;"> 
       
       <p>Join Human Rocket Person on the adventure of a lifetime as he tries to save the universe. Jump your way through different levels on your incredible pogo stick. Fly with special abilities and master the awkward controls.
       </p>
