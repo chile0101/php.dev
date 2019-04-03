@@ -159,3 +159,9 @@ input[type=number], select {
   width: 100%;
   height: auto;
 }
+
+.item-price{
+  text-align: center;
+  padding:5px;
+  background: #F45242;
+}

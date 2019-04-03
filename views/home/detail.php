@@ -85,7 +85,7 @@
         
       </div>
       
-        <div style="text-align:center; width: 100%;float:left;border:solid 2px;border-color:#007BFF; padding-top: 10px ; background-color:white; ">
+        <div class="item-price">
                 <h4>$ <?php echo $viewmodel['pricenew'] ?> </h4>
         </div>
         <div class="addcart" style="width: 96%;">
