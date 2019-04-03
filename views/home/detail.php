@@ -83,11 +83,11 @@
     <div class="col">
       <div class="info-product" style="color:white;">
         <h3><?php echo $viewmodel['name']; ?></h3>
-        <p style="color:#007BFF; font-size:16px;"><?php echo $viewmodel['description']; ?>
+        <p style=" font-size:16px;"><?php echo $viewmodel['description']; ?>
         </p><br>
         <label >Release date:</label> <?php echo $viewmodel['date_release']; ?> <br>
           <label style="margin-right:45px;">Developer:</label> <a href="" style="color:#007BFF;"><?php echo $viewmodel['developer']; ?></a>
-          <a href="<?php echo $viewmodel['link_origin']; ?>" style="color:#007BFF;"> Original link product</a><br>
+          <a href="<?php echo $viewmodel['link_origin']; ?>" style=""> Original link product</a><br>
          <label> Popular user-defined tags for this product: </label><br>
          <div style="margin-bottom:25px;">
           <button type="button" class="btn btn-primary btn-sm" style="height:">Early Access</button>
