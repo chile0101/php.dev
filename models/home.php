@@ -1,7 +1,7 @@
 <?php
 class HomeModel extends Model{
 	public function Index(){
-		$this->query('SELECT * FROM products ORDER BY create_at DESC LIMIT 8');
+		$this->query('SELECT * FROM products ORDER BY create_at DESC LIMIT 6');
 		$rows = $this->resultSet();
 		return $rows;
 	}
