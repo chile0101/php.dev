@@ -95,8 +95,9 @@ header{
   color: #fff;  
 }
 .site-title img{
-  width: 180px;
+  width: 200px;
   height: auto;
+  margin-top:40px;
 }
 
 .menu-primary{
