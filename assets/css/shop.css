@@ -138,6 +138,7 @@ li.item:hover{
   float: right;
   padding-right: 20px;
   margin: 20px 0;
+  color: green;
 }
 
 .ty-see-product {
