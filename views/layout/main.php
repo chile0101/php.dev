@@ -28,7 +28,7 @@
   <header>
     <div class="header-container">
       <div class="site-title">
-        <a href="<?php echo ROOT_URL; ?>"><img  src="<?php echo ROOT_PATH;?>assets/images/logo 2.tif" alt="logo"></a>
+        <a href="<?php echo ROOT_URL; ?>"><img  src="<?php echo ROOT_PATH;?>assets/images/logo21.tif" alt="logo"></a>
       </div>
       <div class="menu-icon" >
         <img src="<?php echo ROOT_PATH;?>assets/images/icons/menu-icon.png" alt="menu-icon" >
