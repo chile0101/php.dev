@@ -94,7 +94,7 @@
                 </span>
                 </div>
             </a>
-            <h3><?php echo $product['name']; ?></h3> 
+            <h3 style="color:green"><?php echo $product['name']; ?></h3> 
             <div class="product-info">
                 <form class="star-rate">
                 <div class="stars">
