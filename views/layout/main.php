@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shopera</title>
+  <title>HTC Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
    
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/bootstrap.min.css">
