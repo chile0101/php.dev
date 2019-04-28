@@ -3,6 +3,8 @@
 <html>
 <head>
   <title>HTC Store</title>
+  <meta name="description" content="Shop game bản quyền lớn và uy tín nhất Việt Nam. Bán game bản quyền giá rẻ, uy tín, nhanh chóng. Steam wallet, Steam code, CD Key Steam, CSGO , Game ...">
+  <meta name="keywords" content="game,steam,game steam,game gia re, game mien phi,pubg,game ban quyen,steam code,gta5">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/bootstrap.min.css">
