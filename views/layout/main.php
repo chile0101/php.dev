@@ -88,15 +88,16 @@
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         // alert(txtValue);
-        if(count==5){
-          break;
-        }
+        
         if(filter == ""){
           div.style.display="none";
         } else if (txtValue.toUpperCase().indexOf(filter) > -1) {
           count+=1;
-          div.style.display="inline";
-          li[i].style.display = "";
+          if(count < 5){
+            div.style.display="inline";
+            li[i].style.display = "";
+          }
+         
         } else {
           div.style.display="inline";
           li[i].style.display = "none";
