@@ -35,12 +35,14 @@
 
   <style>
     .result-search{
-      width:90%;
+      width:88%;
+      z-index:9999;
     }
     .result-search ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
+      border-ra
     }
     .result-search ul li a {
       border: 1px solid #ddd; /* Add a border to all links */
