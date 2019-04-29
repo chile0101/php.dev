@@ -144,19 +144,20 @@
             <li><a href="http://www.chilecse.com/home/detail/4">Watch Dogs 2</a></li>
 
             <li><a href="http://www.chilecse.com/home/detail/5">Outlast 2</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">Resident Evil 7</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">Little Nightmares</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">Rocket League</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">WWE 2K18</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">Beat Saber</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">NBA 2k17</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">WRC 7 FIA World Rally Championship</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">The Elder Scrolls V: Skyrim</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">The Witcher 3: Wild Hunt</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">Sekiro: Shadows Die Twice</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/6">Resident Evil 7</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/7">Resident Evil 2 Remake</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/8">Little Nightmares</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/9">Rocket League</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/10">WWE 2K18</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/11">Beat Saber</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/12">NBA 2k17</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/13">WRC 7 FIA World Rally Championship</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/14">The Elder Scrolls V: Skyrim</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/15">The Witcher 3: Wild Hunt</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/16">Sekiro: Shadows Die Twice</a></li>
 
-            <li><a href="http://www.chilecse.com/home/detail/1">Dark Souls 3</a></li>
-            <li><a href="http://www.chilecse.com/home/detail/1">Diablo</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/17">Dark Souls 3</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/18">Diablo</a></li>
 
           </ul>
         </div>
