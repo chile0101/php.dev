@@ -34,7 +34,10 @@
   </script>
 
   <style>
-    #myUL {
+    .result-search{
+      width:80%;
+    }
+    .result-search ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
@@ -85,23 +88,24 @@
        <div class="header-search">
 
         <form  class="form-inline" id="live-search" action="" method="post">
-          <input style="width:100%" class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+          <input style="width:80%" class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
           <!-- <input  type="text" placeholder="Search" aria-label="Search"> -->
           <!-- <button class="btn btn-outline-light my-2 my-sm-4" type="submit">Search</button> -->
         </form>
 
-     
-        <ul id="myUL">
-          <li><a href="#">Adele</a></li>
-          <li><a href="#">Agnes</a></li>
+        <div class="result-search">
+          <ul>
+            <li><a href="#">Adele</a></li>
+            <li><a href="#">Agnes</a></li>
 
-          <li><a href="#">Billy</a></li>
-          <li><a href="#">Bob</a></li>
+            <li><a href="#">Billy</a></li>
+            <li><a href="#">Bob</a></li>
 
-          <li><a href="#">Calvin</a></li>
-          <li><a href="#">Christina</a></li>
-          <li><a href="#">Cindy</a></li>
-        </ul>
+            <li><a href="#">Calvin</a></li>
+            <li><a href="#">Christina</a></li>
+            <li><a href="#">Cindy</a></li>
+          </ul>
+        </div>
      
 
       </div> 
