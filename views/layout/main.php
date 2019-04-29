@@ -35,27 +35,25 @@
 
   <style>
     .result-search{
-      position: relative;
-      width:88%;
+      position: absolute;
+
+      width:275px;
       z-index:9999;
     }
     .result-search ul {
-      position: relative;
-      z-index:9999;
+     
       list-style-type: none;
       padding: 0;
       margin: 0;
      
     }
     .result-search ul li {
-      position: relative;
-      z-index:9999;
+     
       border-radius:4px;
      
     }
     .result-search ul li a {
-      position: relative;
-      z-index:9999;
+     
       border: 1px solid #ddd; /* Add a border to all links */
       margin-top: -1px; /* Prevent double borders */
       background-color: #f6f6f6; /* Grey background color */
