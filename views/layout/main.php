@@ -39,12 +39,14 @@
       z-index:9999;
     }
     .result-search ul {
+      z-index:9999;
       list-style-type: none;
       padding: 0;
       margin: 0;
       border-ra
     }
     .result-search ul li a {
+      z-index:9999;
       border: 1px solid #ddd; /* Add a border to all links */
       margin-top: -1px; /* Prevent double borders */
       background-color: #f6f6f6; /* Grey background color */
