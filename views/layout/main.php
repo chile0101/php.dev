@@ -34,43 +34,11 @@
   </script>
 
   <style>
-    .liveSearchBar, .liveSearchBar li{
-      margin:0;
-      padding:0;
-      list-style:none;
-    }
-    .liveSearchBar, .liveSearchBar li a{
-      color:#fff;
-      text-decoration:none;
-    }
+    
   </style>
 
   <script>
-    $(document).ready(function(){
-      $("#filter").keyup(function(){
-  
-          // Retrieve the input field text and reset the count to zero
-          var filter = $(this).val(), count = 0;
-  
-          // Loop through the comment list
-          $("nav ul li").each(function(){
-  
-              // If the list item does not contain the text phrase fade it out
-              if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                  $(this).fadeOut();
-  
-              // Show the list item if the phrase matches and increase the count by 1
-              } else {
-                  $(this).show();
-                  count++;
-              }
-          });
-  
-          // Update the count
-          var numberItems = count;
-          $("#filter-count").text("Number of Filter = "+count);
-      });
-    });
+    
 
   </script>
 
@@ -106,7 +74,7 @@
         </form>
 
      
-        <ul id="myUL">
+        <!-- <ul id="myUL">
           <li><a href="#">Adele</a></li>
           <li><a href="#">Agnes</a></li>
 
@@ -116,7 +84,7 @@
           <li><a href="#">Calvin</a></li>
           <li><a href="#">Christina</a></li>
           <li><a href="#">Cindy</a></li>
-        </ul>
+        </ul> -->
      
 
       </div> 
