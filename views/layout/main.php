@@ -136,15 +136,27 @@
 
         <div id="result-search">
           <ul id="myUL">
-            <li><a href="#">Adele</a></li>
-            <li><a href="#">Agnes</a></li>
+            <li><a href="#">Grand Theft Auto V</a></li>
+            <li><a href="#">Devil May Cry 5</a></li>
 
-            <li><a href="#">Billy</a></li>
-            <li><a href="#">Bob</a></li>
+            <li><a href="#">Tom Clancy The Devision</a></li>
+            <li><a href="#">Watch Dogs 2</a></li>
 
-            <li><a href="#">Calvin</a></li>
-            <li><a href="#">Christina</a></li>
-            <li><a href="#">Cindy</a></li>
+            <li><a href="#">Outlast 2</a></li>
+            <li><a href="#">Resident Evil 7</a></li>
+            <li><a href="#">Little Nightmares</a></li>
+            <li><a href="#">Rocket League</a></li>
+            <li><a href="#">WWE 2K18</a></li>
+            <li><a href="#">Beat Saber</a></li>
+            <li><a href="#">NBA 2k17</a></li>
+            <li><a href="#">WRC 7 FIA World Rally Championship</a></li>
+            <li><a href="#">The Elder Scrolls V: Skyrim</a></li>
+            <li><a href="#">Resident Evil 2 Remake</a></li>
+            <li><a href="#">Resident Evil 2 Remake</a></li>
+
+            <li><a href="#">Resident Evil 2 Remake</a></li>
+            <li><a href="#">Resident Evil 2 Remake</a></li>
+
           </ul>
         </div>
      
