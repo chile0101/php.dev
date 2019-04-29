@@ -94,8 +94,8 @@
       
       <?php require($view); ?>
       
-  <iframe width="420" height="315"
-    src="https://www.youtube.com/embed/watch?v=g78Pu4Uh2uM">
+  <iframe   style="width:420px;height:315;margin:0 auto;"
+    src="https://www.youtube.com/embed/g78Pu4Uh2uM">
   </iframe>
    
 <div class="footer" >
