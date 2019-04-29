@@ -79,7 +79,7 @@
       ul = document.getElementById("myUL");
       li = ul.getElementsByTagName('li');
 
-      
+      var count=0;
       for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
@@ -90,6 +90,10 @@
          
           div.style.display="inline";
           li[i].style.display = "inline";
+          count+=1;
+          if(count==5){
+            return;
+          }
           
         } else {
           //div.style.display="inline";
