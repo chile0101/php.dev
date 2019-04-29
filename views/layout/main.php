@@ -89,16 +89,17 @@
         txtValue = a.textContent || a.innerText;
         // alert(txtValue);
        
-        if(count == 5){  
-            alert(count);
-            return;
-          }
+        
         if(filter == ""){
           div.style.display="none";
         } else if (txtValue.toUpperCase().indexOf(filter) > -1) {
           count+=1;
           div.style.display="inline";
           li[i].style.display = "";
+          if(count == 5){  
+            
+            return;
+          }
          
         } else {
           count+=1;
