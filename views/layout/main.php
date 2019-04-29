@@ -96,17 +96,17 @@
           count+=1;
           div.style.display="inline";
           li[i].style.display = "";
+          if(count === 5){  
+            break;
+          }
           
          
         } else {
-          count+=1;
+          //count+=1;
           div.style.display="inline";
           li[i].style.display = "none";
         }
-        if(count == 5){  
-            
-            break;
-          }
+        
       }
     }
 
