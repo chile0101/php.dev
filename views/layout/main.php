@@ -137,26 +137,26 @@
 
         <div id="result-search">
           <ul id="myUL">
-            <li><a href="#">Grand Theft Auto V</a></li>
-            <li><a href="#">Devil May Cry 5</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">Grand Theft Auto V</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/2">Devil May Cry 5</a></li>
 
-            <li><a href="#">Tom Clancy The Devision</a></li>
-            <li><a href="#">Watch Dogs 2</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/3">Tom Clancy The Devision</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/4">Watch Dogs 2</a></li>
 
-            <li><a href="#">Outlast 2</a></li>
-            <li><a href="#">Resident Evil 7</a></li>
-            <li><a href="#">Little Nightmares</a></li>
-            <li><a href="#">Rocket League</a></li>
-            <li><a href="#">WWE 2K18</a></li>
-            <li><a href="#">Beat Saber</a></li>
-            <li><a href="#">NBA 2k17</a></li>
-            <li><a href="#">WRC 7 FIA World Rally Championship</a></li>
-            <li><a href="#">The Elder Scrolls V: Skyrim</a></li>
-            <li><a href="#">Resident Evil 2 Remake</a></li>
-            <li><a href="#">Resident Evil 2 Remake</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/5">Outlast 2</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">Resident Evil 7</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">Little Nightmares</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">Rocket League</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">WWE 2K18</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">Beat Saber</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">NBA 2k17</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">WRC 7 FIA World Rally Championship</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">The Elder Scrolls V: Skyrim</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">The Witcher 3: Wild Hunt</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">Sekiro: Shadows Die Twice</a></li>
 
-            <li><a href="#">Resident Evil 2 Remake</a></li>
-            <li><a href="#">Resident Evil 2 Remake</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">Dark Souls 3</a></li>
+            <li><a href="http://www.chilecse.com/home/detail/1">Diablo</a></li>
 
           </ul>
         </div>
