@@ -43,7 +43,12 @@
       list-style-type: none;
       padding: 0;
       margin: 0;
-      border-ra
+     
+    }
+    .result-search ul li {
+      z-index:9999;
+      border-radius:4px;
+     
     }
     .result-search ul li a {
       z-index:9999;
