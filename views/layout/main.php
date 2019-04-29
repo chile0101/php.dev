@@ -93,6 +93,10 @@
   </header>
       
       <?php require($view); ?>
+      
+  <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/watch?v=g78Pu4Uh2uM">
+  </iframe>
    
 <div class="footer" >
     <div class=" row" style="margin-bottom:3px;">
