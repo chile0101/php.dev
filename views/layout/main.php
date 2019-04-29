@@ -85,10 +85,13 @@
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           div.style.display="inline";
-          li[i].style.display = "none";
+          li[i].style.display = "";
         } else {
           div.style.display="inline";
           li[i].style.display = "none";
+        }
+        if(txtValue.length == 0){
+          div.style.display="none";
         }
       }
     }
