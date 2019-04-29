@@ -42,7 +42,7 @@
       padding: 0;
       margin: 0;
     }
-    #myUL li a {
+    .result-search ul li a {
       border: 1px solid #ddd; /* Add a border to all links */
       margin-top: -1px; /* Prevent double borders */
       background-color: #f6f6f6; /* Grey background color */
@@ -52,7 +52,7 @@
       color: black; /* Add a black text color */
       display: block; /* Make it into a block element to fill the whole list */
     }
-    #myUL li a:hover:not(.header) {
+    .result-search ul li a:hover:not(.header) {
       background-color: #eee; /* Add a hover effect to all links, except for headers */
     }
   </style>
