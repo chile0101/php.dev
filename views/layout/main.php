@@ -88,7 +88,7 @@
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         // alert(txtValue);
-        if(count < 5){  
+        if(count == 5){  
             break;
           }
         if(filter == ""){
