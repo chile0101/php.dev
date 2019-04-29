@@ -106,7 +106,7 @@
           div.style.display="inline";
           li[i].style.display = "none";
         }
-        
+        document.write(i);
       }
     }
 
