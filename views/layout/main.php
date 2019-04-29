@@ -94,10 +94,10 @@
       
       <?php require($view); ?>
       
-  <div style="margin: 0 auto;">
+  <div >
     <h2 style="color:green;margin-bottom:20px;">Introduce HTC Store </h2>
     
-      <iframe   style="display:block;width:754px;height:424px;"
+      <iframe   style="display:block;width:754px;height:424px; margin: 0 auto;"
         src="https://www.youtube.com/embed/g78Pu4Uh2uM">
       </iframe>
    
