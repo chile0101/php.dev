@@ -79,7 +79,7 @@
       ul = document.getElementById("myUL");
       li = ul.getElementsByTagName('li');
 
-    
+      
       for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
@@ -89,7 +89,7 @@
         } else if (txtValue.toUpperCase().indexOf(filter) > -1) {
          
           div.style.display="inline";
-          li[i].style.display = "";
+          li[i].style.display = "inline";
           
         } else {
           div.style.display="inline";
