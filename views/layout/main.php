@@ -89,7 +89,7 @@
         txtValue = a.textContent || a.innerText;
         // alert(txtValue);
         if(count == 5){  
-            break;
+            return;
           }
         if(filter == ""){
           div.style.display="none";
