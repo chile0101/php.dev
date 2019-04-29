@@ -92,7 +92,7 @@
           li[i].style.display = "inline";
           
         } else {
-          div.style.display="inline";
+          //div.style.display="inline";
           li[i].style.display = "none";
         }
        
