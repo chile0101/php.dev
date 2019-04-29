@@ -163,8 +163,18 @@
 
 
     <div class="row ty-see-product">
-        <a class="btn btn-dark" href="<?php echo ROOT_URL; ?>home/shop" style="background-color:green; padding:10px 60px;">SEE ALL PRODUCTS</a>
+        <a class="btn btn-dark" href="" style="background-color:green; padding:10px 60px;">INTRODUCT HTC STORE</a>
     </div>
+
+    <div >
+    
+    
+      <iframe   style="display:block;width:754px;height:424px; margin: 0 auto;margin-bottom:20px;"
+        src="https://www.youtube.com/embed/g78Pu4Uh2uM">
+      </iframe>
+   
+  </div>
+  
 </div>
 
 
