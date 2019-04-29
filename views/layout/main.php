@@ -93,7 +93,7 @@
         if(filter == ""){
           div.style.display="none";
         } else if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          count+=1;
+          // count+=1;
           div.style.display="inline";
           li[i].style.display = "";
           // if(count === 5){  
