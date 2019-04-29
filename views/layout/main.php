@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/fonts/OpenSansCondensed">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139231957-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,35 +34,27 @@
   </script>
 
 
-  
-
 </head>
 
 <body>
   <header>
     <div class="header-container">
+
       <div class="site-title">
         <a href="<?php echo ROOT_URL; ?>"><img  src="<?php echo ROOT_PATH;?>assets/images/logowhite.png" alt="logo"></a>
       </div>
+
       <div class="menu-icon" >
         <img src="<?php echo ROOT_PATH;?>assets/images/icons/menu-icon.png" alt="menu-icon" >
       </div>
+
       <div class="menu-primary">
         <ul> 
           <li><a href="<?php echo ROOT_URL; ?>home/shop">Categories</a></li>
           <li><a href="<?php echo ROOT_URL; ?>home/about">About</a></li>
-
-
-           
-
-          <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a>
-
-          </li>
-          
+          <li><a href="<?php echo ROOT_URL; ?>home/contact">Contact us</a></li>
         </ul>
       </div> 
-
-
 
        <div class="header-search">
         <!-- <form role="search" method="get" class="search-form" action="page_404.html">
@@ -76,9 +68,6 @@
         </form>
       </div> 
 
-      
-
-
       <div class="cart-content">
         <a href="<?php echo ROOT_URL; ?>cart/view">
           <span class="cart-image" id="cart-image"><img src="<?php echo ROOT_PATH;?>assets/images/icons/cart-icon.png" alt="cart-icon"></span>
@@ -89,8 +78,7 @@
 
         <div class="sign-content" ><a href="<?php echo ROOT_URL; ?>auth/profile/<?php echo $_SESSION['user_data']['id']; ?>"><?php echo $_SESSION['user_data']['fullname']; ?>  </a> <a href="<?php echo ROOT_URL; ?>auth/logout">Logout</a>
         </div>
-         
-  
+        
       <?php else: ?>
         <div class="sign-content" style="display:inline-flex;height: 30px;">
           <a href="<?php echo ROOT_URL; ?>auth/login" >Log in </a>
@@ -114,9 +102,7 @@
         
         <a href="mailto:example@mail.com" style="color:green;"><h6><i style="margin-right:5px;" class="fa fa-envelope" aria-hidden="true"></i> anphawolf@mail.com</h6></a>
         <h6> <i style="margin-right:5px;" class="fa fa-phone" aria-hidden="true"></i> +84395669219</h6>
-        <h6><i style="margin-right:5px;" class="fa fa-map-marker" aria-hidden="true"></i> Bach Khoa University</h6>
-      
-	
+        <h6><i style="margin-right:5px;" class="fa fa-map-marker" aria-hidden="true"></i>HTC Store</h6>
       </div>
 
       <div class="col">
