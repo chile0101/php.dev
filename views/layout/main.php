@@ -79,34 +79,23 @@
       ul = document.getElementById("myUL");
       li = ul.getElementsByTagName('li');
 
-      // Loop through all list items, and hide those who don't match the search query
-      // if(txtValue.length == 0){
-      //   div.style.display="none";
-      // }
-      //var count=0;
+    
       for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
-        // alert(txtValue);
-       
         
         if(filter == ""){
           div.style.display="none";
         } else if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          // count+=1;
+         
           div.style.display="inline";
           li[i].style.display = "";
-          // if(count === 5){  
-          //   break;
-          // }
           
-         
         } else {
-          //count+=1;
           div.style.display="inline";
           li[i].style.display = "none";
         }
-       // document.write(i);
+       
       }
     }
 
