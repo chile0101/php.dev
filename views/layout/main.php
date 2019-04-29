@@ -34,25 +34,26 @@
   </script>
 
   <style>
-    .result-search{
+    #result-search{
+      display:none;
       position: absolute;
 
       width:275px;
       z-index:9999;
     }
-    .result-search ul {
+    #result-search ul {
      
       list-style-type: none;
       padding: 0;
       margin: 0;
      
     }
-    .result-search ul li {
+    #result-search ul li {
      
       border-radius:4px;
      
     }
-    .result-search ul li a {
+    #result-search ul li a {
      
       border: 1px solid #ddd; /* Add a border to all links */
       margin-top: -1px; /* Prevent double borders */
@@ -71,7 +72,8 @@
   <script>
     function myFunction() {
       // Declare variables
-      var input, filter, ul, li, a, i, txtValue;
+      var div,input, filter, ul, li, a, i, txtValue;
+      div=document.getElementById("result-search");
       input = document.getElementById('myInput');
       filter = input.value.toUpperCase();
       ul = document.getElementById("myUL");
@@ -82,8 +84,10 @@
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          div.style.display="inline";
           li[i].style.display = "";
         } else {
+          div.style.display="inline";
           li[i].style.display = "none";
         }
       }
@@ -123,7 +127,7 @@
           <!-- <button class="btn btn-outline-light my-2 my-sm-4" type="submit">Search</button> -->
         </form>
 
-        <div class="result-search">
+        <div id="result-search">
           <ul id="myUL">
             <li><a href="#">Adele</a></li>
             <li><a href="#">Agnes</a></li>
