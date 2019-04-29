@@ -80,19 +80,22 @@
       li = ul.getElementsByTagName('li');
 
       // Loop through all list items, and hide those who don't match the search query
+      if(txtValue.length == 0){
+        div.style.display="none";
+      }
       for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > 0) {
+        if(txtValue ==""){
+          div.style.display="none";
+        } else if (txtValue.toUpperCase().indexOf(filter) > 0) {
           div.style.display="inline";
           li[i].style.display = "";
         } else {
           div.style.display="inline";
           li[i].style.display = "none";
         }
-        // if(txtValue.length == 0){
-        //   div.style.display="none";
-        // }
+       
       }
     }
 
