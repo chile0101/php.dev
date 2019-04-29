@@ -117,6 +117,7 @@
        <div class="header-search">
 
         <form  class="form-inline" id="live-search" action="" method="post" autocomplete="off">
+          <input autocomplete="false" name="hidden" type="text" style="display:none;">
           <input style="width:80%;margin-top:20px" class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
           <!-- <input  type="text" placeholder="Search" aria-label="Search"> -->
           <!-- <button class="btn btn-outline-light my-2 my-sm-4" type="submit">Search</button> -->
