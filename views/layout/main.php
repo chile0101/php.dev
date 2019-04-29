@@ -96,7 +96,7 @@
       
   <div>
     <h2 style="color:green;margin-bottom:20px;">Introduce HTC Store </h2>
-    <div style="margin: 0 auto;">
+    <div style="align:center;">
       <iframe   style="width:754px;height:424px;"
         src="https://www.youtube.com/embed/g78Pu4Uh2uM">
       </iframe>
