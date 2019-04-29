@@ -86,7 +86,8 @@
       for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
-        if(txtValue ==""){
+        alert(txtValue);
+        if(txtValue == ""){
           div.style.display="none";
         } else if (txtValue.toUpperCase().indexOf(filter) > -1) {
           div.style.display="inline";
