@@ -33,6 +33,47 @@
     gtag('config', 'UA-139231957-1');
   </script>
 
+  <style>
+    .liveSearchBar, .liveSearchBar li{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .liveSearchBar, .liveSearchBar li a{
+      color:#fff;
+      text-decoration:none;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+      $("#filter").keyup(function(){
+  
+          // Retrieve the input field text and reset the count to zero
+          var filter = $(this).val(), count = 0;
+  
+          // Loop through the comment list
+          $("nav ul li").each(function(){
+  
+              // If the list item does not contain the text phrase fade it out
+              if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                  $(this).fadeOut();
+  
+              // Show the list item if the phrase matches and increase the count by 1
+              } else {
+                  $(this).show();
+                  count++;
+              }
+          });
+  
+          // Update the count
+          var numberItems = count;
+          $("#filter-count").text("Number of Filter = "+count);
+      });
+    });
+
+  </script>
+
 
 </head>
 
@@ -57,15 +98,27 @@
       </div> 
 
        <div class="header-search">
-        <!-- <form role="search" method="get" class="search-form" action="page_404.html">
-          <input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:" />
-          <input type="hidden" name="lang" value="" />
-          <input type="submit" class="search-submit" value="Search" />
-        </form> -->
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-4" type="submit">Search</button>
+
+        <form class="form-inline" id="live-search" action="" method="post">
+          <input class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+          <!-- <input  type="text" placeholder="Search" aria-label="Search"> -->
+          <!-- <button class="btn btn-outline-light my-2 my-sm-4" type="submit">Search</button> -->
         </form>
+
+     
+        <ul id="myUL">
+          <li><a href="#">Adele</a></li>
+          <li><a href="#">Agnes</a></li>
+
+          <li><a href="#">Billy</a></li>
+          <li><a href="#">Bob</a></li>
+
+          <li><a href="#">Calvin</a></li>
+          <li><a href="#">Christina</a></li>
+          <li><a href="#">Cindy</a></li>
+        </ul>
+     
+
       </div> 
 
       <div class="cart-content">
