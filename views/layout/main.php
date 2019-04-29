@@ -92,7 +92,7 @@
           li[i].style.display = "inline";
           count+=1;
           if(count==5){
-            return;
+            break;
           }
           
         } else {
