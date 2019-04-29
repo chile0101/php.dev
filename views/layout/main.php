@@ -34,7 +34,24 @@
   </script>
 
   <style>
-    
+    #myUL {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    #myUL li a {
+      border: 1px solid #ddd; /* Add a border to all links */
+      margin-top: -1px; /* Prevent double borders */
+      background-color: #f6f6f6; /* Grey background color */
+      padding: 12px; /* Add some padding */
+      text-decoration: none; /* Remove default text underline */
+      font-size: 18px; /* Increase the font-size */
+      color: black; /* Add a black text color */
+      display: block; /* Make it into a block element to fill the whole list */
+    }
+    #myUL li a:hover:not(.header) {
+      background-color: #eee; /* Add a hover effect to all links, except for headers */
+    }
   </style>
 
   <script>
@@ -74,7 +91,7 @@
         </form>
 
      
-        <!-- <ul id="myUL">
+        <ul id="myUL">
           <li><a href="#">Adele</a></li>
           <li><a href="#">Agnes</a></li>
 
@@ -84,7 +101,7 @@
           <li><a href="#">Calvin</a></li>
           <li><a href="#">Christina</a></li>
           <li><a href="#">Cindy</a></li>
-        </ul> -->
+        </ul>
      
 
       </div> 
