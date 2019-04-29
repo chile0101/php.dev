@@ -84,8 +84,8 @@
 
        <div class="header-search">
 
-        <form  id="live-search" action="" method="post">
-          <input  type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <form class="form-inline" id="live-search" action="" method="post">
+          <input class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
           <!-- <input  type="text" placeholder="Search" aria-label="Search"> -->
           <!-- <button class="btn btn-outline-light my-2 my-sm-4" type="submit">Search</button> -->
         </form>
