@@ -87,7 +87,7 @@
           div.style.display="inline";
           li[i].style.display = "";
         } else {
-          div.style.display="inline";
+          div.style.display="none";
           li[i].style.display = "none";
         }
       }
