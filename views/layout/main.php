@@ -86,14 +86,12 @@
         
         if(filter == ""){
           div.style.display="none";
-        } else if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        } else if (txtValue.toUpperCase().indexOf(filter) > -1 and count < 5)  {
          
           div.style.display="inline";
           li[i].style.display = "inline";
           count+=1;
-          if(count==5){
-            break;
-          }
+          
           
         } else {
           //div.style.display="inline";
