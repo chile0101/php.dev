@@ -83,7 +83,7 @@
       // if(txtValue.length == 0){
       //   div.style.display="none";
       // }
-      var count=0;
+      //var count=0;
       for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
@@ -96,9 +96,9 @@
           count+=1;
           div.style.display="inline";
           li[i].style.display = "";
-          if(count === 5){  
-            break;
-          }
+          // if(count === 5){  
+          //   break;
+          // }
           
          
         } else {
@@ -106,7 +106,7 @@
           div.style.display="inline";
           li[i].style.display = "none";
         }
-        document.write(i);
+       // document.write(i);
       }
     }
 
