@@ -3,7 +3,7 @@
 // Define DB params
 define("DB_HOST","localhost");
 define("DB_USER","root");
-define("DB_PASS","");
+define("DB_PASS","chi25041997");
 define("DB_NAME","db_phpdev");
 // define("CHARSET","utf8");
 
