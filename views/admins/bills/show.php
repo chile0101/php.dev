@@ -13,17 +13,17 @@
     <div class="row">
         <div class="col-12">
     		<div class="invoice-title" style="margin-top: 20px;">
-    			<h2>Order # 12345</h2>
+    			<h2>Order # <?php echo $order['id']; ?></h2>
     		</div>
     		<hr>
     		<div class="row">
     			<div class="col-6">
     				<address>
     				<strong>Billed To:</strong><br>
-    					John Smith<br>
-    					1234 Main<br>
-    					Apt. 4B<br>
-    					Springfield, ST 54321
+    					<?php echo $user['fullname']; ?><br>
+    					<?php echo $user['email'] ;?><br>
+    					<?php echo $user['phone'] ;?><br>
+    					<?php echo $user['address'] ;?>
     				</address>
     			</div>
     			<div class="col-6 text-right">
@@ -41,13 +41,13 @@
     				<address>
     					<strong>Payment Method:</strong><br>
     					Visa ending **** 4242<br>
-    					jsmith@email.com
+    					<?php echo $user['email'] ;?>
     				</address>
     			</div>
     			<div class="col-6 text-right">
     				<address>
     					<strong>Order Date:</strong><br>
-    					March 7, 2014<br><br>
+    					<?php echo $order['create_at'] ;?><br><br>
     				</address>
     			</div>
     		</div>
@@ -72,25 +72,16 @@
                                 </tr>
     						</thead>
     						<tbody>
-    							<!-- foreach ($order->lineItems as $line) or some such thing here -->
-    							<tr>
-    								<td>BS-200</td>
-    								<td class="text-center">$10.99</td>
-    								<td class="text-center">1</td>
-    								<td class="text-right">$10.99</td>
-    							</tr>
-                                <tr>
-        							<td>BS-400</td>
-    								<td class="text-center">$20.00</td>
-    								<td class="text-center">3</td>
-    								<td class="text-right">$60.00</td>
-    							</tr>
-                                <tr>
-            						<td>BS-1000</td>
-    								<td class="text-center">$600.00</td>
-    								<td class="text-center">1</td>
-    								<td class="text-right">$600.00</td>
-    							</tr>
+    							<?php foreach($products as $value=>$p): ?>
+                                    <tr>
+                                        <td><?php echo $p['name'];?> </td>
+                                        <td class="text-center">$<?php echo $p['pricenew']; ?></td>
+                                        <td class="text-center"><?php echo $orderitems[$value]['quantity']; ?></td>
+                                        <td class="text-right">$10.99</td>
+                                    </tr>
+                                <?php endforeach ?>
+
+
     							<tr>
     								<td class="thick-line"></td>
     								<td class="thick-line"></td>
