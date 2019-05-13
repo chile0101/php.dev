@@ -1,10 +1,10 @@
 <?php 
   $order=$viewmodel[0];
   $user =$viewmodel[1];
-  $orderitem = $viewmodel[2]
-  $product=$viewmodel[3];
+  $orderitems = $viewmodel[2]
+  $products =$viewmodel[3];
 
-  print_r($orderitem);
+  //print_r($orderitem);
 
 ?>
 <div class="row">
@@ -31,19 +31,6 @@
                 <th scope="row">Phone</th>
                 <td><?php echo $user['phone']; ?></td>
             </tr>
-            <tr>
-                <th scope="row">Name Product</th>
-                <td><?php echo $product['name']; ?></td>
-            </tr>
-            <tr>
-                <th scope="row">Code </th>
-                <td><?php echo $product['code']; ?></td>
-            </tr>
-
-            <tr>
-                <th scope="row">Price product </th>
-                <td><?php echo $product['pricenew']; ?></td>
-            </tr>
 
             <tr>
                 <th scope="row">Status</th>
@@ -58,6 +45,27 @@
                 <th scope="row">Update at</th>
                 <td><?php echo $order['update_at']; ?></td>
             </tr>
+
+            <?php foreach($products as $p ): ?>
+                <tr>
+                    <th scope="row">Name Product</th>
+                    <td><?php echo $p['name']; ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">Code </th>
+                    <td><?php echo $p['code']; ?></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Price product </th>
+                    <td><?php echo $p['pricenew']; ?></td>
+                </tr>
+
+            <?php endforeach ?>
+
+            
+
+           
         </tbody>
     </table>
 </div>

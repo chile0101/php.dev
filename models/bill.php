@@ -25,7 +25,7 @@ class BillModel extends Model{
 		$this->bind(':order_id',$order['id']);
 		$orderitems = $this->resultSet();
 
-		print_r($orderitems);
+		//print_r($orderitems);
 
 		$product = array();
 
