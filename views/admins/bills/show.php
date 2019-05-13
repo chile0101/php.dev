@@ -78,7 +78,7 @@
                                         <td class="text-center">$<?php echo $p['pricenew']; ?></td>
                                         <td class="text-center"><?php echo $orderitems[$value]['quantity']; ?></td>
                                         <td class="text-right">$<?php 
-                                            $total = $p['pricenew']*$orderitems[$value]['quantity']; 
+                                            $total = 1*$p['pricenew']*$orderitems[$value]['quantity']; 
                                             echo $total; ?></td>
                                     </tr>
                                 <?php endforeach ?>
