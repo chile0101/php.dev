@@ -16,7 +16,7 @@
     <tbody>
      
       <tr>
-        <th scope="row"></th>
+       
        
         <td><a  class="btn btn-success" href=""><?php echo $viewmodel[1]; ?></a></td>
         <td><a  class="btn btn-success" href=""><?php echo $viewmodel[2]; ?></td>
