@@ -22,17 +22,6 @@ abstract class Controller{
 			$view = './views/'. strtolower(get_class($this)). '/' . $this->action. '.php';
 			require('views/layout/main.php');
 		}
-
-		// if($this->action)
-		//$view = 'views/'. get_class($this). '/' . $this->action. '.php';
-		// if($fullview=="user"){
-		// 	require('views/layout/main.php');
-		// }elseif($fullview=="admin"){
-		// 	require("views/layout/main_admin.php");
-		// } else {
-		// 	echo "require view";
-		// 	//require($view);
-		// }
 	}
 	protected function lock_path_admin(){
         if(!isset($_SESSION['admin_logged_in'])){
