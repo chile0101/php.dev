@@ -12,8 +12,7 @@ class AnalicModel extends Model{
             $num_product += $r['quantity'];
          
         }
-        print_r($rows);
-        echo $num_product;
+    
 		
 		return [$rows,$num_order,$num_product];
 	}
