@@ -3,7 +3,7 @@
 class AnalicModel extends Model{
 
 	public function Index(){
-		$this->query('SELECT * FROM orderitems ORDER BY create_at DESC');
+		$this->query('SELECT * FROM orderitems ');
         $rows = $this->resultSet();
         
         $num_product   =0;
