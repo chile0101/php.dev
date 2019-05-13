@@ -25,6 +25,7 @@ require('controllers/admin/authadmin.php');
 require('controllers/admin/users.php');
 require('controllers/admin/products.php');
 require('controllers/admin/bills.php');
+require('controllers/admin/analics.php');
 
 require('controllers/auth.php');
 require('controllers/home.php');
@@ -37,6 +38,7 @@ require('models/auth.php');
 require('models/home.php');
 require('models/cart_model.php');
 require('models/bill.php');
+require('models/analic.php');
 
 
 
