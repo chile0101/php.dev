@@ -21,9 +21,11 @@ class BillModel extends Model{
 		$this->bind(':id',$order['user_id']);
 		$user=$this->single();
 
-		$this->query('SELECT * FROM orderitems WHERE order_id = :id');
+		$this->query('SELECT * FROM orderitems WHERE order_id = :order_id');
 		$this->bind(':order_id',$order['id']);
 		$orderitems = $this->single();
+
+		$product = array();
 
 		foreach ($orderitems as $key => $item ){
 			$this->query('SELECT * FROM products WHERE id = :id');
