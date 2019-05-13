@@ -1,6 +1,6 @@
 <?php
 
-class BillModel extends Model{
+class AnalicModel extends Model{
 
 	public function Index(){
 		$this->query('SELECT * FROM orderitems ORDER BY create_at DESC');
