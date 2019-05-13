@@ -8,7 +8,7 @@ class AnalicModel extends Model{
         
         $num_product   =0;
         $num_order = count($rows); 
-        foreach($row as $r){
+        foreach($rows as $r){
             $num_product += $r['quantity'];
          
         }
