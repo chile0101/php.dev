@@ -25,6 +25,8 @@ class BillModel extends Model{
 		$this->bind(':order_id',$order['id']);
 		$orderitems = $this->single();
 
+		print_r($orderitems);
+
 		$product = array();
 
 		foreach ($orderitems as $key => $item ){
@@ -35,7 +37,7 @@ class BillModel extends Model{
 
 		
 
-		return [$order,$user,$orderitem,$product];
+		return [$order,$user,$orderitems,$product];
 
 	}
 	public function edit($id){
