@@ -3,6 +3,7 @@
   $user =$viewmodel[1];
   $orderitems = $viewmodel[2];
   $products =$viewmodel[3];
+  $subtotal = array();
 
   //print_r($orderitem);
 
@@ -78,29 +79,24 @@
                                         <td class="text-center">$<?php echo $p['pricenew']; ?></td>
                                         <td class="text-center"><?php echo $orderitems[$value]['quantity']; ?></td>
                                         <td class="text-right">$<?php 
-                                            $total = 1*$p['pricenew']*$orderitems[$value]['quantity']; 
-                                            echo $total; ?></td>
+                                            $total[$value] = 1*$p['pricenew']*$orderitems[$value]['quantity']; 
+                                            echo $subtotal[$value]; ?></td>
                                     </tr>
                                 <?php endforeach ?>
 
 
-    							<tr>
-    								<td class="thick-line"></td>
-    								<td class="thick-line"></td>
-    								<td class="thick-line text-center"><strong>Subtotal</strong></td>
-    								<td class="thick-line text-right">$670.99</td>
-    							</tr>
-    							<tr>
-    								<td class="no-line"></td>
-    								<td class="no-line"></td>
-    								<td class="no-line text-center"><strong>Shipping</strong></td>
-    								<td class="no-line text-right">$15</td>
-    							</tr>
+    	
     							<tr>
     								<td class="no-line"></td>
     								<td class="no-line"></td>
     								<td class="no-line text-center"><strong>Total</strong></td>
-    								<td class="no-line text-right">$685.99</td>
+                                    <td class="no-line text-right">$<?php 
+                                    $total = 0;
+                                    foreach($subtotal as $t){
+                                        $total += $t;
+                                    }
+                                    echo $total;
+                                    ;?></td>
     							</tr>
     						</tbody>
     					</table>
