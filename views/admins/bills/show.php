@@ -12,8 +12,8 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-    		<div class="invoice-title">
-    			<h2>Invoice</h2><h3 class="float-right">Order # 12345</h3>
+    		<div class="invoice-title" style="margin-top: 20px;">
+    			<h2>Order # 12345</h2>
     		</div>
     		<hr>
     		<div class="row">
