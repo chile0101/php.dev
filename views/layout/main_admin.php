@@ -24,6 +24,7 @@
                     <li class="nav-item"><a class="nav-link" href="<?php echo ROOT_URL_ADMIN; ?>users">Users </a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo ROOT_URL_ADMIN; ?>products">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo ROOT_URL_ADMIN; ?>bills">Bills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo ROOT_URL_ADMIN; ?>analics">Analics</a></li>
 
                 </ul>
             
