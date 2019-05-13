@@ -700,7 +700,7 @@ INSERT INTO type_product (id,name) VALUES (4,'indie');
 /* -------------------------------------------Hành Động------------------------------------------------- */
 INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
             VALUES (NULL,'Grand Theft Auto V','https://hb.imgix.net/ad3f96dfd21531e24ab72c3821a01049c8484982.jpg?auto=compress,format&fit=crop&h=353&w=616&s=9fc123b4c723d329d164b8ab02af5284',
-            459,5,'vncur 550 idcur','Home Sweet Home is a first-person horror adventure game based on Thai myths and beliefs.   The core gameplay focuses on storytelling and stealth to avoid perilous spirits hunting you. Moreover, few puzzles are added into the game, making gameplay more various. While playing this game, you will be thrilled by a horror Thai atmosphere, unpredictable scary moments and challenging gameplay!',
+            459,229.5/23.346,'vncur 550 idcur','Home Sweet Home is a first-person horror adventure game based on Thai myths and beliefs.   The core gameplay focuses on storytelling and stealth to avoid perilous spirits hunting you. Moreover, few puzzles are added into the game, making gameplay more various. While playing this game, you will be thrilled by a horror Thai atmosphere, unpredictable scary moments and challenging gameplay!',
             'https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/','2013-09-17','Rockstar','YrtCnL62pB8',1);
 
 INSERT INTO products (id,name,image,priceold,pricenew,code,description,link_origin,date_release,developer,link_trailer,type_product_id)
