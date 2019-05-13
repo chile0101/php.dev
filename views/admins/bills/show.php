@@ -1,7 +1,7 @@
 <?php 
   $order=$viewmodel[0];
   $user =$viewmodel[1];
-  $orderitems = $viewmodel[2]
+  $orderitems = $viewmodel[2];
   $products =$viewmodel[3];
 
   //print_r($orderitem);
