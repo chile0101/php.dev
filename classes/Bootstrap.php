@@ -4,6 +4,11 @@ class Bootstrap{
 	private $controller;
 	private $action;
 	private $id;
+
+	echo $this->role;
+	echo $this->controller;
+	echo $this->action;
+	
 	
 	public function __construct($request){
 	

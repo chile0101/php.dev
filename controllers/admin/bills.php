@@ -8,11 +8,6 @@ class Bills extends Controller{
         $viewmodel = new BillModel();
         $this->ReturnView($viewmodel->Index());
     }
-    // protected function new(){
-    //     $this->lock_path_admin();
-    //     $viewmodel = new BillModel();
-    //     $this->ReturnView($viewmodel->new());
-    // }
     protected function show(){
         $this->lock_path_admin();
 

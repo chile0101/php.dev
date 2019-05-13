@@ -8,9 +8,6 @@ class Analics extends Controller{
         $viewmodel = new AnalicModel();
         $this->ReturnView($viewmodel->Index());
     }
-
-   
-
 }
 
 ?>
