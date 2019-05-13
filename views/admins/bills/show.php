@@ -79,7 +79,7 @@
                                         <td class="text-center">$<?php echo $p['pricenew']; ?></td>
                                         <td class="text-center"><?php echo $orderitems[$value]['quantity']; ?></td>
                                         <td class="text-right">$<?php 
-                                            $total[$value] = 1*$p['pricenew']*$orderitems[$value]['quantity']; 
+                                            $subtotal[$value] = 1*$p['pricenew']*$orderitems[$value]['quantity']; 
                                             echo $subtotal[$value]; ?></td>
                                     </tr>
                                 <?php endforeach ?>
