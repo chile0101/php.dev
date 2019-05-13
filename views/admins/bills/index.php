@@ -19,7 +19,7 @@
       <tr>
         <th scope="row"><?php echo $bill['id']; ?></th>
        
-        <td><?php if($bill['status'] == 1) {echo 'TO DO';}elseif($bill['status']==0){echo 'DONE';}else{echo 'DOING';}?></td>
+        <td><a  class="btn btn-success" href="">DONE</a></td>
       <td><?php echo $bill['create_at']; ?></td>
         <td><?php echo $bill['update_at']; ?></td>
         

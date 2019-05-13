@@ -1,7 +1,10 @@
 <?php 
-  $bill=$viewmodel[0];
+  $order=$viewmodel[0];
   $user =$viewmodel[1];
-  $product=$viewmodel[2];
+  $orderitem = $viewmodel[2]
+  $product=$viewmodel[3];
+
+  print_r($orderitem);
 
 ?>
 <div class="row">
@@ -10,7 +13,7 @@
         <tbody>
             <tr>
                 <th scope="row">ID</th>
-                <td><?php echo $bill['id']; ?></td>
+                <td><?php echo $order['id']; ?></td>
             </tr>
             <tr>
                 <th scope="row">Full name</th>
@@ -44,16 +47,16 @@
 
             <tr>
                 <th scope="row">Status</th>
-                <td><?php if($bill['status'] == 1) {echo 'TO DO';}elseif($bill['status']==0){echo 'DONE';}else{echo 'DOING';}?></td>
+                <td></td>
             </tr>
 
             <tr>
                 <th scope="row">Create at</th>
-                <td><?php echo $bill['create_at']; ?></td>
+                <td><?php echo $order['create_at']; ?></td>
             </tr>
             <tr>
                 <th scope="row">Update at</th>
-                <td><?php echo $bill['update_at']; ?></td>
+                <td><?php echo $order['update_at']; ?></td>
             </tr>
         </tbody>
     </table>
