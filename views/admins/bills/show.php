@@ -90,13 +90,13 @@
     								<td class="no-line"></td>
     								<td class="no-line"></td>
     								<td class="no-line text-center"><strong>Total</strong></td>
-                                    <td class="no-line text-right">$<?php 
+                                    <td class="no-line text-right"><strong> $<?php 
                                     $total = 0;
                                     foreach($subtotal as $t){
                                         $total += $t;
                                     }
                                     echo $total;
-                                    ;?></td>
+                                    ;?></strong></td>
     							</tr>
     						</tbody>
     					</table>
