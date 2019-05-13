@@ -8,13 +8,23 @@ class AnalicModel extends Model{
         
         $num_product   =0;
         $num_order = count($rows); 
+        $total_price=0;
         foreach($rows as $r){
             $num_product += $r['quantity'];
+
+            $this->query('SELECT pricenew FROM products WHERE id = :id');
+            $this->bind(':id',$r['product_id']);
+            $product=$this->single();
+
+            $total_price += $product['pricenew']* $r['quantity']*1;
+
          
         }
+
+       
     
 		
-		return [$rows,$num_order,$num_product];
+		return [$total_price,$num_order,$num_product];
 	}
 
 	

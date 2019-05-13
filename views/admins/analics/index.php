@@ -8,6 +8,8 @@
         
         <th scope="col">Total Products</th>
         
+        <th scope="col">Total Price</th>
+
         <th scope="col">Date</th>
 
      
@@ -20,6 +22,7 @@
        
         <td><a  class="btn btn-success" href=""><?php echo $viewmodel[1]; ?></a></td>
         <td><a  class="btn btn-success" href=""><?php echo $viewmodel[2]; ?></td>
+        <td><a  class="btn btn-success" href=""><?php echo $viewmodel[0]; ?></td>
         <td> <a  class="btn btn-success" href=""><?php
 
            date_default_timezone_set('Asia/Ho_Chi_Minh');
