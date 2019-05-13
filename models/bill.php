@@ -23,7 +23,7 @@ class BillModel extends Model{
 
 		$this->query('SELECT * FROM orderitems WHERE order_id = :order_id');
 		$this->bind(':order_id',$order['id']);
-		$orderitems = $this->single();
+		$orderitems = $this->resultSet();
 
 		print_r($orderitems);
 
