@@ -9,15 +9,15 @@
 ?>
 
 
-<!-- <div class="container"> -->
+<div class="container">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
     		<div class="invoice-title">
     			<h2>Invoice</h2><h3 class="pull-right">Order # 12345</h3>
     		</div>
     		<hr>
     		<div class="row">
-    			<div class="col-xs-6">
+    			<div class="col-6">
     				<address>
     				<strong>Billed To:</strong><br>
     					John Smith<br>
@@ -26,7 +26,7 @@
     					Springfield, ST 54321
     				</address>
     			</div>
-    			<div class="col-xs-6 text-right">
+    			<div class="col-6 text-right">
     				<address>
         			<strong>Shipped To:</strong><br>
     					Jane Smith<br>
@@ -37,14 +37,14 @@
     			</div>
     		</div>
     		<div class="row">
-    			<div class="col-xs-6">
+    			<div class="col-6">
     				<address>
     					<strong>Payment Method:</strong><br>
     					Visa ending **** 4242<br>
     					jsmith@email.com
     				</address>
     			</div>
-    			<div class="col-xs-6 text-right">
+    			<div class="col-6 text-right">
     				<address>
     					<strong>Order Date:</strong><br>
     					March 7, 2014<br><br>
@@ -116,4 +116,4 @@
     		</div>
     	</div>
     </div>
-<!-- </div> -->
+</div>
